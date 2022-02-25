@@ -13,9 +13,11 @@ public class CameraTrigger : MonoBehaviour
 
     void Start()
     {
-        if (canvas == null) canvas.gameObject.GetComponent<Canvas>();
+        if (canvas == null) 
+            canvas.gameObject.GetComponent<Canvas>();
         CanvasGroup canvasGroup = canvas.GetComponent<CanvasGroup>();
-        if (canvasGroup == null) Debug.LogError("Please assign a canvas group to the canvas!");
+        if (canvasGroup == null)
+            Debug.LogError("Please assign a canvas group to the canvas!");
 
         if (animationCurve.length == 0)
         {
@@ -30,25 +32,25 @@ public class CameraTrigger : MonoBehaviour
     public IEnumerator FadeCanvas(CanvasGroup canvasGroup, Direction direction, float duration)
     {
         yield return new WaitForSeconds(5f);
-        // keep track of when the fading started, when it should finish, and how long it has been running
-        var startTime = Time.time;
-        var endTime = Time.time + duration;
-        var elapsedTime = 0f;
+        // fading start and finish
+        float beginTime = Time.time;
+        float  endTime = Time.time + duration;
+        float  elapsedTime = 0f;
 
-        // set the canvas to the start alpha – this ensures that the canvas is ‘reset’ if you fade it multiple times
+        // set the canvas to the start alpha
         if (direction == Direction.FadeIn) canvasGroup.alpha = animationCurve.Evaluate(0f);
         else canvasGroup.alpha = animationCurve.Evaluate(1f);
 
         // loop repeatedly until the previously calculated end time
         while (Time.time <= endTime)
         {
-            elapsedTime = Time.time - startTime; // update the elapsed time
+            elapsedTime = Time.time - beginTime; // update the elapsed time
             var percentage = 1 / (duration / elapsedTime); // calculate how far along the timeline we are
             if ((direction == Direction.FadeOut)) // if we are fading out
             {
                 canvasGroup.alpha = animationCurve.Evaluate(1f - percentage);
             }
-            else // if we are fading in/up
+            else // if we are fading 
             {
                 canvasGroup.alpha = animationCurve.Evaluate(percentage);
             }
@@ -56,7 +58,7 @@ public class CameraTrigger : MonoBehaviour
             yield return new WaitForEndOfFrame(); // wait for the next frame before continuing the loop
         }
 
-        // force the alpha to the end alpha before finishing – this is here to mitigate any rounding errors, e.g. leaving the alpha at 0.01 instead of 0
+        // end alpha
         if (direction == Direction.FadeIn) canvasGroup.alpha = animationCurve.Evaluate(1f);
         else canvasGroup.alpha = animationCurve.Evaluate(0f);
     }
