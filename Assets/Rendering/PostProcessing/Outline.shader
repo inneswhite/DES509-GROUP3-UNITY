@@ -32,11 +32,20 @@
 
 			float _NormalThreshold;
 
+			float4 _EdgeColor;
+
 			float4x4 _ClipToView;
 
 			TEXTURE2D(_InputTexture);
 			TEXTURE2D(_DepthTexture);
 
+			float4 alphaBlend(float4 top, float4 bottom)
+			{
+				float3 color = (top.rgb * top.a) + (bottom.rgb * (1 - top.a));
+				float alpha = top.a + bottom.a * (1 - top.a);
+
+				return float4(color, alpha);
+			}
 
 			struct Attributes
 			{
@@ -132,8 +141,12 @@
 
 				float edge = max(edgeDepth, edgeNormal);
 
+				//float4 edgeColor = float4(_EdgeColor * edge);
+
+				//float4 color = 
+
 				//return float4(input.viewSpaceDir,1);
-				return edge;
+				return alphaBlend(edge, _EdgeColor);
 
 			}
 

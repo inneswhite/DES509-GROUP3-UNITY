@@ -10,6 +10,7 @@ public sealed class Outline : CustomPostProcessVolumeComponent, IPostProcessComp
     public ClampedIntParameter scale = new ClampedIntParameter(1, 0, 100);
     public FloatParameter depthThreshold = new FloatParameter(0.2f);
     public FloatParameter normalThreshold = new FloatParameter(0.4f);
+    public ColorParameter edgeColor = new ColorParameter(Color.cyan);
 
 
     Material m_Material;
@@ -42,6 +43,7 @@ public sealed class Outline : CustomPostProcessVolumeComponent, IPostProcessComp
         m_Material.SetFloat("_NormalThreshold", normalThreshold.value);
         m_Material.SetVector("_Params", parameters);
         m_Material.SetTexture("_InputTexture", source);
+        m_Material.SetColor("_EdgeColor", edgeColor.value);
         HDUtils.DrawFullScreen(cmd, m_Material, destination);
     }
 
