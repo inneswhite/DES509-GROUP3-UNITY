@@ -36,7 +36,7 @@
 
 			float4x4 _ClipToView;
 
-			TEXTURE2D(_InputTexture);
+			TEXTURE2D_X(_InputTexture);
 			TEXTURE2D(_DepthTexture);
 
 			float4 alphaBlend(float4 top, float4 bottom)
@@ -89,6 +89,7 @@
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
 
 				uint2 positionSS = input.texcoord * _ScreenSize.xy;
+				float4 color = float4(LOAD_TEXTURE2D_X(_InputTexture, positionSS).xyz,1);
 
 				float4 texelSize = float4(1/ _ScreenSize.x, 1/ _ScreenSize.y, _ScreenSize.x, _ScreenSize.y);
 
@@ -140,13 +141,13 @@
 				edgeNormal = edgeNormal > _NormalThreshold ? 1 : 0;
 
 				float edge = max(edgeDepth, edgeNormal);
+				float4 edgeColor = float4(edge * _EdgeColor);
 
 				//float4 edgeColor = float4(_EdgeColor * edge);
-
-				//float4 color = 
-
+				
+				
 				//return float4(input.viewSpaceDir,1);
-				return alphaBlend(edge, _EdgeColor);
+				return alphaBlend(edgeColor, color);
 
 			}
 

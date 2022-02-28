@@ -37,8 +37,8 @@ public sealed class Outline : CustomPostProcessVolumeComponent, IPostProcessComp
 
         Matrix4x4 clipToView = GL.GetGPUProjectionMatrix(camera.camera.projectionMatrix, true).inverse;
         Vector4 parameters = new Vector4(depthDistance.value, scale.value, depthThreshold.value, depthDistance.value);
-        
 
+        m_Material.SetTexture("_InputTexture", source);
         m_Material.SetMatrix("_ClipToView", clipToView);
         m_Material.SetFloat("_NormalThreshold", normalThreshold.value);
         m_Material.SetVector("_Params", parameters);
@@ -46,6 +46,7 @@ public sealed class Outline : CustomPostProcessVolumeComponent, IPostProcessComp
         m_Material.SetColor("_EdgeColor", edgeColor.value);
         HDUtils.DrawFullScreen(cmd, m_Material, destination);
     }
+
 
     public override void Cleanup()
     {

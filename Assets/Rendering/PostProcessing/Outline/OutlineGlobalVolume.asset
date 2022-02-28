@@ -65,24 +65,24 @@ MonoBehaviour:
   active: 1
   m_AdvancedMode: 0
   depthDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.3
     min: 0
     max: 32
   scale:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 2
     min: 0
     max: 100
   depthThreshold:
     m_OverrideState: 1
     m_Value: 6
   normalThreshold:
-    m_OverrideState: 0
-    m_Value: 0.4
+    m_OverrideState: 1
+    m_Value: 1
   edgeColor:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0, b: 0.10015011, a: 1}
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
