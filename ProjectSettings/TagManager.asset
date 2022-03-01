@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - SideCamera
+  - SideCamera2
+  - SideCamera3
   layers:
   - Default
   - TransparentFX

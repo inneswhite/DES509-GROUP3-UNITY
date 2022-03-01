@@ -13,7 +13,7 @@ public class CameraTrigger : MonoBehaviour
 
     void Start()
     {
-        if (canvas == null) 
+       /* if (canvas == null) 
             canvas.gameObject.GetComponent<Canvas>();
         CanvasGroup canvasGroup = canvas.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
@@ -26,10 +26,10 @@ public class CameraTrigger : MonoBehaviour
         }
 
         StartCoroutine(FadeCanvas(canvasGroup, Direction.FadeIn, fadingSpeed));
-        //StartCoroutine(FadeCanvas(canvasGroup, Direction.FadeOut, fadingSpeed));
+        //StartCoroutine(FadeCanvas(canvasGroup, Direction.FadeOut, fadingSpeed)); */
     }
 
-    public IEnumerator FadeCanvas(CanvasGroup canvasGroup, Direction direction, float duration)
+ /*   public IEnumerator FadeCanvas(CanvasGroup canvasGroup, Direction direction, float duration)
     {
         yield return new WaitForSeconds(5f);
         // fading start and finish
@@ -61,7 +61,7 @@ public class CameraTrigger : MonoBehaviour
         // end alpha
         if (direction == Direction.FadeIn) canvasGroup.alpha = animationCurve.Evaluate(1f);
         else canvasGroup.alpha = animationCurve.Evaluate(0f);
-    }
+    } */
 
 
 
