@@ -6,11 +6,14 @@ using System;
 [Serializable, VolumeComponentMenu("Post-processing/Custom/Outline")]
 public sealed class Outline : CustomPostProcessVolumeComponent, IPostProcessComponent
 {
-    public ClampedFloatParameter depthDistance = new ClampedFloatParameter(1f, 0f, 32f);
     public ClampedIntParameter scale = new ClampedIntParameter(1, 0, 100);
-    public FloatParameter depthThreshold = new FloatParameter(0.2f);
-    public FloatParameter normalThreshold = new FloatParameter(0.4f);
     public ColorParameter edgeColor = new ColorParameter(Color.cyan);
+    
+    public ClampedFloatParameter depthThreshold = new ClampedFloatParameter(0.2f,0,100);
+    public FloatParameter depthNormalThreshold = new FloatParameter(0.5f);
+    public FloatParameter depthNormalThresholdScale = new FloatParameter(7);
+    public FloatParameter normalThreshold = new FloatParameter(0.4f);
+    
 
 
     Material m_Material;
@@ -36,13 +39,18 @@ public sealed class Outline : CustomPostProcessVolumeComponent, IPostProcessComp
             return;
 
         Matrix4x4 clipToView = GL.GetGPUProjectionMatrix(camera.camera.projectionMatrix, true).inverse;
-        Vector4 parameters = new Vector4(depthDistance.value, scale.value, depthThreshold.value, depthDistance.value);
 
         m_Material.SetTexture("_InputTexture", source);
+
         m_Material.SetMatrix("_ClipToView", clipToView);
+
+        m_Material.SetFloat("_Scale", scale.value);
+        m_Material.SetFloat("_DepthThreshold", depthThreshold.value);
+        m_Material.SetFloat("_DepthNormalThreshold", depthNormalThreshold.value);
+        m_Material.SetFloat("_DepthNormalThresholdScale", depthNormalThresholdScale.value);
         m_Material.SetFloat("_NormalThreshold", normalThreshold.value);
-        m_Material.SetVector("_Params", parameters);
-        m_Material.SetTexture("_InputTexture", source);
+
+        
         m_Material.SetColor("_EdgeColor", edgeColor.value);
         HDUtils.DrawFullScreen(cmd, m_Material, destination);
     }

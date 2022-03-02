@@ -24,15 +24,15 @@
             #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/NormalBuffer.hlsl"
 
 
-			float4 _Params;
+		
+			float4 _EdgeColor;
 
-			#define _Distance _Params.x
-			#define _Scale _Params.y
-			#define _DepthThreshold _Params.z;
+			float _Scale;
+			float _DepthThreshold;
+			float _DepthNormalThreshold;
+			float _DepthNormalThresholdScale;
 
 			float _NormalThreshold;
-
-			float4 _EdgeColor;
 
 			float4x4 _ClipToView;
 
@@ -82,14 +82,26 @@
 			}
 
 
-			
+
+			float3 GetNormalWS(float2 positionSS, float depth)
+			{
+				float3 normalWS = 0;
+				if (depth > 0.0f)
+				{
+					NormalData normalData;
+					DecodeFromNormalBuffer(positionSS, normalData);
+					normalWS = normalData.normalWS;
+				}
+				return normalWS;
+			}
 
 			float4 CustomPostProcess(Varyings input) : SV_Target
 			{
 				UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
 
 				uint2 positionSS = input.texcoord * _ScreenSize.xy;
-				float4 color = float4(LOAD_TEXTURE2D_X(_InputTexture, positionSS).xyz,1);
+
+				float4 inputColor = float4(LOAD_TEXTURE2D_X(_InputTexture, positionSS).xyz,1);
 
 				float4 texelSize = float4(1/ _ScreenSize.x, 1/ _ScreenSize.y, _ScreenSize.x, _ScreenSize.y);
 
@@ -99,19 +111,31 @@
 
 				float2 bottomLeftUV = input.texcoord - float2(texelSize.x, texelSize.y) * halfScaleFloor;
 				float2 topRightUV = input.texcoord + float2(texelSize.x, texelSize.y) * halfScaleCeil;  
-
 				float2 bottomRightUV = input.texcoord + float2(texelSize.x * halfScaleCeil, -texelSize.y * halfScaleFloor);
 				float2 topLeftUV = input.texcoord + float2(-texelSize.x * halfScaleFloor, texelSize.y * halfScaleCeil);
 
+				float2 bottomLeftSS = float2(bottomLeftUV.x * _ScreenSize.x, bottomLeftUV.y * _ScreenSize.y);
+				float2 topRightSS = float2(topRightUV.x * _ScreenSize.x, topRightUV.y * _ScreenSize.y);
+				float2 bottomRightSS = float2(bottomRightUV.x * _ScreenSize.x, bottomRightUV.y * _ScreenSize.y);
+				float2 topLeftSS = float2(topLeftUV.x * _ScreenSize.x, topLeftUV.y * _ScreenSize.y);
 				
-				
-				float depth0 = _Distance/ LinearEyeDepth(SampleCameraDepth(bottomLeftUV), _ZBufferParams);
-				float depth1 = _Distance/LinearEyeDepth(SampleCameraDepth(topRightUV), _ZBufferParams);
-				float depth2 =_Distance/ LinearEyeDepth(SampleCameraDepth(bottomRightUV), _ZBufferParams);
-				float depth3 = _Distance/LinearEyeDepth(SampleCameraDepth(topLeftUV), _ZBufferParams);
+				float depth0 = SampleCameraDepth(bottomLeftUV);
+				float depth1 = SampleCameraDepth(topRightUV);
+				float depth2 = SampleCameraDepth(bottomRightUV);
+				float depth3 = SampleCameraDepth(topLeftUV);
+
+				float3 normalWS0 = GetNormalWS(bottomLeftSS, depth0);
+				float3 normalWS1 = GetNormalWS(topRightSS, depth1);
+				float3 normalWS2 = GetNormalWS(bottomRightSS, depth2);
+				float3 normalWS3 = GetNormalWS(topLeftSS, depth3);
+
+				float3 viewNormal = normalWS0 * 2 - 1;
+				float NdotV = 1 - dot(viewNormal, -input.viewSpaceDir);
+
+				float normalThreshold01 = saturate((NdotV - _DepthNormalThreshold) / (1- _DepthNormalThreshold));
+				float normalThreshold = normalThreshold01 * _DepthNormalThresholdScale + 1;
 			
-				float depthThreshold = _DepthThreshold;
-				depthThreshold *= depth0;
+				float depthThreshold = _DepthThreshold * depth0 * normalThreshold;
 
 				float depthFiniteDifference0 = depth1 - depth0;
 				float depthFiniteDifference1 = depth3 - depth2;
@@ -119,40 +143,40 @@
 				float edgeDepth = sqrt(pow(depthFiniteDifference0, 2) + pow(depthFiniteDifference1, 2)) * 100;
 				edgeDepth = edgeDepth > depthThreshold ? 1 : 0;
 
-				float2 bottomLeftSS = float2(bottomLeftUV.x * _ScreenSize.x, bottomLeftUV.y * _ScreenSize.y);
-				float2 topRightSS = float2(topRightUV.x * _ScreenSize.x, topRightUV.y * _ScreenSize.y);
-				float2 bottomRightSS = float2(bottomRightUV.x * _ScreenSize.x, bottomRightUV.y * _ScreenSize.y);
-				float2 topLeftSS = float2(topLeftUV.x * _ScreenSize.x, topLeftUV.y * _ScreenSize.y);
-
-				NormalData normalData;
-				DecodeFromNormalBuffer(bottomRightSS, normalData);
-				float3 normal0 = normalData.normalWS;
-				DecodeFromNormalBuffer(topRightSS, normalData);
-				float3 normal1 = normalData.normalWS;
-				DecodeFromNormalBuffer(bottomRightSS, normalData);
-				float3 normal2 = normalData.normalWS;
-				DecodeFromNormalBuffer(topLeftSS, normalData);
-				float3 normal3 = normalData.normalWS;
 				
-				float3 normalFiniteDifference0 = normal1 - normal0;
-				float3 normalFiniteDifference1 = normal3 - normal2;
+				float3 normalFiniteDifference0 = normalWS1 - normalWS0;
+				float3 normalFiniteDifference1 = normalWS3 - normalWS2;
 
 				float edgeNormal = sqrt(dot(normalFiniteDifference0, normalFiniteDifference0) + dot(normalFiniteDifference1, normalFiniteDifference1));
 				edgeNormal = edgeNormal > _NormalThreshold ? 1 : 0;
 
 				float edge = max(edgeDepth, edgeNormal);
-				float4 edgeColor = float4(edge * _EdgeColor);
+				float4 edgeColor = float4(_EdgeColor.rgb, _EdgeColor.a * edge);
 
-				//float4 edgeColor = float4(_EdgeColor * edge);
-				
-				
-				//return float4(input.viewSpaceDir,1);
-				return alphaBlend(edgeColor, color);
+				return alphaBlend(edgeColor, inputColor);
 
 			}
 
 			ENDHLSL
 		}
+		Pass
+        {
+            Stencil
+            {
+                WriteMask [_StencilMask]
+                Ref [_StencilRef]
+                Comp Always
+                Pass Replace
+            }
+
+            HLSLPROGRAM
+
+                #pragma vertex VertEdge
+                #pragma fragment FragEdge
+                #include "SubpixelMorphologicalAntialiasingBridgeOutline.hlsl"
+
+            ENDHLSL
+        }
 	}
 
 	Fallback Off
