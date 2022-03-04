@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClickMove : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
 	private CharacterController charController;
 	private CollisionFlags collisionFlags = CollisionFlags.None;
+	[SerializeField]
 	private float moveSpeed = 1f;
-	public bool canMove;
+	public bool isMove;
 	public bool finished_Movement;
-	private Vector3 target_Pos = Vector3.zero;
+	private Vector3 targetposition = Vector3.zero;
 	private Vector3 player_Move = Vector3.zero;
-	private float player_ToPointDistance;
+	private float playerPointDistance;
 
 	private float gravity = 9.8f;
 	private float height;
+	private float dist;
+
 	private Camera Maincam;
 	private Camera Sidecam, Sidecam2, Sidecam3;
 	[SerializeField]
@@ -38,9 +41,8 @@ public class ClickMove : MonoBehaviour
 	{
 		CameraSwitch();
 		CalculateHeight();
-		//CheckIfFinishedMovement();
-		MovePlayerWithoutRotation();
-	
+		CheckIfFinishedMovement();
+
 	}
 
 	bool IsGrounded()
@@ -66,73 +68,48 @@ public class ClickMove : MonoBehaviour
 		if (!finished_Movement)
 		{
 			MoveThePlayer();
-	
+
 			player_Move.y = height * Time.deltaTime;
 			collisionFlags = charController.Move(player_Move);
 		}
 
-		
+
 	}
 
-	void MovePlayerWithoutRotation()
-    {
-			if (Input.GetMouseButtonDown(0))
-			{
-				Ray ray = thiscam.ScreenPointToRay(Input.mousePosition);
-				RaycastHit hit;
-				if (Physics.Raycast(ray, out hit))
-				{
-					target_Pos = hit.point;
-				}
-			}
-		charController = GetComponent(typeof(CharacterController)) as CharacterController;
-		if (Vector3.Magnitude(target_Pos - transform.position) > 0.1f)
-		{
-			if (charController.isGrounded)
-			{
-				player_Move = target_Pos - transform.position;
-				player_Move = transform.TransformDirection(player_Move);
-				player_Move*= moveSpeed;
-			}
-			player_Move.y -= gravity * Time.deltaTime; 
-			charController.Move(player_Move * Time.deltaTime);
-		}
-		else
-		{
-			transform.position = target_Pos;
-		}
-	}
 
 	void MoveThePlayer()
 	{
+		RaycastHit hit;
 		if (Input.GetMouseButtonDown(0))
 		{
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-			RaycastHit hit;
+			Debug.Log("i clicked a point");
+			Ray ray = thiscam.ScreenPointToRay(Input.mousePosition);
 
 			if (Physics.Raycast(ray, out hit))
 			{
-				if (hit.collider is MeshCollider)
+				Debug.DrawRay(transform.position, transform.forward, Color.cyan);
+				if (hit.collider.gameObject.tag == "Ground")
 				{
-					player_ToPointDistance = Vector3.Distance(transform.position, hit.point);
-					if (player_ToPointDistance >= 1.0f)
+					playerPointDistance = Vector3.Distance(transform.position, hit.point);
+					if (playerPointDistance > 0.1f)
 					{
-						canMove = true;
-						target_Pos = hit.point;
+						isMove = true;
+						targetposition = hit.point;
 					}
 				}
 			}
-		} 
+		}
 
-		if (canMove == true)
+		if (isMove)
 		{
-			Vector3 targetTemp = new Vector3(target_Pos.x, transform.position.y, target_Pos.z);
+			Vector3 targetTemp = new Vector3(targetposition.x, transform.position.y, targetposition.z);
+			dist = Vector3.Distance(transform.position, targetTemp); //calculate distance of player position and temporary position
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetTemp - transform.position), 15.0f * Time.deltaTime);
 			player_Move = transform.forward * moveSpeed * Time.deltaTime;
 
-			if (Vector3.Distance(transform.position, target_Pos) <= 1f)
+			if (dist < 0.1f)
 			{
-				canMove = false;
+				isMove = false;
 			}
 		}
 		else
@@ -142,25 +119,25 @@ public class ClickMove : MonoBehaviour
 	}
 
 	public void CameraSwitch()
-    {
+	{
 		if (Sidecam.enabled || Maincam.enabled == false)
 		{
 			thiscam = Sidecam;
 		}
-		if (Sidecam2.enabled)
-		{
-			thiscam = Sidecam2;
-		}
-		if (Sidecam3.enabled)
-		{
-			thiscam = Sidecam3;
-		}
-		else if (Maincam.enabled)
-		{
-			thiscam = Maincam;
-		}
+			if (Sidecam2.enabled)
+			{
+				thiscam = Sidecam2;
+			}
+			if (Sidecam3.enabled)
+			{
+				thiscam = Sidecam3;
+			}
+			else if (Maincam.enabled)
+			{
+				thiscam = Maincam;
+			}
+		} 
 	}
-}
 
 
 		
