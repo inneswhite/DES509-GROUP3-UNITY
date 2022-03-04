@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -41,10 +42,10 @@ public class PlayerController : MonoBehaviour
 	{
 		CameraSwitch();
 		CalculateHeight();
-		CheckIfFinishedMovement();
+	    CheckIfFinishedMovement();
+
 
 	}
-
 	bool IsGrounded()
 	{
 		return collisionFlags == CollisionFlags.CollidedBelow ? true : false;
@@ -87,7 +88,6 @@ public class PlayerController : MonoBehaviour
 
 			if (Physics.Raycast(ray, out hit))
 			{
-				Debug.DrawRay(transform.position, transform.forward, Color.cyan);
 				if (hit.collider.gameObject.tag == "Ground")
 				{
 					playerPointDistance = Vector3.Distance(transform.position, hit.point);
