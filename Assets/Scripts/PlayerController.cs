@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
 	private Camera Sidecam, Sidecam2, Sidecam3;
 	[SerializeField]
 	private Camera thiscam;
+	[HideInInspector]
+	public bool isOpen;
 
 
 	void Awake()
@@ -80,41 +82,45 @@ public class PlayerController : MonoBehaviour
 
 	void MoveThePlayer()
 	{
-		RaycastHit hit;
-		if (Input.GetMouseButtonDown(0))
+		if (!isOpen)
 		{
-			Debug.Log("i clicked a point");
-			Ray ray = thiscam.ScreenPointToRay(Input.mousePosition);
-
-			if (Physics.Raycast(ray, out hit))
+			if (Input.GetMouseButtonDown(0))
 			{
-				if (hit.collider.gameObject.tag == "Ground")
+				RaycastHit hit;
+				Ray ray = thiscam.ScreenPointToRay(Input.mousePosition);
+
+				if (Physics.Raycast(ray, out hit))
 				{
-					playerPointDistance = Vector3.Distance(transform.position, hit.point);
-					if (playerPointDistance > 0.1f)
+					if (hit.collider is MeshCollider)
 					{
-						isMove = true;
-						targetposition = hit.point;
+						playerPointDistance = Vector3.Distance(transform.position, hit.point);
+						if (playerPointDistance > 0f)
+						{
+							isMove = true;
+							//Debug.Log(hit.point);
+							//	Debug.DrawLine(hit.transform.position, hit.point, Color.red);
+							targetposition = hit.point;
+						}
 					}
 				}
 			}
-		}
 
-		if (isMove)
-		{
-			Vector3 targetTemp = new Vector3(targetposition.x, transform.position.y, targetposition.z);
-			dist = Vector3.Distance(transform.position, targetTemp); //calculate distance of player position and temporary position
-			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetTemp - transform.position), 15.0f * Time.deltaTime);
-			player_Move = transform.forward * moveSpeed * Time.deltaTime;
-
-			if (dist < 0.1f)
+			if (isMove)
 			{
-				isMove = false;
+				Vector3 targetTemp = new Vector3(targetposition.x, transform.position.y, targetposition.z);
+				dist = Vector3.Distance(transform.position, targetTemp); //calculate distance of player position and temporary position
+				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetTemp - transform.position), 15.0f * Time.deltaTime);
+				player_Move = transform.forward * moveSpeed * Time.deltaTime;
+
+				if (dist < 0.1f)
+				{
+					isMove = false;
+				}
 			}
-		}
-		else
-		{
-			player_Move.Set(0f, 0f, 0f);
+			else
+			{
+				player_Move.Set(0f, 0f, 0f);
+			}
 		}
 	}
 
@@ -123,6 +129,7 @@ public class PlayerController : MonoBehaviour
 		if (Sidecam.enabled || Maincam.enabled == false)
 		{
 			thiscam = Sidecam;
+
 		}
 			if (Sidecam2.enabled)
 			{

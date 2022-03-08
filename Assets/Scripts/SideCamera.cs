@@ -15,7 +15,7 @@ public class SideCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, target.position) > 0.2f)
+        if (Vector3.Distance(transform.position, target.position) > 0.5f)
         {
             Vector3 direction = target.position - target.position;
             direction.y = 0;
