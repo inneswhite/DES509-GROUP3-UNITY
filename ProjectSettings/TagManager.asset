@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - SideCamera
+  - SideCamera2
+  - SideCamera3
+  - Ground
+  - NPC
   layers:
   - Default
   - TransparentFX

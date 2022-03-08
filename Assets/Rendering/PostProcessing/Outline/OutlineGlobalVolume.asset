@@ -28,19 +28,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
-  depthDistance:
-    m_OverrideState: 0
-    m_Value: 1
-    min: 0
-    max: 32
   scale:
     m_OverrideState: 0
     m_Value: 1
     min: 0
     max: 100
+  edgeColor:
+    m_OverrideState: 0
+    m_Value: {r: 0, g: 1, b: 1, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
   depthThreshold:
     m_OverrideState: 0
     m_Value: 0.2
+    min: 0
+    max: 100
+  depthNormalThreshold:
+    m_OverrideState: 0
+    m_Value: 0.5
+  depthNormalThresholdScale:
+    m_OverrideState: 0
+    m_Value: 7
   normalThreshold:
     m_OverrideState: 0
     m_Value: 0.4
@@ -58,19 +67,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   m_AdvancedMode: 0
-  depthDistance:
-    m_OverrideState: 1
-    m_Value: 1.2
-    min: 0
-    max: 32
   scale:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 4
     min: 0
     max: 100
+  edgeColor:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    hdr: 0
+    showAlpha: 1
+    showEyeDropper: 1
   depthThreshold:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 5.24
+    min: 0
+    max: 100
+  depthNormalThreshold:
+    m_OverrideState: 1
+    m_Value: 0.3
+  depthNormalThresholdScale:
+    m_OverrideState: 1
+    m_Value: 3
   normalThreshold:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 1.14
