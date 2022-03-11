@@ -6,11 +6,16 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public static Inventory instance;
+    public GameObject inventoryPanel;
     public List<Item> items = new List<Item>();
 
     public Transform container;
     public GameObject inventoryitem;
     public RemoveItem[] removeitems;
+    [SerializeField]
+
+
+    private bool istoggled;
 
     private void Awake()
     {
@@ -23,6 +28,11 @@ public class Inventory : MonoBehaviour
         }    
     }
 
+    void Start()
+    {
+        inventoryPanel.SetActive(false);
+    }
+
     public void AddItem(Item item)
     {
         items.Add(item);
@@ -31,6 +41,7 @@ public class Inventory : MonoBehaviour
     public void RemoveItem(Item item)
     {
         items.Remove(item);
+     
     }
 
     public void ListItems()
@@ -48,6 +59,19 @@ public class Inventory : MonoBehaviour
         }
 
         SetItems();
+    }
+
+    public void OpenInventory()
+    {
+        istoggled = !istoggled;
+        if(istoggled)
+        {
+            inventoryPanel.SetActive(true);
+        }
+        else
+        {
+            inventoryPanel.SetActive(false);
+        }
     }
 
    public void SetItems()

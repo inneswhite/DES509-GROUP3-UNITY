@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
 	[HideInInspector]
 	public bool isOpen;
 
+	[SerializeField]
+	private GameObject groundpointer;
+	private GameObject mousepointholder;
+
 
 	void Awake()
 	{
@@ -45,6 +49,7 @@ public class PlayerController : MonoBehaviour
 		CameraSwitch();
 		CalculateHeight();
 	    CheckIfFinishedMovement();
+		MakePointer();
 
 
 	}
@@ -92,13 +97,12 @@ public class PlayerController : MonoBehaviour
 				if (Physics.Raycast(ray, out hit))
 				{
 					if (hit.collider is MeshCollider)
-					{
+					{					
 						playerPointDistance = Vector3.Distance(transform.position, hit.point);
 						if (playerPointDistance > 0f)
 						{
 							isMove = true;
-							//Debug.Log(hit.point);
-							//	Debug.DrawLine(hit.transform.position, hit.point, Color.red);
+							Debug.Log(hit.point);
 							targetposition = hit.point;
 						}
 					}
@@ -120,6 +124,34 @@ public class PlayerController : MonoBehaviour
 			else
 			{
 				player_Move.Set(0f, 0f, 0f);
+			}
+		}
+	}
+
+	void MakePointer()
+	{
+		if (Input.GetMouseButtonUp(0))
+		{
+			RaycastHit mousehit;
+			Ray mouseray = thiscam.ScreenPointToRay(Input.mousePosition);
+			if (Physics.Raycast(mouseray, out mousehit))
+			{
+				if (mousehit.collider is MeshCollider)
+				{
+					Vector3 groundposition = mousehit.point;
+					groundposition.y = 0.35f;
+					if (mousepointholder == null)
+					{
+						mousepointholder = Instantiate(groundpointer) as GameObject;
+						mousepointholder.transform.position = groundposition;
+					}
+					else
+                    {
+						Destroy(mousepointholder);
+						mousepointholder = Instantiate(groundpointer) as GameObject;
+						mousepointholder.transform.position = groundposition;
+					}
+				}
 			}
 		}
 	}
