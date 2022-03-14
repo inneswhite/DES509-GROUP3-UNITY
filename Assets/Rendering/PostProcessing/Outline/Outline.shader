@@ -153,30 +153,14 @@
 				float edge = max(edgeDepth, edgeNormal);
 				float4 edgeColor = float4(_EdgeColor.rgb, _EdgeColor.a * edge);
 
+				//return float4(GetNormalWS(positionSS, depth0),1);
+				//return SampleCameraDepth(input.texcoord);
 				return alphaBlend(edgeColor, inputColor);
 
 			}
 
 			ENDHLSL
 		}
-		Pass
-        {
-            Stencil
-            {
-                WriteMask [_StencilMask]
-                Ref [_StencilRef]
-                Comp Always
-                Pass Replace
-            }
-
-            HLSLPROGRAM
-
-                #pragma vertex VertEdge
-                #pragma fragment FragEdge
-                #include "SubpixelMorphologicalAntialiasingBridgeOutline.hlsl"
-
-            ENDHLSL
-        }
 	}
 
 	Fallback Off
