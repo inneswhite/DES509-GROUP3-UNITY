@@ -38,18 +38,17 @@ Shader "Custom/CellShading"
     float _Steps;
     float _MinimumBrightness;
     float _MinimumSaturation;
-    float4 _AmbientColor;
+    float _DarkValuePriority;
     TEXTURE2D_X(_InputTexture);
 
     float posterize(float In, float steps)
     {
-        return clamp(floor(In / (1/ steps)) * (1/steps), _MinimumBrightness, 1);
+        float nonLinearIn = pow(In, 1 / _DarkValuePriority);
+        float stepped = floor(nonLinearIn / (1/steps)) * (1/steps);
+        return clamp(stepped, _MinimumBrightness, 1);
     }
 
-    float remap()
-    {
-        return 0;
-    }
+
     
 
     float4 CustomPostProcess(Varyings input) : SV_Target
@@ -60,6 +59,19 @@ Shader "Custom/CellShading"
 
         float3 outColor = LOAD_TEXTURE2D_X(_InputTexture, positionSS).xyz;
         
+        /*
+        float greyscale = max(outColor.r, max(outColor.g, outColor.b));
+        float lower = floor((greyscale * _Steps)) / _Steps;
+        float lowerDiff = abs(greyscale - lower);
+
+        float upper = ceil(greyscale * _Steps) / _Steps;
+        float upperDiff = abs(upper - greyscale);
+
+        float level = lower <= upperDiff ? lower : upper;
+        float adjustment = level / greyscale;
+        */
+
+        
 
         float3 hsvColor = RgbToHsv(outColor);
 
@@ -69,11 +81,12 @@ Shader "Custom/CellShading"
         hsvColor.b = posterize((hsvColor.b), _Steps);
 
         outColor = HsvToRgb(hsvColor);
-        outColor *= _AmbientColor;
 
         outColor = saturate(outColor);
 
-        return float4(outColor, 1);
+        
+
+        return float4(outColor, 1); 
     }
 
     ENDHLSL

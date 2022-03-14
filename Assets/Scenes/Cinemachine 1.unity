@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,6 +156,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camid: {fileID: 1378763197}
   camid2: {fileID: 870068602}
+  canvas: {fileID: 0}
+  animationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fadingSpeed: 5
 --- !u!65 &3040141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -317,7 +325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252699079}
-  m_LocalRotation: {x: 0.035346985, y: 0.9484443, z: -0.11421207, w: 0.29352972}
+  m_LocalRotation: {x: 0.03534698, y: 0.9484443, z: -0.11421207, w: 0.29352972}
   m_LocalPosition: {x: -19.003426, y: 10.111662, z: 28.711006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -546,11 +554,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c109294dc42cadd4b8a97be0a212d802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  switchvalue: 2
-  cameras:
-  - {fileID: 870068604}
-  - {fileID: 0}
+  moveSpeed: 1
+  isMove: 0
+  finished_Movement: 0
+  thiscam: {fileID: 0}
+  isOpen: 0
+  groundpointer: {fileID: 0}
 --- !u!143 &429079142
 CharacterController:
   m_ObjectHideFlags: 0
@@ -751,8 +760,9 @@ GameObject:
   m_Component:
   - component: {fileID: 870068605}
   - component: {fileID: 870068604}
-  - component: {fileID: 870068603}
   - component: {fileID: 870068606}
+  - component: {fileID: 870068607}
+  - component: {fileID: 870068603}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -760,14 +770,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &870068603
-AudioListener:
+--- !u!114 &870068603
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870068602}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547d70d20a46bd6438a1d3787ea8fc6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!20 &870068604
 Camera:
   m_ObjectHideFlags: 0
@@ -839,6 +855,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 429079146}
   smoothtime: 0.09
+--- !u!114 &870068607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870068602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2683c6eb30da094a96f121008121f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &933452386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,6 +1364,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camid: {fileID: 870068602}
   camid2: {fileID: 1378763197}
+  canvas: {fileID: 0}
+  animationCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  fadingSpeed: 5
 --- !u!65 &1733931898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1361,6 +1407,62 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &2024998318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2024998320}
+  - component: {fileID: 2024998319}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2024998319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024998318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1730a2c0eb0544e4987981111b94a140, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 0e7855d61d1c7a24bb043d1c9e8ec7f9, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &2024998320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024998318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116681541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,7 +1583,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122865512}
-  m_LocalRotation: {x: -0.15404625, y: 0.7282058, z: -0.11078255, w: -0.65856916}
+  m_LocalRotation: {x: -0.15404625, y: 0.7282058, z: -0.110782534, w: -0.65856916}
   m_LocalPosition: {x: 0.15, y: 0.14, z: 0.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1546,6 +1648,13 @@ MonoBehaviour:
     FarClipPlane: 1000
     Dutch: 0
     LensShift: {x: 0, y: 0}
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
