@@ -3,24 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
-{
-    public Item item;
-    
+{ 
+    private Inventory inventory;
     // Start is called before the first frame update
     void Start()
+    {
+        inventory = GameObject.Find("Player").GetComponent<Inventory>();
+    }
+
+    // Update is called once per frame
+    void Update()
     {
         
     }
 
-    public void PickItem()
-    {
-        Inventory.instance.AddItem(item);
-        Destroy(gameObject);
-    }
+  
 
     private void OnMouseDown()
     {
-        PickItem();
+        inventory.RemoveItem(0);
     }
-
 }

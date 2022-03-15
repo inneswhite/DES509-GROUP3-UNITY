@@ -1,86 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public static Inventory instance;
-    public GameObject inventoryPanel;
-    public List<Item> items = new List<Item>();
-
-    public Transform container;
-    public GameObject inventoryitem;
-    public RemoveItem[] removeitems;
-    [SerializeField]
+    public List<Item> inventoryitems = new List<Item>();
+    public ItemDatabase itemdatabase;
+    public DisplayInventory displayinventory;
 
 
-    private bool istoggled;
-
-    private void Awake()
+    private void Start()
     {
+        GiveItem(1);
+        GiveItem(0);
+        GiveItem(1);
 
-        instance = this;
-
-        if(instance!=this)
-        {
-            DontDestroyOnLoad(gameObject);
-        }    
+        //RemoveItem(1);
+    }
+    public void GiveItem(int id)
+    {
+        Item items = itemdatabase.FindItem(id);
+        inventoryitems.Add(items);
+        displayinventory.AddItemSlot(items);
+        Debug.Log("Added item:" + items.itemName);
     }
 
-    void Start()
+    public void GiveItem(string itemname)
     {
-        inventoryPanel.SetActive(false);
+        Item items = itemdatabase.FindItem(itemname);
+        inventoryitems.Add(items);
+        displayinventory.AddItemSlot(items);
+        Debug.Log("Added item:" + items.itemName);
     }
 
-    public void AddItem(Item item)
+    public Item CheckItem(int id)
     {
-        items.Add(item);
+        return inventoryitems.Find(item => item.itemId == id);
     }
 
-    public void RemoveItem(Item item)
+    public void RemoveItem(int id)
     {
-        items.Remove(item);
-     
-    }
-
-    public void ListItems()
-    {
-        foreach(Transform item in container)
+        Item item = CheckItem(id);     //check if item is in inventory
+        if(item!=null)
         {
-            Destroy(item.gameObject);
-        }
-        foreach(var item in items)
-        {
-            GameObject obj = Instantiate(inventoryitem, container);
-            var itemIcon = obj.transform.Find("itemIcon").GetComponent<Image>();           
-            itemIcon.sprite = item.Icon;
-            var removebutton = obj.transform.Find("Close Button").GetComponent<Button>();
-        }
-
-        SetItems();
-    }
-
-    public void OpenInventory()
-    {
-        istoggled = !istoggled;
-        if(istoggled)
-        {
-            inventoryPanel.SetActive(true);
-        }
-        else
-        {
-            inventoryPanel.SetActive(false);
-        }
-    }
-
-   public void SetItems()
-    {
-        removeitems = container.GetComponentsInChildren<RemoveItem>();
-
-        for(int i=0;i<items.Count;i++)
-        {
-            removeitems[i].Additem(items[i]);
+            inventoryitems.Remove(item);
+            displayinventory.RemoveItemSlot(item);
+            Debug.Log("item removed:" + item.itemName);
         }
     }
 }

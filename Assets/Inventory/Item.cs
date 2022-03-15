@@ -1,12 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-[CreateAssetMenu(fileName ="New Item",menuName ="Item/Create New Item")]
-public class Item : ScriptableObject
+[System.Serializable]
+public class Item
 {
-    public int ItemId;
+    public int itemId;
     public string itemName;
-    public int itemvalue;
-    public Sprite Icon;
+    public string description;
+    public Sprite itemIcon;
+    public Dictionary<string, int> iteminfo = new Dictionary<string, int>();
+
+
+    public Item(int id, string name,string desc,Dictionary<string,int> iteminfo)
+    {
+        this.itemId = id;
+        this.itemName = name;
+        this.description = desc;
+        this.itemIcon = Resources.Load<Sprite>("Icons/" + name);
+        this.iteminfo = iteminfo;
+    }
+
+    public Item(Item item)  //create item
+    {
+        this.itemId = item.itemId;
+        this.itemName = item.itemName;
+        this.description = item.description;
+        this.itemIcon = Resources.Load<Sprite>("Icons/" + itemName);
+        this.iteminfo = item.iteminfo;
+    }
+
 }
