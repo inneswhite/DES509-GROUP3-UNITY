@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Rendering/PostProcessing/Outline.unity
-    guid: 60af5fb002f90da46adc27aee999604a
+    path: Assets/Scenes/Callais.unity
+    guid: d97a772433f18aa438d96a88af9470a6
   m_configObjects: {}

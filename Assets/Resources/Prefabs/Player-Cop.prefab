@@ -3422,10 +3422,10 @@ GameObject:
   - component: {fileID: 7324101947138987195}
   - component: {fileID: 8302184849352337477}
   - component: {fileID: 4844288518579153503}
-  - component: {fileID: 1946589577124185766}
+  - component: {fileID: 966217785}
   m_Layer: 0
   m_Name: Player-Cop
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3476,10 +3476,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.15
+  m_Height: 1.1
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.55, z: 0.03}
 --- !u!143 &8302184849352337477
 CharacterController:
   m_ObjectHideFlags: 0
@@ -3516,7 +3516,7 @@ MonoBehaviour:
   thiscam: {fileID: 0}
   isOpen: 0
   groundpointer: {fileID: 0}
---- !u!114 &1946589577124185766
+--- !u!114 &966217785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3525,12 +3525,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6139989164869991250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bcd29841df549f4e8d2026191b704d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bb9f4e8436bfda4a951ed69cf0ad9a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryitems: []
-  itemdatabase: {fileID: 0}
-  displayinventory: {fileID: 0}
+  showPlayerSpeed: 0
+  idlePlaybackSpeed: 1
+  walkPlaybackSpeed: 1
+  jogPlaybackSpeed: 0.3
 --- !u!1 &6164043714308705815
 GameObject:
   m_ObjectHideFlags: 0

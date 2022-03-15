@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: GlobalVolume
+  m_Name: ToonVolume
   m_EditorClassIdentifier: 
   components:
   - {fileID: 9179087734138797393}
@@ -113,7 +113,7 @@ MonoBehaviour:
     max: 100
   minimumBrightness:
     m_OverrideState: 1
-    m_Value: 0.016
+    m_Value: 0.033
     min: 0
     max: 1
   minimumSaturation:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   scale:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 1
     min: 0
     max: 100
   edgeColor:
