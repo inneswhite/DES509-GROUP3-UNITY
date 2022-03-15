@@ -230,6 +230,7 @@ MonoBehaviour:
   finished_Movement: 0
   thiscam: {fileID: 0}
   isOpen: 0
+  groundpointer: {fileID: 0}
 --- !u!114 &8704175765425472328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,9 +243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bcd29841df549f4e8d2026191b704d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 0}
-  items: []
-  container: {fileID: 0}
-  inventoryitem: {fileID: 2490528769555887295, guid: c17a37c7a11bc5a46afaddbc1a19d7c4, type: 3}
-  removeitems: []
-  istoggled: 0
+  inventoryitems: []
+  itemdatabase: {fileID: 0}
+  displayinventory: {fileID: 0}
