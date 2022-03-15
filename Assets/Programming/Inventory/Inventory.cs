@@ -11,9 +11,6 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        GiveItem(1);
-        GiveItem(0);
-        GiveItem(1);
 
         //RemoveItem(1);
     }

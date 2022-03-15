@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
 	}
 	private void Start()
 	{
+		//check for all cameras
 		Maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 		Sidecam = GameObject.FindGameObjectWithTag("SideCamera").GetComponent<Camera>();
 		Sidecam2 = GameObject.FindGameObjectWithTag("SideCamera2").GetComponent<Camera>();
@@ -89,10 +90,10 @@ public class PlayerController : MonoBehaviour
 	{
 		if (!isOpen)
 		{
-			if (Input.GetMouseButtonDown(0))
+			if (Input.GetMouseButtonDown(0))		
 			{
 				RaycastHit hit;
-				Ray ray = thiscam.ScreenPointToRay(Input.mousePosition);
+				Ray ray = thiscam.ScreenPointToRay(Input.mousePosition);		// mouse position after point click
 
 				if (Physics.Raycast(ray, out hit))
 				{
@@ -130,15 +131,15 @@ public class PlayerController : MonoBehaviour
 
 	void MakePointer()
 	{
-		if (Input.GetMouseButtonUp(0))
+		if (Input.GetMouseButtonUp(0))			// mouse click
 		{
 			RaycastHit mousehit;
 			Ray mouseray = thiscam.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(mouseray, out mousehit))
 			{
-				if (mousehit.collider is MeshCollider)
+				if (mousehit.collider is MeshCollider)			
 				{
-					Vector3 groundposition = mousehit.point;
+					Vector3 groundposition = mousehit.point;		// set groundpointer position to mouse click position
 					groundposition.y = 0.35f;
 					if (mousepointholder == null)
 					{

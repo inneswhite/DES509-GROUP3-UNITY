@@ -11,6 +11,7 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
     private UIItem selecteditem;
     private Inventory inventory;
     private ItemStats itemstats;
+    private GameObject statsPanel;
     // Start is called before the first frame update
     void Awake()
     {

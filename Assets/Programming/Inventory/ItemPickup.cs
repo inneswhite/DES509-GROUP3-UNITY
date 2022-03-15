@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 { 
     private Inventory inventory;
+    public int itemId;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +22,21 @@ public class ItemPickup : MonoBehaviour
 
     private void OnMouseDown()
     {
-        inventory.RemoveItem(0);
+        if(itemId==0)
+        {
+            inventory.GiveItem(0);
+            this.gameObject.SetActive(false);
+        }
+        if (itemId == 1)
+        {
+            inventory.GiveItem(1);
+            this.gameObject.SetActive(false);
+        }
+        if (itemId == 2)
+        {
+            inventory.GiveItem(2);
+            this.gameObject.SetActive(false);
+        }
+
     }
 }

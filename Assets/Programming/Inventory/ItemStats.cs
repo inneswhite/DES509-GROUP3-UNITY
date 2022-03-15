@@ -9,7 +9,8 @@ public class ItemStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stats = GetComponentInChildren<Text>();       
+        stats = GetComponentInChildren<Text>();
+        this.gameObject.SetActive(false);
     }
 
 

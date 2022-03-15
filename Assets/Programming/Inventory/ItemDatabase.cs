@@ -10,11 +10,13 @@ public class ItemDatabase : MonoBehaviour
     private bool toggled;
 
     // Start is called before the first frame update
-
+     void Awake()
+    {
+        Build();
+    }
     private void Start()
     {
         inventoryPanel.SetActive(false);
-        Build();
     }
 
     public void OpenInventory()

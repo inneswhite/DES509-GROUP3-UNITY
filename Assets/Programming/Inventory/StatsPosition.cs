@@ -5,7 +5,7 @@ using UnityEngine;
 public class StatsPosition : MonoBehaviour
 {
 
-    void Update()
+    void LateUpdate()
     {
         transform.position = Input.mousePosition;
     }
