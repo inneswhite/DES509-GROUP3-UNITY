@@ -53,7 +53,6 @@ public class PlayerAnimationParams : MonoBehaviour
     private void UpdateAnimationValues()
     {
         animator.SetFloat("moveSpeed", GetPlayerSpeed());
-        animator.SetFloat("idleAnimSpeed", idlePlaybackSpeed * GetPlayerSpeed());
         animator.SetFloat("walkAnimSpeed", walkPlaybackSpeed * GetPlayerSpeed());
         animator.SetFloat("jogAnimSpeed", jogPlaybackSpeed * GetPlayerSpeed());
     }
