@@ -17,8 +17,7 @@ public class GroundPointer : MonoBehaviour
     {
         dist = Vector3.Distance(transform.position, player.position);
         if (dist<=2f)
-        {
-            Debug.Log("hi im working");
+        {         
             Destroy(gameObject);
         }
     }

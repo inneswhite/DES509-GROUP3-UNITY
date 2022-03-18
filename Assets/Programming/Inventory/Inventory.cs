@@ -40,6 +40,7 @@ public class Inventory : MonoBehaviour
         Item item = CheckItem(id);     //check if item is in inventory
         if(item!=null)
         {
+           
             inventoryitems.Remove(item);
             displayinventory.RemoveItemSlot(item);
             Debug.Log("item removed:" + item.itemName);

@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
 						if (playerPointDistance > 0f)
 						{
 							isMove = true;
-							Debug.Log(hit.point);
+						//	Debug.Log(hit.point);
 							targetposition = hit.point;
 						}
 					}
@@ -159,18 +159,27 @@ public class PlayerController : MonoBehaviour
 
 	public void CameraSwitch()
 	{
-		if (Sidecam.enabled || Maincam.enabled == false)
+		if (Sidecam.enabled)
 		{
 			thiscam = Sidecam;
+			Maincam.enabled = false;
+			Sidecam2.enabled = false;
+			Sidecam3.enabled = false;
 
 		}
 			if (Sidecam2.enabled)
 			{
 				thiscam = Sidecam2;
+			Maincam.enabled = false;
+			Sidecam.enabled = false;
+			Sidecam3.enabled = false;
 			}
 			if (Sidecam3.enabled)
 			{
 				thiscam = Sidecam3;
+			Maincam.enabled = false;
+			Sidecam.enabled = false;
+			Sidecam2.enabled = false;
 			}
 			else if (Maincam.enabled)
 			{

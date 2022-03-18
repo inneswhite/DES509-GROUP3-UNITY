@@ -12,6 +12,7 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
     private Inventory inventory;
     private ItemStats itemstats;
     private GameObject statsPanel;
+    private SpawnItem spawnitem;
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,6 +21,7 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
         selecteditem = GameObject.Find("SelectedIcon").GetComponent<UIItem>();
         inventory = GameObject.Find("Player").GetComponent<Inventory>();
         itemstats = GameObject.Find("ItemStats").GetComponent<ItemStats>();
+        spawnitem = GameObject.Find("SelectedIcon").GetComponent<SpawnItem>();
     }
 
   
@@ -36,6 +38,12 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
         {
             itemIcon.color = Color.clear;
         }
+    }
+
+    public void RemoveUI(Item item)
+    {
+        this.item = item;
+        itemIcon.color = Color.clear;
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -62,12 +70,48 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
         }
     }
 
+
+    void Update()
+    {
+        if (selecteditem.item != null)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("asa");
+                RaycastHit hit = new RaycastHit();
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 1000))
+                {
+                    if (hit.collider.gameObject.tag == "Player")
+                    {
+                        if (selecteditem.item.itemId == 0)
+                        {
+                             spawnitem.SpawningItem();
+                            inventory.RemoveItem(selecteditem.item.itemId);
+                            selecteditem.UpdateUI(null);
+                        }
+                        else if (selecteditem.item.itemId == 1)
+                        {
+                            spawnitem.SpawningItem2();
+                            inventory.RemoveItem(selecteditem.item.itemId);
+                            selecteditem.UpdateUI(null);
+                        }
+                        else if (selecteditem.item.itemId == 2)
+                        {
+                            spawnitem.SpawningItem3();
+                            inventory.RemoveItem(selecteditem.item.itemId);
+                            selecteditem.UpdateUI(null);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
     public void OnDrop(PointerEventData eventData)
     {
-        if(selecteditem.item!=null)
-        {
+
            
-        }
     }
 
     public void OnPointerEnter(PointerEventData eventData)
