@@ -21,7 +21,6 @@ public class PlayerAnimationParams : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
         characterController = gameObject.GetComponent<CharacterController>();
-
     }
     private void Start()
     {

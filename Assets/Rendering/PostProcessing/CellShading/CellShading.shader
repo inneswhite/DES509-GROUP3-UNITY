@@ -79,9 +79,10 @@ Shader "Custom/CellShading"
 
 
         hsvColor.b = posterize((hsvColor.b), _Steps);
+        
 
         outColor = HsvToRgb(hsvColor);
-
+        //return float4(outColor, 1); 
         outColor = saturate(outColor);
 
         
