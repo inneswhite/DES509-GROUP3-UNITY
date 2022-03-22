@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//HUDManager communicates between UI Manager and HUD elements
 public class HUDManager : MonoBehaviour
 {
     [Header("UI References")]
@@ -10,7 +11,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField]
     HUDMenuPanel inventoryPanel;
 
-    private enum ActivePanel
+    public enum ActivePanel
     {
         objectives,
         inventory,
@@ -20,6 +21,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField]
     ActivePanel activePanel = ActivePanel.none;
 
+    //Activate Objects Panel | Only runs if no panel is open
     public void ActivateObjectivesPanel()
     {
         if (activePanel == ActivePanel.none)
@@ -28,6 +30,8 @@ public class HUDManager : MonoBehaviour
             activePanel = ActivePanel.objectives;
         }
     }
+
+    //Deactivate Objects Panel | Only runs if objects panel is open
     public void DeactivateObjectivesPanel()
     {
         if(activePanel == ActivePanel.objectives)
@@ -51,6 +55,31 @@ public class HUDManager : MonoBehaviour
         {
             inventoryPanel.Deactivate();
             activePanel = ActivePanel.none;
+        }
+    }
+
+    public bool menuIsOpen()
+    {
+        if (activePanel == ActivePanel.none)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    // Close any menu that may be open
+    public void CloseMenus()
+    {
+        if(activePanel == ActivePanel.objectives)
+        {
+            DeactivateObjectivesPanel();
+        }
+        else if (activePanel == ActivePanel.inventory)
+        {
+            DeactivateInventoryPanel();
         }
     }
 }

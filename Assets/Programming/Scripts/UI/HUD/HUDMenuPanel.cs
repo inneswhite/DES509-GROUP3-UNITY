@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HUDMenuPanel : MonoBehaviour
 {
+    UIManager uiManager;
     [Header("Animation Parameters")]
     [SerializeField]
     float animDuration = 1f;
@@ -18,13 +19,14 @@ public class HUDMenuPanel : MonoBehaviour
     bool isActive = false;
     private void Awake()
     {
+        uiManager = UIManager.instance;
         rectTransform = gameObject.GetComponent<RectTransform>();
     }
 
     private void Start()
     {
         activePosition = rectTransform.position;
-        inactivePosition = new Vector2(-200, activePosition.y);
+        inactivePosition = new Vector2(-uiManager.GetCanvasSize().x, activePosition.y);
         rectTransform.position = inactivePosition;
     }
 
