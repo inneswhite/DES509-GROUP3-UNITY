@@ -74,12 +74,12 @@ MonoBehaviour:
     max: 100
   minimumBrightness:
     m_OverrideState: 1
-    m_Value: 0.033
+    m_Value: 0
     min: 0
     max: 1
   minimumSaturation:
     m_OverrideState: 1
-    m_Value: 0.037
+    m_Value: 0
     min: 0
     max: 1
   darkValuePriority:
