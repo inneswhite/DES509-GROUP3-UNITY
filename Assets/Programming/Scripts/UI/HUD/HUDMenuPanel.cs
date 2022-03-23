@@ -19,14 +19,15 @@ public class HUDMenuPanel : MonoBehaviour
     bool isActive = false;
     private void Awake()
     {
-        uiManager = UIManager.instance;
+        
         rectTransform = gameObject.GetComponent<RectTransform>();
     }
 
     private void Start()
     {
+        uiManager = UIManager.instance;
         activePosition = rectTransform.position;
-        inactivePosition = new Vector2(-uiManager.GetCanvasSize().x, activePosition.y);
+        inactivePosition = new Vector2(-rectTransform.sizeDelta.x, activePosition.y);
         rectTransform.position = inactivePosition;
     }
 

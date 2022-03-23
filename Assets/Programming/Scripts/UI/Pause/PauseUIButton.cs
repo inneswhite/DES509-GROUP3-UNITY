@@ -22,9 +22,23 @@ public class PauseUIButton : MonoBehaviour
         text = gameObject.transform.GetChild(0).gameObject.GetComponent<TMPro.TextMeshProUGUI>();
     }
 
-    private void Start()
+     //____________Event Triggers___________\\
+    //See Event Trigger Component for details\\
+    public void PointerEnter()
     {
-        
+        text.color = hoverColor;
+        Debug.Log("pointer enter");
+    }
+
+    public void PointerExit()
+    {
+        text.color = defaultColor;
+        Debug.Log("pointer exit");
+    }
+
+    public void PointerDown()
+    {
+        text.color = pressedColor;
     }
 
 }
