@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 	private CharacterController charController;
 	private CollisionFlags collisionFlags = CollisionFlags.None;
 	[SerializeField]
+	private PlayerCop playercop;
+	[SerializeField]
 	private float moveSpeed = 1f;
 	public bool isMove;
 	public bool finished_Movement;
@@ -23,12 +25,15 @@ public class PlayerController : MonoBehaviour
 	private Camera Sidecam, Sidecam2, Sidecam3;
 	[SerializeField]
 	private Camera thiscam;
-	[HideInInspector]
-	public bool isOpen;
+
 
 	[SerializeField]
 	private GameObject groundpointer;
 	private GameObject mousepointholder;
+
+	private Inventory inventory;
+
+	
 
 
 	void Awake()
@@ -42,6 +47,7 @@ public class PlayerController : MonoBehaviour
 		Sidecam = GameObject.FindGameObjectWithTag("SideCamera").GetComponent<Camera>();
 		Sidecam2 = GameObject.FindGameObjectWithTag("SideCamera2").GetComponent<Camera>();
 		Sidecam3 = GameObject.FindGameObjectWithTag("SideCamera3").GetComponent<Camera>();
+
 		thiscam = Maincam;
 	}
 
@@ -88,7 +94,7 @@ public class PlayerController : MonoBehaviour
 
 	void MoveThePlayer()
 	{
-		if (!isOpen)
+		if(playercop.currentState==PlayerCop.playerState.idle)
 		{
 			if (Input.GetMouseButtonDown(0))		
 			{
@@ -131,31 +137,35 @@ public class PlayerController : MonoBehaviour
 
 	void MakePointer()
 	{
-		if (Input.GetMouseButtonUp(0))			// mouse click
+		if (playercop.currentState == PlayerCop.playerState.idle)
 		{
-			RaycastHit mousehit;
-			Ray mouseray = thiscam.ScreenPointToRay(Input.mousePosition);
-			if (Physics.Raycast(mouseray, out mousehit))
+			if (Input.GetMouseButtonUp(0))          // mouse click
 			{
-				if (mousehit.collider is MeshCollider)			
+				RaycastHit mousehit;
+				Ray mouseray = thiscam.ScreenPointToRay(Input.mousePosition);
+				if (Physics.Raycast(mouseray, out mousehit))
 				{
-					Vector3 groundposition = mousehit.point;		// set groundpointer position to mouse click position
-					groundposition.y = 0.35f;
-					if (mousepointholder == null)
+					if (mousehit.collider is MeshCollider)
 					{
-						mousepointholder = Instantiate(groundpointer) as GameObject;
-						mousepointholder.transform.position = groundposition;
-					}
-					else
-                    {
-						Destroy(mousepointholder);
-						mousepointholder = Instantiate(groundpointer) as GameObject;
-						mousepointholder.transform.position = groundposition;
+						Vector3 groundposition = mousehit.point;        // set groundpointer position to mouse click position
+						groundposition.y = 0.35f;
+						if (mousepointholder == null)
+						{
+							mousepointholder = Instantiate(groundpointer) as GameObject;
+							mousepointholder.transform.position = groundposition;
+						}
+						else
+						{
+							Destroy(mousepointholder);
+							mousepointholder = Instantiate(groundpointer) as GameObject;
+							mousepointholder.transform.position = groundposition;
+						}
 					}
 				}
 			}
 		}
 	}
+
 
 	public void CameraSwitch()
 	{

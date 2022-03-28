@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCName: Tom
   npcdialogue:
-  - Hello stranger plz find me my key
-  - 'i need it to escape '
-  - do this and ill do anything for you so do not let me down
+  - 'Hi Officer '
+  - what brings you here to my area
+  questdialogue:
+  - Officer im sure you wont find anything here

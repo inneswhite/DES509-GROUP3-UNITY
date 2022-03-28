@@ -59,11 +59,11 @@ public class ItemDatabase : MonoBehaviour
 
     public Item FindItem(int id)
     {
-        return items.Find(item => item.itemId == id);
+        return items.Find(item => item.itemId == id);       
     }
 
     public Item FindItem(string name)
     {
-        return items.Find(item => item.itemName == name);
+        return items.Find(item => item.itemName == name);       
     }
 }

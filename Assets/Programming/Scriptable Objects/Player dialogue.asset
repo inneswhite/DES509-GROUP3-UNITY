@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5b98e5feb29e24dadfda2e99b64c7f, type: 3}
+  m_Name: Player dialogue
+  m_EditorClassIdentifier: 
+  copName: Sonya blade
+  currentState: 0
+  currentrelations: 0
+  playerstartdialogue:
+  - 'I need to search the tent '
+  - There  cannot be any contraband
+  - its dangerous to have it in the camp.
+  playeroptiondialogue:
+  - I found no confiscated items
+  playeroptiondialogue2:
+  - I found one confiscated item
+  playeroptiondialogue3:
+  - I found two confiscated items

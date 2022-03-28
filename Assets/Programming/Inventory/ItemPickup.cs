@@ -6,6 +6,7 @@ public class ItemPickup : MonoBehaviour
 { 
     private Inventory inventory;
     public int itemId;
+   
     // Start is called before the first frame update
     void Start()
     {

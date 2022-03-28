@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
     public List<Item> inventoryitems = new List<Item>();
     public ItemDatabase itemdatabase;
     public DisplayInventory displayinventory;
+    public int confiscatednumber;
 
 
     private void Start()
@@ -16,6 +17,7 @@ public class Inventory : MonoBehaviour
     }
     public void GiveItem(int id)
     {
+        confiscatednumber++;
         Item items = itemdatabase.FindItem(id);
         inventoryitems.Add(items);
         displayinventory.AddItemSlot(items);
@@ -42,6 +44,7 @@ public class Inventory : MonoBehaviour
         {
            
             inventoryitems.Remove(item);
+            confiscatednumber--;
             displayinventory.RemoveItemSlot(item);
             Debug.Log("item removed:" + item.itemName);
         }

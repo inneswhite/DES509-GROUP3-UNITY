@@ -12,8 +12,10 @@ public class NPC : ScriptableObject
     public string[] npcdialogue;
 
     [TextArea(3, 15)]
-    public string[] thanksdialogue;
+    public string[] questdialogue;
 
     public string[] NPCDialogue => npcdialogue;
+
+    public string[] questDialogue => questdialogue;
  
 }
