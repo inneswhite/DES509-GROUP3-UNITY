@@ -3423,6 +3423,7 @@ GameObject:
   - component: {fileID: 8302184849352337477}
   - component: {fileID: 4844288518579153503}
   - component: {fileID: 966217785}
+  - component: {fileID: 966217786}
   m_Layer: 0
   m_Name: Player-Cop
   m_TagString: Player
@@ -3491,13 +3492,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1
+  m_Radius: 0.15
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.55, z: 0.03}
 --- !u!114 &4844288518579153503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3510,12 +3511,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c109294dc42cadd4b8a97be0a212d802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playercop: {fileID: 11400000, guid: 5afba8783aa2bec419e7ecc1597030cd, type: 2}
   moveSpeed: 4
   isMove: 0
   finished_Movement: 0
   thiscam: {fileID: 0}
-  isOpen: 0
-  groundpointer: {fileID: 0}
+  groundpointer: {fileID: 8436647824578465934, guid: 5b17593ef9a47df4faa6e854652ad910, type: 3}
 --- !u!114 &966217785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3532,6 +3533,22 @@ MonoBehaviour:
   idlePlaybackSpeed: 1
   walkPlaybackSpeed: 1
   jogPlaybackSpeed: 0.3
+--- !u!114 &966217786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6139989164869991250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bcd29841df549f4e8d2026191b704d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventoryitems: []
+  itemdatabase: {fileID: 0}
+  displayinventory: {fileID: 0}
+  confiscatednumber: 0
 --- !u!1 &6164043714308705815
 GameObject:
   m_ObjectHideFlags: 0
