@@ -43,9 +43,12 @@ Shader "Custom/CellShading"
 
     float posterize(float In, float steps)
     {
-        float nonLinearIn = pow(In, 1 / _DarkValuePriority);
-        float stepped = floor(nonLinearIn / (1/steps)) * (1/steps);
-        return clamp(stepped, _MinimumBrightness, 1);
+        //float nonLinearIn = pow(In, 1.0 / _DarkValuePriority + 0.01);
+        //float nonLinearIn = ceil(In*10) / 10;
+        float nonLinearIn = ceil(In * steps) / steps;
+        //float stepped = floor(nonLinearIn / (1/steps)) * (1/steps);
+        return nonLinearIn;
+        //return clamp(stepped, _MinimumBrightness, 1);
     }
 
 
@@ -74,8 +77,6 @@ Shader "Custom/CellShading"
         
 
         float3 hsvColor = RgbToHsv(outColor);
-
-        hsvColor.g = clamp(hsvColor.g, _MinimumSaturation, 1);
 
 
         hsvColor.b = posterize((hsvColor.b), _Steps);
