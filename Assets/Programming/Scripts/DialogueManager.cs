@@ -197,12 +197,6 @@ public class DialogueManager : MonoBehaviour
     {  
             Talking();   
     }
-
-
-     void OnApplicationQuit()
-    {
-        cop.currentState = PlayerCop.playerState.idle;
-    }
 }
     
  

@@ -296,7 +296,7 @@ MonoBehaviour:
       enableBigTilePrepass: 0
       isFptlEnabled: 0
   clearColorMode: 1
-  backgroundColorHDR: {r: 0, g: 0, b: 0, a: 0}
+  backgroundColorHDR: {r: 1, g: 1, b: 1, a: 0}
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
@@ -565,6 +565,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1728773663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5834650735804807851, guid: f4165c45d198f0748b8ada4c665b8e21, type: 3}
+  m_PrefabInstance: {fileID: 5834650735728831939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5834650735728831939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -575,6 +580,10 @@ PrefabInstance:
     - target: {fileID: 5834650734802504468, guid: f4165c45d198f0748b8ada4c665b8e21, type: 3}
       propertyPath: m_Name
       value: UI (In-Game)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834650734802504468, guid: f4165c45d198f0748b8ada4c665b8e21, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5834650734802504472, guid: f4165c45d198f0748b8ada4c665b8e21, type: 3}
       propertyPath: m_Pivot.x
@@ -658,6 +667,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5834650734802504472, guid: f4165c45d198f0748b8ada4c665b8e21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834650734802504479, guid: f4165c45d198f0748b8ada4c665b8e21, type: 3}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 1728773663}
+    - target: {fileID: 5834650735804807851, guid: f4165c45d198f0748b8ada4c665b8e21, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -16,18 +16,7 @@ public class QuestLog : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    public void OpenAndCloseQuestLog()
-    {
-        isLogOpen = !isLogOpen;
-        if (isLogOpen)
-        {
-            this.gameObject.SetActive(true);
-        }
-        else
-        {
-            this.gameObject.SetActive(false);
-        }
-    }
+ 
 
 
     public bool GetTaskCompleted(int no)

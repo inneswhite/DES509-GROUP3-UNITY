@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
 
     RectTransform rectTransform;
 
+    public GameObject pausePanel;
+
     private void Awake()
     {
         SingletonCheck();
@@ -29,6 +31,7 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
+       
             if (hud.menuIsOpen())
             {
                 CloseHUDMenus();
@@ -51,6 +54,7 @@ public class UIManager : MonoBehaviour
     {
         if (!hud.menuIsOpen())
         {
+           
             pauseUIManager.Activate();
         }
     }

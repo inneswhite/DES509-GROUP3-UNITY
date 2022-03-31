@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 	private Vector3 targetposition = Vector3.zero;
 	private Vector3 player_Move = Vector3.zero;
 	private float playerPointDistance;
+	LayerMask layermask = 1 << 8;
 
 	private float gravity = 9.8f;
 	private float height;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
 	private GameObject mousepointholder;
 
 	private Inventory inventory;
+
 
 	
 
@@ -101,15 +103,15 @@ public class PlayerController : MonoBehaviour
 				RaycastHit hit;
 				Ray ray = thiscam.ScreenPointToRay(Input.mousePosition);		// mouse position after point click
 
-				if (Physics.Raycast(ray, out hit))
+				if (Physics.Raycast(ray, out hit,layermask))
 				{
-					if (hit.collider is MeshCollider)
+					if (hit.collider.CompareTag("Ground") || hit.collider.CompareTag("CameraTrigger"))
 					{					
 						playerPointDistance = Vector3.Distance(transform.position, hit.point);
 						if (playerPointDistance > 0f)
 						{
 							isMove = true;
-						//	Debug.Log(hit.point);
+							Debug.Log(hit.point);
 							targetposition = hit.point;
 						}
 					}
@@ -143,9 +145,9 @@ public class PlayerController : MonoBehaviour
 			{
 				RaycastHit mousehit;
 				Ray mouseray = thiscam.ScreenPointToRay(Input.mousePosition);
-				if (Physics.Raycast(mouseray, out mousehit))
+				if (Physics.Raycast(mouseray, out mousehit,layermask))
 				{
-					if (mousehit.collider is MeshCollider)
+					if (mousehit.collider.CompareTag("Ground") || mousehit.collider.CompareTag("CameraTrigger"))
 					{
 						Vector3 groundposition = mousehit.point;        // set groundpointer position to mouse click position
 						groundposition.y = 0.35f;
@@ -195,8 +197,13 @@ public class PlayerController : MonoBehaviour
 			{
 				thiscam = Maincam;
 			}
-		} 
+		}
+
+	void OnApplicationQuit()
+	{
+		playercop.currentState = PlayerCop.playerState.idle;
 	}
+}
 
 
 		

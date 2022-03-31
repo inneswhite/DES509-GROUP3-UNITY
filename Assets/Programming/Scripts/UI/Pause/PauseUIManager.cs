@@ -9,7 +9,8 @@ public class PauseUIManager : MonoBehaviour
     Vector2 activePos, inactivePos;
     UIManager uiManager;
 
-    bool pauseActive = false;
+    [SerializeField]
+    private bool pauseActive = false;
 
     private void Awake()
     {
@@ -27,12 +28,14 @@ public class PauseUIManager : MonoBehaviour
     }
     public void Activate()
     {
+        Time.timeScale = 0f;        //pause
         rectTransform.position = activePos;
         pauseActive = true;
     }
 
     public void Deactivate()
     {
+        Time.timeScale = 1f;       //resume
         rectTransform.position = inactivePos;
         pauseActive = false;
     }
