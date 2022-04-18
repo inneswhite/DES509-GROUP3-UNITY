@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
     public ItemDatabase itemdatabase;
     public DisplayInventory displayinventory;
     public int confiscatednumber;
+    public int inventoryid;
 
 
     private void Start()
@@ -17,11 +18,15 @@ public class Inventory : MonoBehaviour
     }
     public void GiveItem(int id)
     {
-        confiscatednumber++;
+        inventoryid = id;      
         Item items = itemdatabase.FindItem(id);
         inventoryitems.Add(items);
         displayinventory.AddItemSlot(items);
         Debug.Log("Added item:" + items.itemName);
+        if(id==0||id==1||id==2)
+        {
+            confiscatednumber++;
+        }
     }
 
     public void GiveItem(string itemname)
@@ -34,11 +39,14 @@ public class Inventory : MonoBehaviour
 
     public Item CheckItem(int id)
     {
+   
         return inventoryitems.Find(item => item.itemId == id);
+     
     }
 
     public void RemoveItem(int id)
     {
+
         Item item = CheckItem(id);     //check if item is in inventory
         if(item!=null)
         {
@@ -47,6 +55,10 @@ public class Inventory : MonoBehaviour
             confiscatednumber--;
             displayinventory.RemoveItemSlot(item);
             Debug.Log("item removed:" + item.itemName);
+        }
+        if(id==0||id==1||id==2)
+        {
+            confiscatednumber--;
         }
     }
 }

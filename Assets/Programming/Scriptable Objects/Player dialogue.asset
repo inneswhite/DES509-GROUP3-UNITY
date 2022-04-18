@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Player dialogue
   m_EditorClassIdentifier: 
   copName: Sonya blade
-  currentState: 0
-  currentrelations: 0
   playerstartdialogue:
   - 'I need to search the tent '
   - There  cannot be any contraband
@@ -25,3 +23,19 @@ MonoBehaviour:
   - I found one confiscated item
   playeroptiondialogue3:
   - I found two confiscated items
+  singleitemdialogue:
+  - Im sorry but this is not allowed and you know this.You should have enough supplies
+    only for yourself
+  singleitemdialogue2:
+  - Im sorry but this is not allowed.This could be a deadly weapon surely you can
+    understand?
+  bothitemsdialogue:
+  - Okay but this is your final warning i cant keep letting you away with this
+  bothitemsdialogue2:
+  - Okay listen I can allow you to keep the razor but im taking away the medicine
+  bothitemsdialogue3:
+  - Okay listen I can allow you to keep the medicine but im taking away the razor
+  bothitemsdialogue4:
+  - Im sorry but i am going to have to confiscate both of them
+  bothitemsdialogue5:
+  - You know the rules Afsoon i have to stick to the rules

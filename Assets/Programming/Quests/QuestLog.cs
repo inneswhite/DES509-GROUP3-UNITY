@@ -17,6 +17,19 @@ public class QuestLog : MonoBehaviour
     }
 
  
+    public void OpenAndCloseLog()
+    {
+        isLogOpen = !isLogOpen;
+
+        if(isLogOpen)
+        {
+            this.gameObject.SetActive(true);
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 
 
     public bool GetTaskCompleted(int no)
@@ -24,28 +37,8 @@ public class QuestLog : MonoBehaviour
         return quests[no].isComplete;
     }
 
-    public void Method()
-    {
-        if (quests[0].CurrentStatus == Quest.QuestType.Open)
-        {
-            quests[0].ItemsCollected();
-            if (quests[0].isReached())
-            {
-                quests[0].TaskCompleted();
-                Debug.Log("Task has been completed");
-            }
-        }
-    }
 
 
-
-    public void ItemsMisplaced(int no)
-    {
-        if (quests[no].CurrentStatus == Quest.QuestType.Open)
-        {
-            quests[no].ItemsDisposed();
-        }
-    }
 
 
 

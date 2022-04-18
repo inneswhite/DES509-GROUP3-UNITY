@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
 
 	private Inventory inventory;
 
+	[HideInInspector]
+	public bool istalking;
+
 
 	
 
@@ -55,12 +58,13 @@ public class PlayerController : MonoBehaviour
 
 	void Update()
 	{
-		CameraSwitch();
-		CalculateHeight();
-	    CheckIfFinishedMovement();
-		MakePointer();
-
-
+		if (!istalking)
+		{
+			CameraSwitch();
+			CalculateHeight();
+			CheckIfFinishedMovement();
+			MakePointer();
+		}
 	}
 	bool IsGrounded()
 	{
@@ -95,9 +99,7 @@ public class PlayerController : MonoBehaviour
 
 
 	void MoveThePlayer()
-	{
-		if(playercop.currentState==PlayerCop.playerState.idle)
-		{
+	{		
 			if (Input.GetMouseButtonDown(0))		
 			{
 				RaycastHit hit;
@@ -134,13 +136,10 @@ public class PlayerController : MonoBehaviour
 			{
 				player_Move.Set(0f, 0f, 0f);
 			}
-		}
-	}
+		}	
 
 	void MakePointer()
-	{
-		if (playercop.currentState == PlayerCop.playerState.idle)
-		{
+	{		
 			if (Input.GetMouseButtonUp(0))          // mouse click
 			{
 				RaycastHit mousehit;
@@ -166,7 +165,6 @@ public class PlayerController : MonoBehaviour
 				}
 			}
 		}
-	}
 
 
 	public void CameraSwitch()
@@ -198,11 +196,6 @@ public class PlayerController : MonoBehaviour
 				thiscam = Maincam;
 			}
 		}
-
-	void OnApplicationQuit()
-	{
-		playercop.currentState = PlayerCop.playerState.idle;
-	}
 }
 
 

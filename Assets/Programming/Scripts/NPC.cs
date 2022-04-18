@@ -14,8 +14,33 @@ public class NPC : ScriptableObject
     [TextArea(3, 15)]
     public string[] questdialogue;
 
+    [TextArea(3, 15)]
+    public string[] choicedialogue;
+
+    [TextArea(1, 15)]
+    public string[] finaldialogue;
+
+    [TextArea(1, 15)]
+    public string[] finaldialogue2;
+
+    [TextArea(1, 15)]
+    public string[] finaldialogue3;
+
+    [TextArea(1, 5)]
+    public string[] singleitemdialogue;
+
     public string[] NPCDialogue => npcdialogue;
 
     public string[] questDialogue => questdialogue;
- 
+
+    public string[] ChoiceDialogue => choicedialogue;
+
+    public string[] FinalDialogue => finaldialogue;
+
+    public string[] FinalDialogue2 => finaldialogue2;
+
+    public string[] FinalDialogue3 => finaldialogue3;
+
+    public string[] SingleItemDialogue => singleitemdialogue;
+
 }

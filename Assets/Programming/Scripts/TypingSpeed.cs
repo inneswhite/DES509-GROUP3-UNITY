@@ -7,7 +7,8 @@ public class TypingSpeed : MonoBehaviour
 {
     [SerializeField]
     private float speed;
-  public Coroutine Run(string dialoguetext,Text nametext)
+   
+    public Coroutine Run(string dialoguetext,Text nametext)
     {
        return  StartCoroutine(TypeText(dialoguetext,nametext));
     }

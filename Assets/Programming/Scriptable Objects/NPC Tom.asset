@@ -18,3 +18,14 @@ MonoBehaviour:
   - what brings you here to my area
   questdialogue:
   - Officer im sure you wont find anything here
+  choicedialogue:
+  - Sir Please i need these for other members of the camp
+  finaldialogue:
+  - Okay sir thanks for doing this
+  finaldialogue2:
+  - Okay I understand dont worry
+  finaldialogue3:
+  - This is unfair sir the supplies are not enough to help the sick and you know
+    it
+  singleitemdialogue:
+  - Yes but you know i am only using this to help treat wounds
