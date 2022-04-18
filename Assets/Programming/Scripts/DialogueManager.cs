@@ -43,8 +43,6 @@ public class DialogueManager : MonoBehaviour
     private GameObject choicePanel3;
 
 
-    private float delay = 0.1f;
-    public string endtext;
 
     private int Tracker;
     private int relationshipvalue;
@@ -62,6 +60,8 @@ public class DialogueManager : MonoBehaviour
         playercontroller = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         choicePanel.SetActive(false);
+        choicePanel2.SetActive(false);
+        choicePanel3.SetActive(false);
 
     }
 
@@ -321,6 +321,7 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopCopDialogue();
+            sequencenumber++;
         }
         if (relationshipvalue == -1)    //TAKE AWAY SYRINGE
         {
@@ -347,6 +348,7 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopCopDialogue();
+            sequencenumber++;
         }
     }
 
@@ -590,6 +592,7 @@ public class DialogueManager : MonoBehaviour
             yield return typingspeed.Run(dialogue, copdialoguetext);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
+        sequencenumber++;
         StopCopDialogue();
     }
 

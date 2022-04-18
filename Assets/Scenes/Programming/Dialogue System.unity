@@ -844,7 +844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &284662171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7032,7 +7032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2137422314
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7290,6 +7290,14 @@ PrefabInstance:
       propertyPath: currenttext
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 742093942278633558, guid: 0e755352363a2854b8c3a64b545fefff, type: 3}
+      propertyPath: choicePanel2
+      value: 
+      objectReference: {fileID: 2137422313}
+    - target: {fileID: 742093942278633558, guid: 0e755352363a2854b8c3a64b545fefff, type: 3}
+      propertyPath: choicePanel3
+      value: 
+      objectReference: {fileID: 284662170}
     - target: {fileID: 742093942278633558, guid: 0e755352363a2854b8c3a64b545fefff, type: 3}
       propertyPath: dialoguetext
       value: 
