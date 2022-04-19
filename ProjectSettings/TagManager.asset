@@ -12,6 +12,7 @@ TagManager:
   - CameraTrigger
   - Medicine
   - Syringe
+  - InspectManager
   layers:
   - Default
   - TransparentFX

@@ -83,8 +83,9 @@ public class DialogueManager : MonoBehaviour
                 }
                 else if (sequencenumber == 1)
                 {
-                    StartCoroutine(ReadingQuestDialogue(npc));      //quest dialogue
+                    StartCoroutine(ReadQuestDialogue(npc));      //quest dialogue
                     Debug.Log("I am the quest");
+  
                 }
                 else if (sequencenumber == 2)
                 {
@@ -107,41 +108,65 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ReadingDialogue(NPC npc)
     {
-        PlayNPCDialogue();        //set npc dialogue panel
-        yield return new WaitForSeconds(2f);
+        PlayCopDialogue();                              // COP START DIALOGUE
+        yield return new WaitForSeconds(1f);
+        foreach(string dialogue in cop.playerstartdialogue)     
+        {
+            yield return typingspeed.Run(dialogue, copdialoguetext);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        }
+        StopCopDialogue();
+        yield return new WaitForSeconds(1f);
+        PlayNPCDialogue();                              // PLAYER START NPC DIALOGUE
         foreach (string dialogue in npc.npcdialogue)
         {
             yield return typingspeed.Run(dialogue, dialoguetext);
-
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
         StopNPCDialogue();
-
-
-        yield return new WaitForSeconds(3f);  // start cop dialogue         
+        yield return new WaitForSeconds(1f);       
         PlayCopDialogue();
-        foreach (string dialogue in cop.playerstartdialogue)
+        foreach (string dialogue in cop.playerstartdialogue2)
         {
             yield return typingspeed.Run(dialogue, copdialoguetext);
-
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
+        StopCopDialogue();
+        yield return new WaitForSeconds(1f);
+        PlayNPCDialogue();
+        foreach(string dialogue in npc.npcdialogue2)
+        {
+            yield return typingspeed.Run(dialogue, dialoguetext);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        }
+        StopNPCDialogue();
+        yield return new WaitForSeconds(1f);
+        PlayCopDialogue();
+        foreach (string dialogue in cop.playerstartdialogue3)
+        {
+            yield return typingspeed.Run(dialogue, copdialoguetext);
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+        }
+        yield return new WaitForSeconds(1f);
         CloseCopDialogue();
     }
 
 
 
-    public void CloseCopDialogue()
+    public void CloseCopDialogue()          //AFTER FIRST INTERACTION
     {
         Copdialoguecanvas.SetActive(false);
         copdialoguetext.text = null;
-
         sequencenumber++;
         isActive = false;
-
         quests[0].ActivateQuest();      //Activate your first quest
     }
 
+
+    public void DuringSearch()
+    {
+                                               // Search Dialogue
+    }
 
 
 
@@ -150,32 +175,17 @@ public class DialogueManager : MonoBehaviour
 
 
 
-    private IEnumerator ReadingQuestDialogue(NPC npc)
+
+
+    private IEnumerator ReadQuestDialogue(NPC npc)
     {
-        PlayNPCDialogue();        //set npc dialogue after quest panel
-   
-
-        yield return new WaitForSeconds(2f);
-        foreach (string dialogue in npc.questdialogue)
-        {
-            yield return typingspeed.Run(dialogue, dialoguetext);
-
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-        }
-        StopNPCDialogue();
-        StartCoroutine(ReadPlayerQuestDialogue(cop));
-    }
-
-    private IEnumerator ReadPlayerQuestDialogue(PlayerCop cop)
-    {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         PlayCopDialogue();
         if (inventory.confiscatednumber == 0)
         {
             foreach (string dialogue in cop.playeroptiondialogue)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
-
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StartCoroutine(LastConversation());         //Have Final Conversation
@@ -185,21 +195,20 @@ public class DialogueManager : MonoBehaviour
             foreach (string dialogue in cop.playeroptiondialogue2)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
-
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
-            ConfiscateSingleItem();
+            ConfiscateSingleItem();         // If Player has single item 
         }
         else if (inventory.confiscatednumber == 2)
         {
-            foreach (string dialogue in cop.playeroptiondialogue3)
+            foreach (string dialogue in cop.playeroptiondialogue2)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
-
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
-            ConfiscateBothItems();
+            ConfiscateBothItems();          // If Player has two items
         }
+        StopCopDialogue();      // Cop stops talking
     }
 
     /*IF COP HAS SINGLE ITEM*/
@@ -212,24 +221,23 @@ public class DialogueManager : MonoBehaviour
     {
         isActive = true;
         yield return new WaitForSeconds(1f);
-        if (inventory.inventoryid == 0 && inventory.confiscatednumber == 1)
+        if (inventory.inventoryid == 0 && inventory.confiscatednumber == 1)         //ROBOT
         {
-            PlayNPCDialogue();
-            foreach (string dialogue in npc.choicedialogue)
+            foreach (string dialogue in npc.choicedialogue)     // DISPLAY ROBOT DIALOGUE
             {
-                yield return typingspeed.Run(dialogue, copdialoguetext);
+                yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopNPCDialogue();
             yield return new WaitForSeconds(1f);
             choicePanel2.SetActive(true);
         }
-        else if (inventory.inventoryid == 1 && inventory.confiscatednumber == 1)
+        else if (inventory.inventoryid == 1 && inventory.confiscatednumber == 1)     //SYRINGE
         {
             PlayNPCDialogue();
-            foreach (string dialogue in npc.choicedialogue)
+            foreach (string dialogue in npc.choicedialogue)         //DISPLAY SYRINGE DIALOGUE 
             {
-                yield return typingspeed.Run(dialogue, copdialoguetext);
+                yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopNPCDialogue();
@@ -238,7 +246,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void MedicineChoice()
+    public void RobotChoice()
     {
         relationshipvalue = -2;
         choicePanel2.SetActive(false);   
@@ -247,7 +255,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("chose first option");
     }
 
-    public void MedicineChoice2()
+    public void RobotChoice2()
     {
         relationshipvalue = 1;
         choicePanel2.SetActive(false);
@@ -277,7 +285,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator SingleDecision(NPC npc)
     {
         yield return new WaitForSeconds(2f);
-        if(relationshipvalue==1)
+        if(relationshipvalue==1)                    //GIVE AWAY SINGLE ITEM
         {
             PlayCopDialogue();
             foreach (string dialogue in cop.bothitemsdialogue)
@@ -288,7 +296,7 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue2)
+            foreach (string dialogue in npc.finaldialogue)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -296,7 +304,7 @@ public class DialogueManager : MonoBehaviour
             StopNPCDialogue();
             StartCoroutine(LastConversation());
         }
-        if (relationshipvalue == -2)    //TAKE AWAY MEDICINE
+        if (relationshipvalue == -2)    //TAKE AWAY ROBOT
         {
             PlayCopDialogue();
             foreach (string dialogue in cop.singleitemdialogue)
@@ -313,17 +321,9 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopNPCDialogue();
-            yield return new WaitForSeconds(1f);
-            PlayCopDialogue();
-            foreach(string dialogue in cop.bothitemsdialogue5)
-            {
-                yield return typingspeed.Run(dialogue, dialoguetext);
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-            }
-            StopCopDialogue();
             sequencenumber++;
         }
-        if (relationshipvalue == -1)    //TAKE AWAY SYRINGE
+        if (relationshipvalue == -1)    //TAKE AWAY SYRINGE     
         {
             PlayCopDialogue();
             foreach (string dialogue in cop.singleitemdialogue2)
@@ -334,20 +334,12 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.singleitemdialogue)
+            foreach (string dialogue in npc.finaldialogue2)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopNPCDialogue();
-            yield return new WaitForSeconds(1f);
-            PlayCopDialogue();
-            foreach (string dialogue in cop.bothitemsdialogue5)
-            {
-                yield return typingspeed.Run(dialogue, dialoguetext);
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-            }
-            StopCopDialogue();
             sequencenumber++;
         }
     }
@@ -359,13 +351,12 @@ public class DialogueManager : MonoBehaviour
     {
         Copdialoguecanvas.SetActive(false);
         copdialoguetext.text = null;
-        isActive = false;
         quests[0].TaskCompleted();
         StartCoroutine(MakeChoiceDialogue(npc));
     }
 
   
-
+    /* COP MAKES A CHOICE */
     private IEnumerator MakeChoiceDialogue(NPC npc)
     {
         yield return new WaitForSeconds(2f);
@@ -373,11 +364,9 @@ public class DialogueManager : MonoBehaviour
         foreach (string dialogue in npc.choicedialogue)
         {
             yield return typingspeed.Run(dialogue, dialoguetext);
-
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
         StopNPCDialogue();
-
         yield return new WaitForSeconds(2f);
         choicePanel.SetActive(true);            //Make a choice
     }
@@ -404,7 +393,7 @@ public class DialogueManager : MonoBehaviour
     }
     protected bool Choice()
     {
-
+        isActive = false;
         choicePanel.SetActive(false);
         relationshipvalue = 2;
         sequencenumber++;
@@ -415,6 +404,7 @@ public class DialogueManager : MonoBehaviour
 
     protected bool Choice2()
     {
+        isActive = false;
         choicePanel.SetActive(false);
         relationshipvalue = -2;
         sequencenumber++;
@@ -425,6 +415,7 @@ public class DialogueManager : MonoBehaviour
 
     protected bool Choice3()
     {
+        isActive = false;
         choicePanel.SetActive(false);
         relationshipvalue = -2;
         sequencenumber++;
@@ -435,6 +426,7 @@ public class DialogueManager : MonoBehaviour
 
     protected bool Choice4()
     {
+        isActive = false;
         choicePanel.SetActive(false);
         relationshipvalue = -5;
         sequencenumber++;
@@ -445,7 +437,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator FinalDecision(NPC npc)
     {
-        if (relationshipvalue == 2)
+        if (relationshipvalue == 2)         //RETURN BOTH THE ITEMS
         {
             PlayCopDialogue();
             foreach (string dialogue in cop.bothitemsdialogue)
@@ -465,7 +457,7 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(LastConversation());
         }
 
-        if (relationshipvalue == -2)                 //KEEP MEDICINE BUT TAKE AWAY RAZOR
+        if (relationshipvalue == -2)                 //KEEP TOY BUT TAKE AWAY SYRINGE
         {
             PlayCopDialogue();
             foreach (string dialogue in cop.bothitemsdialogue2)
@@ -485,30 +477,10 @@ public class DialogueManager : MonoBehaviour
             StopNPCDialogue();
             StartCoroutine(LastConversation());
         }
-        if (relationshipvalue == -3)                 //KEEP RAZOR BUT TAKE AWAY MEDICINE 
+        if (relationshipvalue == -3)                 //KEEP SYRINGE BUT TAKE AWAY ROBOT
         {
             PlayCopDialogue();
             foreach (string dialogue in cop.bothitemsdialogue3)
-            {
-                yield return typingspeed.Run(dialogue, copdialoguetext);
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-            }
-            StopCopDialogue();
-            yield return new WaitForSeconds(2f);
-            PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue2)
-            {
-                yield return typingspeed.Run(dialogue, dialoguetext);
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-
-            }
-            StopNPCDialogue();
-            StartCoroutine(LastConversation());
-        }
-        if (relationshipvalue == -5)                 //TAKE AWAY BOTH
-        {
-            PlayCopDialogue();
-            foreach (string dialogue in cop.bothitemsdialogue4)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -520,22 +492,36 @@ public class DialogueManager : MonoBehaviour
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
             }
             StopNPCDialogue();
-            yield return new WaitForSeconds(1f);
-            foreach(string dialogue in cop.bothitemsdialogue5)
+            StartCoroutine(LastConversation());
+        }
+        if (relationshipvalue == -5)                 //TAKE AWAY BOTH ITEMS
+        {
+            PlayCopDialogue();
+            foreach (string dialogue in cop.bothitemsdialogue4)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopCopDialogue();
+            yield return new WaitForSeconds(2f);
+            PlayNPCDialogue();
+            foreach (string dialogue in npc.finaldialogue4)
+            {
+                yield return typingspeed.Run(dialogue, dialoguetext);
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            }
+            StopNPCDialogue();
             StartCoroutine(LastConversation());
         }
     }
 
 
-    IEnumerator LastConversation()
+    IEnumerator LastConversation()      //HAVE LAST CONVERSATION
     {
+        //End
         yield return new WaitForSeconds(1f);
         PlayNPCDialogue();
         foreach(string dialogue in End.endnpcdialogue)
@@ -585,15 +571,15 @@ public class DialogueManager : MonoBehaviour
         }
         StopCopDialogue();
         yield return new WaitForSeconds(1f);
-        PlayCopDialogue();
-
-        foreach (string dialogue in End.endcopdialogue4)
+        PlayNPCDialogue();
+        foreach(string dialogue in End.endnpcdialogue4)
         {
-            yield return typingspeed.Run(dialogue, copdialoguetext);
+            yield return typingspeed.Run(dialogue, dialoguetext);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
+        StopNPCDialogue();
+        yield return new WaitForSeconds(1f);   
         sequencenumber++;
-        StopCopDialogue();
     }
 
 
@@ -630,7 +616,7 @@ public class DialogueManager : MonoBehaviour
 
 
 
-    void Update()
+    void Update()               
     {
         Talking();
         if (isActive)

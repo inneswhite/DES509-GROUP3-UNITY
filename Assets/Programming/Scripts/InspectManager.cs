@@ -57,6 +57,7 @@ public class InspectManager : MonoBehaviour
                     if (hit.collider.gameObject.tag == "Syringe")
                     {
                         ShowSyringe();
+                        
                     }
                 }
             }

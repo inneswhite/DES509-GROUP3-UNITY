@@ -52,7 +52,6 @@ public class Inventory : MonoBehaviour
         {
            
             inventoryitems.Remove(item);
-            confiscatednumber--;
             displayinventory.RemoveItemSlot(item);
             Debug.Log("item removed:" + item.itemName);
         }

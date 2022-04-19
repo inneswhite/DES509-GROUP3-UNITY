@@ -15,6 +15,11 @@ public class EndDialogue : ScriptableObject
     public string[] endnpcdialogue3;
 
     [TextArea(1, 5)]
+    public string[] endnpcdialogue4;
+
+
+
+    [TextArea(1, 5)]
     public string[] endcopdialogue;
 
     [TextArea(1, 5)]
@@ -23,8 +28,6 @@ public class EndDialogue : ScriptableObject
     [TextArea(1, 5)]
     public string[] endcopdialogue3;
 
-    [TextArea(1, 5)]
-    public string[] endcopdialogue4;
 
 
 
@@ -37,11 +40,12 @@ public class EndDialogue : ScriptableObject
 
     public string[] EndNPCDialogue3 => endnpcdialogue3;
 
+    public string[] EndNPCDialogue4 => endnpcdialogue4;
+
     public string[] EndCopDialogue => endcopdialogue;
 
     public string[] EndCopDialogue2 => endcopdialogue2;
 
     public string[] EndCopDialogue3 => endcopdialogue3;
 
-    public string[] EndCopDialogue4 => endcopdialogue4;
 }

@@ -9,17 +9,21 @@ public class PlayerCop:ScriptableObject
 
 
 
-    [TextArea(1, 5)]
+    [TextArea(1, 2)]
     public string[] playerstartdialogue;
 
-    [TextArea(1, 5)]
+    [TextArea(1, 2)]
+    public string[] playerstartdialogue2;
+
+    [TextArea(1, 2)]
+    public string[] playerstartdialogue3;
+
+    [TextArea(1, 2)]
     public string[] playeroptiondialogue;
 
-    [TextArea(1, 5)]
+    [TextArea(1, 2)]
     public string[] playeroptiondialogue2;
 
-    [TextArea(1, 5)]
-    public string[] playeroptiondialogue3;
 
     [TextArea(1, 5)]
     public string[] singleitemdialogue;         //CONFISCATE SINGLE ITEM
@@ -40,24 +44,25 @@ public class PlayerCop:ScriptableObject
     [TextArea(1, 5)]
     public string[] bothitemsdialogue4;
 
-    [TextArea(1, 5)]
-    public string[] bothitemsdialogue5;
 
 
 
 
-    public string[] PlayerDialogue=>playerstartdialogue;        //start
+    public string[] PlayerStartDialogue=>playerstartdialogue;        //start
+
+    public string[] PlayerStartDialogue2 => playerstartdialogue2;
+
+    public string[] PlayerStartDialogue3 => playerstartdialogue3;
 
 
-                                                                 //After quest dialogue
+                                                                 //After quest dialogue that is displayed
     public string[] PlayerOptionDialogue => playeroptiondialogue;
 
     public string[] PlayerOptionDialogue2 => playeroptiondialogue2;
 
-    public string[] PlayerOptionDialogue3 => playeroptiondialogue3;
 
 
-    public string[] BothItemsDialogue => bothitemsdialogue;     //final outcome
+    public string[] BothItemsDialogue => bothitemsdialogue;     //final outcome that is displayed 
 
     public string[] BothItemsDialogue2 => bothitemsdialogue2;
 
@@ -65,7 +70,6 @@ public class PlayerCop:ScriptableObject
 
     public string[] BothItemsDialogue4 => bothitemsdialogue4;
 
-    public string[] BothItemsDialogue5 => bothitemsdialogue5;
 
     public string[] SingleItemDialogue => singleitemdialogue;
 

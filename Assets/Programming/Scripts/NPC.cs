@@ -8,11 +8,14 @@ public class NPC : ScriptableObject
 {
     public string NPCName;
 
-    [TextArea(3, 15)]
+    [TextArea(1, 2)]
     public string[] npcdialogue;
 
-    [TextArea(3, 15)]
-    public string[] questdialogue;
+    [TextArea(1, 2)]
+    public string[] npcdialogue2;
+
+
+
 
     [TextArea(3, 15)]
     public string[] choicedialogue;
@@ -27,11 +30,13 @@ public class NPC : ScriptableObject
     public string[] finaldialogue3;
 
     [TextArea(1, 5)]
-    public string[] singleitemdialogue;
+    public string[] finaldialogue4;
 
-    public string[] NPCDialogue => npcdialogue;
 
-    public string[] questDialogue => questdialogue;
+    public string[] NPCDialogue => npcdialogue;             //start 
+
+    public string[] NPCDialogue2 => npcdialogue2;
+
 
     public string[] ChoiceDialogue => choicedialogue;
 
@@ -41,6 +46,7 @@ public class NPC : ScriptableObject
 
     public string[] FinalDialogue3 => finaldialogue3;
 
-    public string[] SingleItemDialogue => singleitemdialogue;
+    public string[] FinalDialogue4 => finaldialogue4;
+
 
 }
