@@ -26,23 +26,23 @@ public class PlayerCop:ScriptableObject
 
 
     [TextArea(1, 5)]
-    public string[] singleitemdialogue;         //CONFISCATE SINGLE ITEM
+    public string[] takesyringedialogue;         //CONFISCATE SINGLE ITEM
 
     [TextArea(1, 5)]
-    public string[] singleitemdialogue2;
+    public string[] takerobotdialogue;
 
 
     [TextArea(1, 5)]                              
     public string[] bothitemsdialogue;                       //CONFISCATE TWO ITEMS
 
     [TextArea(1, 5)]
-    public string[] bothitemsdialogue2;
+    public string[] giverobotdialogue;
 
     [TextArea(1, 5)]
-    public string[] bothitemsdialogue3;
+    public string[] givesyringedialogue;
 
     [TextArea(1, 5)]
-    public string[] bothitemsdialogue4;
+    public string[] takebothdialogue;
 
 
 
@@ -64,16 +64,16 @@ public class PlayerCop:ScriptableObject
 
     public string[] BothItemsDialogue => bothitemsdialogue;     //final outcome that is displayed 
 
-    public string[] BothItemsDialogue2 => bothitemsdialogue2;
+    public string[] GiveRobotDialogue => giverobotdialogue;
 
-    public string[] BothItemsDialogue3 => bothitemsdialogue3;
+    public string[] GiveSyringeDialogue => givesyringedialogue;
 
-    public string[] BothItemsDialogue4 => bothitemsdialogue4;
+    public string[] TakeBothDialogue => takebothdialogue;
 
 
-    public string[] SingleItemDialogue => singleitemdialogue;
+    public string[] TakeSyringeDialogue => takesyringedialogue;
 
-    public string[] SingleItemDialogue2 => singleitemdialogue2;
+    public string[] TakeRobotDialogue => takerobotdialogue;
 
 
 

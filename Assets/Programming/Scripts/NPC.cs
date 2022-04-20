@@ -17,20 +17,20 @@ public class NPC : ScriptableObject
 
 
 
-    [TextArea(3, 15)]
+    [TextArea(1, 5)]
     public string[] choicedialogue;
 
-    [TextArea(1, 15)]
-    public string[] finaldialogue;
-
-    [TextArea(1, 15)]
-    public string[] finaldialogue2;
-
-    [TextArea(1, 15)]
-    public string[] finaldialogue3;
+    [TextArea(1, 5)]
+    public string[] takesyringedialogue;
 
     [TextArea(1, 5)]
-    public string[] finaldialogue4;
+    public string[] takerobotdialogue;
+
+    [TextArea(1, 5)]
+    public string[] takebothdialogue;
+
+    [TextArea(1, 5)]
+    public string[] thanksdialogue;
 
 
     public string[] NPCDialogue => npcdialogue;             //start 
@@ -40,13 +40,13 @@ public class NPC : ScriptableObject
 
     public string[] ChoiceDialogue => choicedialogue;
 
-    public string[] FinalDialogue => finaldialogue;
+    public string[] TakeSyringeDialogue => takesyringedialogue;
 
-    public string[] FinalDialogue2 => finaldialogue2;
+    public string[] TakeRobotDialogue => takerobotdialogue;
 
-    public string[] FinalDialogue3 => finaldialogue3;
+    public string[] TakeBothDialogue => takebothdialogue;
 
-    public string[] FinalDialogue4 => finaldialogue4;
+    public string[] ThanksDialogue => thanksdialogue;
 
 
 }

@@ -14,18 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NPCName: Tom
   npcdialogue:
-  - 'Hi Officer '
-  - what brings you here to my area
-  questdialogue:
-  - Officer im sure you wont find anything here
+  - No Sir, everything have been removed according to rule book
+  npcdialogue2:
+  - I'm sorry! I had to help some sick people and I ran out of time
   choicedialogue:
-  - Sir Please i need these for other members of the camp
-  finaldialogue:
-  - Okay sir thanks for doing this
-  finaldialogue2:
-  - Okay I understand dont worry
-  finaldialogue3:
-  - This is unfair sir the supplies are not enough to help the sick and you know
-    it
-  singleitemdialogue:
-  - Yes but you know i am only using this to help treat wounds
+  - Oh okay, of course
+  takesyringedialogue:
+  - But sir I nee- I need that syringe for treating the sick and wounded
+  takerobotdialogue:
+  - "Sir no please! Tafari worked hard for that and you know I won\u2019t harm anyone.
+    The syringe is for helping others get better. The supplies you give are not enough
+    for all of the sick to get better, please see your heart to let me keep these
+    things"
+  takebothdialogue:
+  - Sir you cannot take those, they are personal belongings
+  thanksdialogue:
+  - Oh sir thank you thank you. You are a good man!

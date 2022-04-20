@@ -87,19 +87,6 @@ public class DialogueManager : MonoBehaviour
                     Debug.Log("I am the quest");
   
                 }
-                else if (sequencenumber == 2)
-                {
-                    if (inventory.confiscatednumber == 2)
-                        {
-                        StartCoroutine(FinalDecision(npc));
-                        Debug.Log("i have decided");
-                        }
-                    else if(inventory.confiscatednumber==1)
-                    {
-                        StartCoroutine(SingleDecision(npc));
-                        Debug.Log("i have decided about single item");
-                    }
-                }
             }
         }
     }
@@ -155,6 +142,7 @@ public class DialogueManager : MonoBehaviour
 
     public void CloseCopDialogue()          //AFTER FIRST INTERACTION
     {
+        isActive = false;
         Copdialoguecanvas.SetActive(false);
         copdialoguetext.text = null;
         sequencenumber++;
@@ -249,8 +237,8 @@ public class DialogueManager : MonoBehaviour
     public void RobotChoice()
     {
         relationshipvalue = -2;
-        choicePanel2.SetActive(false);   
-        sequencenumber++;
+        choicePanel2.SetActive(false);
+        StartCoroutine(SingleDecision(npc));
         isActive = false;
         Debug.Log("chose first option");
     }
@@ -259,7 +247,7 @@ public class DialogueManager : MonoBehaviour
     {
         relationshipvalue = 1;
         choicePanel2.SetActive(false);
-        sequencenumber++;
+        StartCoroutine(SingleDecision(npc));
         isActive = false;
         Debug.Log("chose second option");
     }
@@ -268,7 +256,7 @@ public class DialogueManager : MonoBehaviour
     {
         relationshipvalue = 1;
         choicePanel3.SetActive(false);
-        sequencenumber++;
+        StartCoroutine(SingleDecision(npc));
         isActive = false;
         Debug.Log("chose first option");
     }
@@ -277,7 +265,7 @@ public class DialogueManager : MonoBehaviour
     {
         relationshipvalue = -1;
         choicePanel3.SetActive(false);
-        sequencenumber++;
+        StartCoroutine(SingleDecision(npc));
         isActive = false;
         Debug.Log("chose second option");
     }
@@ -296,7 +284,7 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue)
+            foreach (string dialogue in npc.thanksdialogue)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -307,7 +295,7 @@ public class DialogueManager : MonoBehaviour
         if (relationshipvalue == -2)    //TAKE AWAY ROBOT
         {
             PlayCopDialogue();
-            foreach (string dialogue in cop.singleitemdialogue)
+            foreach (string dialogue in cop.takerobotdialogue)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -315,7 +303,7 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue3)
+            foreach (string dialogue in npc.takerobotdialogue)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -326,7 +314,7 @@ public class DialogueManager : MonoBehaviour
         if (relationshipvalue == -1)    //TAKE AWAY SYRINGE     
         {
             PlayCopDialogue();
-            foreach (string dialogue in cop.singleitemdialogue2)
+            foreach (string dialogue in cop.takesyringedialogue)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -334,7 +322,7 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue2)
+            foreach (string dialogue in npc.takesyringedialogue)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -396,7 +384,7 @@ public class DialogueManager : MonoBehaviour
         isActive = false;
         choicePanel.SetActive(false);
         relationshipvalue = 2;
-        sequencenumber++;
+        StartCoroutine(FinalDecision(npc));
         isActive = false;
         Debug.Log("chose 1");
         return true;
@@ -407,7 +395,7 @@ public class DialogueManager : MonoBehaviour
         isActive = false;
         choicePanel.SetActive(false);
         relationshipvalue = -2;
-        sequencenumber++;
+        StartCoroutine(FinalDecision(npc));
         isActive = false;
         Debug.Log("chose 2");
         return true;
@@ -417,8 +405,8 @@ public class DialogueManager : MonoBehaviour
     {
         isActive = false;
         choicePanel.SetActive(false);
-        relationshipvalue = -2;
-        sequencenumber++;
+        relationshipvalue = -3;
+        StartCoroutine(FinalDecision(npc));
         isActive = false;
         Debug.Log("chose 3");
         return true;
@@ -429,7 +417,7 @@ public class DialogueManager : MonoBehaviour
         isActive = false;
         choicePanel.SetActive(false);
         relationshipvalue = -5;
-        sequencenumber++;
+        StartCoroutine(FinalDecision(npc));
         isActive = false;
         Debug.Log("chose 4");
         return true;
@@ -437,6 +425,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator FinalDecision(NPC npc)
     {
+        yield return new WaitForSeconds(1f);
         if (relationshipvalue == 2)         //RETURN BOTH THE ITEMS
         {
             PlayCopDialogue();
@@ -448,7 +437,7 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue)
+            foreach (string dialogue in npc.thanksdialogue)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -457,10 +446,10 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(LastConversation());
         }
 
-        if (relationshipvalue == -2)                 //KEEP TOY BUT TAKE AWAY SYRINGE
+        if (relationshipvalue == -2)                 //GIVE TOY BUT TAKE AWAY SYRINGE
         {
             PlayCopDialogue();
-            foreach (string dialogue in cop.bothitemsdialogue2)
+            foreach (string dialogue in cop.giverobotdialogue)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -468,7 +457,7 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue2)
+            foreach (string dialogue in npc.thanksdialogue)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -480,7 +469,7 @@ public class DialogueManager : MonoBehaviour
         if (relationshipvalue == -3)                 //KEEP SYRINGE BUT TAKE AWAY ROBOT
         {
             PlayCopDialogue();
-            foreach (string dialogue in cop.bothitemsdialogue3)
+            foreach (string dialogue in cop.givesyringedialogue)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -488,7 +477,7 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue3)
+            foreach (string dialogue in npc.thanksdialogue)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -500,7 +489,7 @@ public class DialogueManager : MonoBehaviour
         if (relationshipvalue == -5)                 //TAKE AWAY BOTH ITEMS
         {
             PlayCopDialogue();
-            foreach (string dialogue in cop.bothitemsdialogue4)
+            foreach (string dialogue in cop.takebothdialogue)
             {
                 yield return typingspeed.Run(dialogue, copdialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -508,7 +497,7 @@ public class DialogueManager : MonoBehaviour
             StopCopDialogue();
             yield return new WaitForSeconds(2f);
             PlayNPCDialogue();
-            foreach (string dialogue in npc.finaldialogue4)
+            foreach (string dialogue in npc.takebothdialogue)
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
@@ -522,7 +511,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator LastConversation()      //HAVE LAST CONVERSATION
     {
         //End
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         PlayNPCDialogue();
         foreach(string dialogue in End.endnpcdialogue)
         {
@@ -578,7 +567,8 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
         StopNPCDialogue();
-        yield return new WaitForSeconds(1f);   
+        yield return new WaitForSeconds(1f);
+        isActive = false;
         sequencenumber++;
     }
 
@@ -593,7 +583,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StopNPCDialogue()
     {
-        isActive = false;
         Dialoguecanvas.SetActive(false);
         npcName.text = npc.NPCName;
         dialoguetext.text = null;
@@ -608,7 +597,6 @@ public class DialogueManager : MonoBehaviour
 
     public void StopCopDialogue()
     {
-        isActive = false;
         Copdialoguecanvas.SetActive(false);
         copName.text = cop.copName;
         copdialoguetext.text = null;

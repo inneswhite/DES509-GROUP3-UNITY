@@ -14,28 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   copName: Sonya blade
   playerstartdialogue:
-  - 'I need to search the tent '
-  - There  cannot be any contraband
-  - its dangerous to have it in the camp.
+  - Hello Afsoon, do you have anything to declare?
+  playerstartdialogue2:
+  - This rule book has yesterday's date on it. You know you need to have the most
+    up to date version Afsoon.
+  playerstartdialogue3:
+  - Afsoon *Sigh* The rules are constantly changing. Let me have a look around.
   playeroptiondialogue:
-  - I found no confiscated items
+  - I could not find anything to confiscate.Make sure you have nothing dangerous
+    in here Afsoon.
   playeroptiondialogue2:
-  - I found one confiscated item
-  playeroptiondialogue3:
-  - I found two confiscated items
-  singleitemdialogue:
-  - Im sorry but this is not allowed and you know this.You should have enough supplies
-    only for yourself
-  singleitemdialogue2:
-  - Im sorry but this is not allowed.This could be a deadly weapon surely you can
-    understand?
+  - "Afsoon I have found A few things that I\u2019d like to discuss with you"
+  takesyringedialogue:
+  - "You have here a syringe, as stated in section 1 of your camp rule book personal
+    medical equipment is not allowed, I\u2019m going to have to take this away from
+    you"
+  takerobotdialogue:
+  - There is also this toy Robot. The edges are rough and could easily be used as
+    a weapon and therefore is classed as a sharp object. I'm also gonna have to take
+    this away
   bothitemsdialogue:
-  - Okay but this is your final warning i cant keep letting you away with this
-  bothitemsdialogue2:
-  - Okay listen I can allow you to keep the razor but im taking away the medicine
-  bothitemsdialogue3:
-  - Okay listen I can allow you to keep the medicine but im taking away the razor
-  bothitemsdialogue4:
-  - Im sorry but i am going to have to confiscate both of them
-  bothitemsdialogue5:
-  - You know the rules Afsoon i have to stick to the rules
+  - '*sigh* Afsoon, this is the last time I can turn a blind eye to this. My job
+    is on the line, can you please just be more careful. Make sure you have an up
+    to date rule book by tomorrow'
+  giverobotdialogue:
+  - You need to dull the sides of this toy robot by tomorrow as well. Take it to
+    Tafari and ask him to make sure there are no sharp edges okay?
+  givesyringedialogue:
+  - I can let you keep this syringe for treating the sick and wounded
+  takebothdialogue:
+  - I am taking these items away.They could be dangerous.Im sorry Afsoon
