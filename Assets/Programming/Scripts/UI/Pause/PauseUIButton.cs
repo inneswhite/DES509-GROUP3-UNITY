@@ -13,12 +13,10 @@ public class PauseUIButton : MonoBehaviour
     [SerializeField]
     Color pressedColor = Color.white;
 
-    Button button;
     TMPro.TextMeshProUGUI text;
 
     private void Awake()
     {
-        button = gameObject.GetComponent<Button>();
         text = gameObject.transform.GetChild(0).gameObject.GetComponent<TMPro.TextMeshProUGUI>();
     }
 
@@ -27,13 +25,11 @@ public class PauseUIButton : MonoBehaviour
     public void PointerEnter()
     {
         text.color = hoverColor;
-        Debug.Log("pointer enter");
     }
 
     public void PointerExit()
     {
         text.color = defaultColor;
-        Debug.Log("pointer exit");
     }
 
     public void PointerDown()

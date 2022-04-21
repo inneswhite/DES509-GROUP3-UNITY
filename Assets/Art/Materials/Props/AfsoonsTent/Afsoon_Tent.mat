@@ -22,24 +22,24 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Afsoon_Tent
   m_Shader: {fileID: -6465566751694194690, guid: d435d4bffc5b6f543842c46550e5b2f7, type: 3}
-  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE
+  m_ShaderKeywords: _DISABLE_SSR_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2225
+  stringTagMap:
+    MotionVector: User
   disabledShaderPasses:
-  - DistortionVectors
+  - RayTracingPrepass
   - MOTIONVECTORS
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
-  - RayTracingPrepass
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_b7b1a64d8b4b404bb9191f91241411e4:
-        m_Texture: {fileID: 2800000, guid: e77f3ce16997ce345ab04e874e75371c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 93d4752a461011d4db4f99788adf331f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -51,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: cebf7c40e8031a3449711085d17a5c66, type: 3}
+        m_Texture: {fileID: 2800000, guid: 92ca61808f098d643bbab07a3e2e3953, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -95,7 +95,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: eafb62c5edcd0eb408168f275891f00a, type: 3}
+        m_Texture: {fileID: 2800000, guid: d24fa5b5c9b80d844b61ebfa9455b754, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -232,7 +232,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Saturation: 0
+    - _Saturation: -0.51
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
