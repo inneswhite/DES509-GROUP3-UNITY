@@ -9,7 +9,8 @@ public class ItemPickup : MonoBehaviour
     private PlayerController player;
     private float distance;
     private InspectManager inspectmanager;
-   
+    public AK.Wwise.Event Sound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,8 @@ public class ItemPickup : MonoBehaviour
         {
             if (inspectmanager.isInspect == false)
             {
+
+                Sound.Post(gameObject);
                 if (itemId == 0)
                 {
                     inventory.GiveItem(0);

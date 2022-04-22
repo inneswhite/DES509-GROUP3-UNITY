@@ -345,8 +345,22 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 4861802c2ddba145a63025fac4669776
     GuidInternal: 
-    m_lastTime: -8585558048765985501
-    List: []
+    m_lastTime: -8585509666868514865
+    List:
+    - name: Main
+      guid: cf0e2c26e9073343a0de2f20ecbc0e9a
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 4861802c2ddba145a63025fac4669776
+      - ElementName: Main
+        ObjectType: 7
+        guid: cf0e2c26e9073343a0de2f20ecbc0e9a
+      Path: SoundBanks\Default Work Unit\Main
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -359,8 +373,93 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7721433ab38bed44a81b8a5149666270
     GuidInternal: 
-    m_lastTime: -8585558048766585697
-    List: []
+    m_lastTime: -8585509666868574881
+    List:
+    - name: Dialogue
+      guid: f4043964df919343966f9f9c49f54ecd
+      id: 3930136735
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7721433ab38bed44a81b8a5149666270
+      - ElementName: Dialogue
+        ObjectType: 3
+        guid: f4043964df919343966f9f9c49f54ecd
+      Path: Events\Default Work Unit\Dialogue
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Footstep_Platform
+      guid: ff8f2183078f954793d3cfea0fae5e37
+      id: 1062709567
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7721433ab38bed44a81b8a5149666270
+      - ElementName: Footstep_Platform
+        ObjectType: 3
+        guid: ff8f2183078f954793d3cfea0fae5e37
+      Path: Events\Default Work Unit\Footstep_Platform
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Interact
+      guid: 2482c3e6e9ab3d4f8c1aa640c8f4c891
+      id: 1466384055
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7721433ab38bed44a81b8a5149666270
+      - ElementName: Interact
+        ObjectType: 3
+        guid: 2482c3e6e9ab3d4f8c1aa640c8f4c891
+      Path: Events\Default Work Unit\Interact
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Investigate
+      guid: 48cf6596d162814ab70611d827fa6fe1
+      id: 2041902182
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7721433ab38bed44a81b8a5149666270
+      - ElementName: Investigate
+        ObjectType: 3
+        guid: 48cf6596d162814ab70611d827fa6fe1
+      Path: Events\Default Work Unit\Investigate
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Pickup
+      guid: 2b6d29d02c62324b9d44f64134e280d1
+      id: 3978245845
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7721433ab38bed44a81b8a5149666270
+      - ElementName: Pickup
+        ObjectType: 3
+        guid: 2b6d29d02c62324b9d44f64134e280d1
+      Path: Events\Default Work Unit\Pickup
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -612,7 +711,7 @@ MonoBehaviour:
     m_lastTime: -8585558048765895512
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 06000000070000000f00000010000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
