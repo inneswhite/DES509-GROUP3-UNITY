@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Quest : MonoBehaviour
 {
     [SerializeField]
     private string description;
 
-    public Text descriptionText;
-    public Text currentamountText;
+    public TextMeshProUGUI descriptionText;
 
-    public Text requiredamountText;
     public bool isComplete;
 
     public bool AssignedQuest { get; set; }
@@ -24,7 +23,7 @@ public class Quest : MonoBehaviour
     }
     void Start()
     {
-
+        //descriptionText = GetComponent<TextMeshProUGUI>();
         //CurrentStatus = QuestType.Closed;
 
     }
@@ -35,13 +34,9 @@ public class Quest : MonoBehaviour
     }
     public QuestType CurrentStatus;
 
-    public int currentAmount;
-    public int requiredAmount;
 
-    public bool isReached()
-    {
-        return (currentAmount >= requiredAmount);
-    }
+
+
 
 
     public void ActivateQuest()
@@ -50,29 +45,14 @@ public class Quest : MonoBehaviour
         AssignedQuest = true;
         if (CurrentStatus == QuestType.Open)
         {
-            descriptionText.GetComponent<Text>().text = description;
-            currentamountText.GetComponent<Text>().text = currentAmount.ToString();
-            requiredamountText.GetComponent<Text>().text = requiredAmount.ToString();
-        }
-    }
-    public void ItemsCollected()
-    {
-        if (CurrentStatus == QuestType.Open)
-        {
-            currentAmount += 1;
-            currentamountText.GetComponent<Text>().text = currentAmount.ToString();
+            descriptionText.GetComponent<TextMeshProUGUI>().text = description;
+
         }
     }
 
 
-    public void ItemsDisposed()
-    {
-        if (CurrentStatus == QuestType.Open)
-        {
-            currentAmount -= 1;
-            currentamountText.GetComponent<Text>().text = currentAmount.ToString();
-        }
-    }
+
+  
     public void TaskCompleted()
     {
         CurrentStatus = QuestType.Closed;

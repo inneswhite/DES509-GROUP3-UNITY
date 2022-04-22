@@ -40,17 +40,17 @@ public class ItemDatabase : MonoBehaviour
     }
     void Build()
     {
-        items = new List<Item>{ new Item(0, "Diamond Ore", "this is a diamond", new Dictionary<string, int>
+        items = new List<Item>{ new Item(0, "Robot", "this is a Robot", new Dictionary<string, int>
         {
             { "Cost", 35 },
             { "Sell", 20 }
         }),
-        new Item(1,"Gold Ore","this is a gold ore",new Dictionary<string, int>
+        new Item(1,"Syringe","this is a syringe",new Dictionary<string, int>
         {
             {"Cost",50 },
             {"Durability",90 }
         }),
-        new Item(2,"Axe","Dual wielding Axe",new Dictionary<string, int>
+        new Item(2,"Medicine","Medicine used for treatment",new Dictionary<string, int>
         {
             {"Power",100 }
         })

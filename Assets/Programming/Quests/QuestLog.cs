@@ -5,7 +5,6 @@ using UnityEngine;
 public class QuestLog : MonoBehaviour
 {
     private bool isLogOpen;
-    public List<Quest> quests = new List<Quest>();
 
 
 
@@ -16,12 +15,12 @@ public class QuestLog : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
- 
+
     public void OpenAndCloseLog()
     {
         isLogOpen = !isLogOpen;
 
-        if(isLogOpen)
+        if (isLogOpen)
         {
             this.gameObject.SetActive(true);
         }
@@ -30,32 +29,13 @@ public class QuestLog : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
-
-
-    public bool GetTaskCompleted(int no)
-    {
-        return quests[no].isComplete;
-    }
-
-
-
-
-
-
-
-    public void Complete(int no)
-    {
-        if (quests[no].CurrentStatus == Quest.QuestType.Open)
-        {
-            quests[no].ItemsCollected();
-            if (quests[no].isReached())
-            {
-                quests[no].TaskCompleted();
-                quests[no].isComplete = true;
-            }
-        }
-    }
 }
+
+
+
+
+
+
 
 
    

@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
     public NPC npc;
-    public Text npcName;
-    public Text dialoguetext;
+    public TextMeshProUGUI npcName;
+    public TextMeshProUGUI dialoguetext;
     [SerializeField]
     private bool isActive;
 
     public PlayerCop cop;
-    public Text copName;
-    public Text copdialoguetext;
+    public TextMeshProUGUI copName;
+    public TextMeshProUGUI copdialoguetext;
 
     public EndDialogue End;
 
@@ -62,6 +63,7 @@ public class DialogueManager : MonoBehaviour
         choicePanel.SetActive(false);
         choicePanel2.SetActive(false);
         choicePanel3.SetActive(false);
+        quests[0].ActivateQuest();          // Activate your quest
 
     }
 
@@ -147,7 +149,6 @@ public class DialogueManager : MonoBehaviour
         copdialoguetext.text = null;
         sequencenumber++;
         isActive = false;
-        quests[0].ActivateQuest();      //Activate your first quest
     }
 
 

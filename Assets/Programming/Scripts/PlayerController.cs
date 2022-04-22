@@ -127,7 +127,7 @@ public class PlayerController : MonoBehaviour
 				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetTemp - transform.position), 15.0f * Time.deltaTime);
 				player_Move = transform.forward * moveSpeed * Time.deltaTime;
 
-				if (dist < 0.1f)
+				if (dist < 0.3f)
 				{
 					isMove = false;
 				}

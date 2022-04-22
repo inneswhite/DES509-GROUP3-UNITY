@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c5b98e5feb29e24dadfda2e99b64c7f, type: 3}
   m_Name: Player dialogue
   m_EditorClassIdentifier: 
-  copName: Sonya blade
+  copName: Jack
   playerstartdialogue:
   - Hello Afsoon, do you have anything to declare?
   playerstartdialogue2:

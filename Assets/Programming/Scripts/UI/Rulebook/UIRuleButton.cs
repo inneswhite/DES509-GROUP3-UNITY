@@ -18,6 +18,9 @@ public class UIRuleButton : MonoBehaviour
 
     UIRuleBookManager uiRuleBookManager;
 
+    [SerializeField]
+    internal int value;
+
     private void Awake()
     {
         text = gameObject.GetComponent<TMPro.TextMeshProUGUI>();

@@ -13,6 +13,7 @@ TagManager:
   - Medicine
   - Syringe
   - InspectManager
+  - Robot
   layers:
   - Default
   - TransparentFX

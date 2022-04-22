@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c9930447b5f4be408be2ef73e880e55, type: 3}
   m_Name: NPC Tom
   m_EditorClassIdentifier: 
-  NPCName: Tom
+  NPCName: Afsoon
   npcdialogue:
   - No Sir, everything have been removed according to rule book
   npcdialogue2:

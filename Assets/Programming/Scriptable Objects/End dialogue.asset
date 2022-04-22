@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: End dialogue
   m_EditorClassIdentifier: 
   endnpcdialogue:
-  - Sir i have been meaning to ask you something
+  - "Yes sir I will, I speak to hi-\u201D \u201COh my god! Sir! Sir"
   endnpcdialogue2:
-  - Its about Tafari, he sai- Oh my god
+  - He kicked, the child kicked, quick feel
   endnpcdialogue3:
-  - The baby quick, feel its kicking
+  - "A mother knows these things, I pray for a baby boy every night. The lord needs
+    to answer one of my prayers. He has been ignoring them for too long.\u201D"
+  endnpcdialogue4:
+  - Goodbye sir and god bless you.
   endcopdialogue:
-  - What is it Afsoon?
+  - Whats wrong What is it Afsoon?
   endcopdialogue2:
-  - Afsoon what is it?
+  - How do you know its a boy?
   endcopdialogue3:
-  - We will need to get a doctor in to see you soon,its not long until the baby arrives
-  endcopdialogue4:
-  - I cannot wait to hold them in my arms.
+  - Have that rule book and toy sorted by tomorrow Afsoon, I will see you tomorrow

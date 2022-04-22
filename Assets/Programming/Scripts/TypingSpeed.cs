@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TypingSpeed : MonoBehaviour
 {
     [SerializeField]
     private float speed;
    
-    public Coroutine Run(string dialoguetext,Text nametext)
+    public Coroutine Run(string dialoguetext,TextMeshProUGUI nametext)
     {
        return  StartCoroutine(TypeText(dialoguetext,nametext));
     }
 
-    private IEnumerator TypeText(string dialoguetext,Text nametext)
+    private IEnumerator TypeText(string dialoguetext,TextMeshProUGUI nametext)
     {
         nametext.text = string.Empty;
         float t = 0;
