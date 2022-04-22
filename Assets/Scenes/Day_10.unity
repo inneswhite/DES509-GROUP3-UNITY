@@ -508,6 +508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Crate_Box (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
+      propertyPath: m_TagString
+      value: CameraTrigger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
 --- !u!1001 &53689718
@@ -573,6 +577,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1720916838f93b547b770d589c33479a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f831cf5eaa106884685aa211d44bdfe7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1720916838f93b547b770d589c33479a, type: 3}
       propertyPath: m_Name
       value: Bottle3 (12)
@@ -638,6 +646,47 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2258671, y: 0.61393094, z: 0.17995699}
   m_Center: {x: -0.0039664195, y: 0.26480013, z: -0.0024769988}
+--- !u!1 &71842562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2924194270067029409, guid: e414d89236b32f746a27b2a9abc9e98c, type: 3}
+  m_PrefabInstance: {fileID: 1308261279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &71842563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71842562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d7853a9c8fe394385641b3e369abdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &71842564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71842562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bad6729a44ff6439d0a9597aab4b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &111201543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1247,6 +1296,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1720916838f93b547b770d589c33479a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7397ebcf1fd38ed4fa8d861a5cfd81f7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1720916838f93b547b770d589c33479a, type: 3}
       propertyPath: m_Name
       value: Bottle3 (8)
@@ -1441,6 +1494,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1720916838f93b547b770d589c33479a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7397ebcf1fd38ed4fa8d861a5cfd81f7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1720916838f93b547b770d589c33479a, type: 3}
       propertyPath: m_Name
       value: Bottle3 (13)
@@ -1510,6 +1567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1720916838f93b547b770d589c33479a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7397ebcf1fd38ed4fa8d861a5cfd81f7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1720916838f93b547b770d589c33479a, type: 3}
       propertyPath: m_Name
       value: Bottle3 (2)
@@ -1614,7 +1675,7 @@ GameObject:
   - component: {fileID: 412385155}
   m_Layer: 0
   m_Name: Jungle Environment
-  m_TagString: Untagged
+  m_TagString: CameraTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1894,6 +1955,7 @@ GameObject:
   - component: {fileID: 566134843}
   - component: {fileID: 566134842}
   - component: {fileID: 566134845}
+  - component: {fileID: 566134846}
   m_Layer: 0
   m_Name: cineCamera (1)
   m_TagString: SideCamera2
@@ -1908,7 +1970,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566134841}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f66af820f4dc8774f909febd34a4c4b8, type: 3}
   m_Name: 
@@ -2086,6 +2148,20 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
+--- !u!114 &566134846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566134841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6598f54cb378c114183090a51db1f81d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 966217784}
+  smoothtime: 0.09
 --- !u!1 &569845380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +3012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.167
+      value: 0.099
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2973,6 +3049,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
       propertyPath: m_Name
       value: Wooden_Crate_Box (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
+      propertyPath: m_TagString
+      value: CameraTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
@@ -3069,6 +3153,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
       propertyPath: m_Name
       value: Wooden_Crate_Box (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
+      propertyPath: m_TagString
+      value: CameraTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
@@ -3763,6 +3851,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Crate_Box (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
+      propertyPath: m_TagString
+      value: CameraTrigger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
 --- !u!1 &819691552 stripped
@@ -3922,8 +4014,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.97468495, y: 0.10277675, z: 0.0798694}
-  m_Center: {x: 0.2881242, y: -0.109530084, z: 0.3196239}
+  m_Size: {x: 0.84991586, y: 0.10035123, z: 0.07986943}
+  m_Center: {x: 0.22573857, y: -0.1107418, z: 0.3196206}
 --- !u!33 &842421011
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4132,6 +4224,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00818923510dd714dbefe1c4487be412, type: 3}
+--- !u!1 &862876391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862876393}
+  - component: {fileID: 862876392}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &862876392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862876391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa73e4f170cacc46965878b12b000eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 0ce3df519cabce3418389397350bbcab, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &862876393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862876391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &863819819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4650,6 +4798,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1720916838f93b547b770d589c33479a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f831cf5eaa106884685aa211d44bdfe7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1720916838f93b547b770d589c33479a, type: 3}
       propertyPath: m_Name
       value: Bottle3 (1)
@@ -4815,6 +4967,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1720916838f93b547b770d589c33479a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7397ebcf1fd38ed4fa8d861a5cfd81f7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1720916838f93b547b770d589c33479a, type: 3}
       propertyPath: m_Name
       value: Bottle3 (4)
@@ -5624,6 +5780,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
       propertyPath: m_Name
       value: Crate Bottles
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
+      propertyPath: m_TagString
+      value: CameraTrigger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
@@ -6920,6 +7080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Crate_Box (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
+      propertyPath: m_TagString
+      value: CameraTrigger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
 --- !u!1 &1562035553 stripped
@@ -7210,6 +7374,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate Bottles
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
+      propertyPath: m_TagString
+      value: CameraTrigger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
 --- !u!1001 &1626676749
@@ -7423,6 +7591,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1720916838f93b547b770d589c33479a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7397ebcf1fd38ed4fa8d861a5cfd81f7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1720916838f93b547b770d589c33479a, type: 3}
       propertyPath: m_Name
       value: Bottle3
@@ -7642,6 +7814,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1720916838f93b547b770d589c33479a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7397ebcf1fd38ed4fa8d861a5cfd81f7, type: 2}
     - target: {fileID: 919132149155446097, guid: 1720916838f93b547b770d589c33479a, type: 3}
       propertyPath: m_Name
       value: Bottle3 (11)
@@ -8775,8 +8951,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2247895, z: 0.0961243}
-  m_Center: {x: 2.2420649e-11, y: 0.38760233, z: -0.4016047}
+  m_Size: {x: 0.7928706, y: 0.12905961, z: 0.03821104}
+  m_Center: {x: -0.16526532, y: 0.3397279, z: -0.43055275}
 --- !u!33 &2033576832
 MeshFilter:
   m_ObjectHideFlags: 0

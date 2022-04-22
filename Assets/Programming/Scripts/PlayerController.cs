@@ -107,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
 				if (Physics.Raycast(ray, out hit,layermask))
 				{
-					if (hit.collider.CompareTag("Ground") || hit.collider.CompareTag("CameraTrigger"))
+					if (hit.collider.CompareTag("Ground") || hit.collider.CompareTag("CameraTrigger"))  // mouse pos raycast hit
 					{					
 						playerPointDistance = Vector3.Distance(transform.position, hit.point);
 						if (playerPointDistance > 0f)

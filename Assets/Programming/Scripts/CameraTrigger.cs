@@ -11,8 +11,11 @@ public class CameraTrigger : MonoBehaviour
 
     public enum Direction { FadeIn, FadeOut };
 
+    private GameObject sidecamera;
+
     void Start()
     {
+      
        /* if (canvas == null) 
             canvas.gameObject.GetComponent<Canvas>();
         CanvasGroup canvasGroup = canvas.GetComponent<CanvasGroup>();
@@ -69,6 +72,7 @@ private void OnTriggerEnter(Collider other)
     {
        if(other.gameObject.tag=="Player")
         {
+        
             camid.enabled = true;
             camid2.enabled=false;
         }
