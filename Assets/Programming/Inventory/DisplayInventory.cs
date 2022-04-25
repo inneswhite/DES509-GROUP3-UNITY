@@ -7,13 +7,14 @@ public class DisplayInventory : MonoBehaviour
     public List<UIItem> uiItems = new List<UIItem>();
     public GameObject inventoryslot;
     public Transform slottransform;
-    public int numberofslots = 16;
+    public int numberofslots;
+
     // Start is called before the first frame update
     void Awake()
     {
         for(int i=0;i<numberofslots;i++)
         {
-            if (i < 16)
+            if (i < 12)
             {
                 GameObject instance = Instantiate(inventoryslot);
                 instance.transform.SetParent(slottransform);
@@ -40,8 +41,4 @@ public class DisplayInventory : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
-    {
-     
-    }
 }

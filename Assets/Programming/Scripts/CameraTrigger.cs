@@ -5,14 +5,11 @@ using UnityEngine;
 public class CameraTrigger : MonoBehaviour
 {
     [SerializeField] private Camera camid, camid2;
-    public GameObject canvas;
-    public AnimationCurve animationCurve;
-    public float fadingSpeed = 5f;
-
-    public enum Direction { FadeIn, FadeOut };
-
-    private GameObject sidecamera;
-
+    [Header("Camera Follow")]
+    [SerializeField]
+    private CameraFollow sidecam;
+    [SerializeField]
+    private int camfollowvalue;
     void Start()
     {
       
@@ -72,9 +69,20 @@ private void OnTriggerEnter(Collider other)
     {
        if(other.gameObject.tag=="Player")
         {
-        
-            camid.enabled = true;
-            camid2.enabled=false;
+            if (camfollowvalue == 1)
+            {
+                sidecam.enabled = true;
+
+                camid.enabled = true;                   // Switch Cameras
+                camid2.enabled = false;
+            }
+            else
+            {
+                sidecam.enabled = false;
+
+                camid.enabled = true;                   // Switch Cameras
+                camid2.enabled = false;
+            }
         }
     }
 }

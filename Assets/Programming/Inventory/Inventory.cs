@@ -9,17 +9,21 @@ public class Inventory : MonoBehaviour
     public DisplayInventory displayinventory;
     public int confiscatednumber;
     public int inventoryid;
+    private Item items;
 
 
     private void Start()
     {
 
-        //RemoveItem(1);
+       
     }
+
+
+
     public void GiveItem(int id)
     {
         inventoryid = id;      
-        Item items = itemdatabase.FindItem(id);
+        items = itemdatabase.FindItem(id);
         inventoryitems.Add(items);
         displayinventory.AddItemSlot(items);
         Debug.Log("Added item:" + items.itemName);

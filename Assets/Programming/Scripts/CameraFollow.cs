@@ -8,6 +8,7 @@ public class CameraFollow : MonoBehaviour
     #region
     [SerializeField] private Transform target;
     [SerializeField] private float smoothtime;
+    [SerializeField] private float distance;
     private Vector3 currentvelocity = Vector3.zero;
     private Vector3 Offset;
     #endregion
@@ -24,5 +25,6 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 relativePosition = target.position + Offset;  
         transform.position = Vector3.SmoothDamp(transform.position,relativePosition, ref currentvelocity, smoothtime);
+        transform.position = target.position - transform.forward * distance;
     }
 }

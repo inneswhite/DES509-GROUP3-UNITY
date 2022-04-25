@@ -11,8 +11,8 @@ public class PlayerController : MonoBehaviour
 	private PlayerCop playercop;
 	[SerializeField]
 	private float moveSpeed = 1f;
-	public bool isMove;
-	public bool finished_Movement;
+	private bool isMove;
+	private bool finished_Movement;
 	private Vector3 targetposition = Vector3.zero;
 	private Vector3 player_Move = Vector3.zero;
 	private float playerPointDistance;
@@ -23,7 +23,13 @@ public class PlayerController : MonoBehaviour
 	private float dist;
 
 	private Camera Maincam;
-	private Camera Sidecam, Sidecam2, Sidecam3;
+
+	[Header("Side Cameras")]
+	[SerializeField]
+	private Camera Sidecam;
+	[SerializeField]
+	private Camera Sidecam2;
+	[Header("Reference Cam")]
 	[SerializeField]
 	private Camera thiscam;
 
@@ -49,9 +55,6 @@ public class PlayerController : MonoBehaviour
 	{
 		//check for all cameras
 		Maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-		Sidecam = GameObject.FindGameObjectWithTag("SideCamera").GetComponent<Camera>();
-		Sidecam2 = GameObject.FindGameObjectWithTag("SideCamera2").GetComponent<Camera>();
-		Sidecam3 = GameObject.FindGameObjectWithTag("SideCamera3").GetComponent<Camera>();
 
 		thiscam = Maincam;
 	}
@@ -174,22 +177,12 @@ public class PlayerController : MonoBehaviour
 			thiscam = Sidecam;
 			Maincam.enabled = false;
 			Sidecam2.enabled = false;
-			Sidecam3.enabled = false;
-
 		}
 			if (Sidecam2.enabled)
 			{
 				thiscam = Sidecam2;
 			Maincam.enabled = false;
 			Sidecam.enabled = false;
-			Sidecam3.enabled = false;
-			}
-			if (Sidecam3.enabled)
-			{
-				thiscam = Sidecam3;
-			Maincam.enabled = false;
-			Sidecam.enabled = false;
-			Sidecam2.enabled = false;
 			}
 			else if (Maincam.enabled)
 			{

@@ -15,8 +15,8 @@ public class SpawnItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        selecteditem= GameObject.Find("SelectedIcon").GetComponent<UIItem>();
-        inventory = GameObject.Find("Player").GetComponent<Inventory>();
+        selecteditem= GameObject.FindGameObjectWithTag("SelectedIcon").GetComponent<UIItem>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
     }
 

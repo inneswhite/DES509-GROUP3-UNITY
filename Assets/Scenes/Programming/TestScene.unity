@@ -156,32 +156,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camid: {fileID: 1378763198}
   camid2: {fileID: 870068604}
-  canvas: {fileID: 1177668920}
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.009498596
-      value: 1.018753
-      inSlope: -0.99811184
-      outSlope: -0.99811184
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9986572
-      value: 0.012500763
-      inSlope: -0.99811184
-      outSlope: -0.99811184
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  fadingSpeed: 5
+  sidecam: {fileID: 0}
+  camfollowvalue: 0
 --- !u!65 &3040141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -495,10 +471,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playercop: {fileID: 0}
   moveSpeed: 4
-  isMove: 0
-  finished_Movement: 0
+  Sidecam: {fileID: 0}
+  Sidecam2: {fileID: 0}
   thiscam: {fileID: 0}
   groundpointer: {fileID: 0}
+  istalking: 0
 --- !u!143 &429079142
 CharacterController:
   m_ObjectHideFlags: 0
@@ -747,18 +724,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   npc: {fileID: 11400000, guid: 2a489a1cd83d8bf4d975729eda3d2ea0, type: 2}
-  npcName: {fileID: 1939342518}
-  dialoguetext: {fileID: 1802019381}
+  npcName: {fileID: 0}
+  dialoguetext: {fileID: 0}
   isActive: 0
   cop: {fileID: 0}
   copName: {fileID: 0}
   copdialoguetext: {fileID: 0}
+  End: {fileID: 0}
   dist: 0
   player: {fileID: 429079140}
   Dialoguecanvas: {fileID: 1438213427}
   Copdialoguecanvas: {fileID: 0}
   quests: []
   sequencenumber: 0
+  choicePanel: {fileID: 0}
+  choicePanel2: {fileID: 0}
+  choicePanel3: {fileID: 0}
 --- !u!136 &503571606
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1296,32 +1277,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camid: {fileID: 566134843}
   camid2: {fileID: 1378763198}
-  canvas: {fileID: 1177668920}
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.009498596
-      value: 1.018753
-      inSlope: -0.99811184
-      outSlope: -0.99811184
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9986572
-      value: 0.012500763
-      inSlope: -0.99811184
-      outSlope: -0.99811184
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  fadingSpeed: 5
+  sidecam: {fileID: 0}
+  camfollowvalue: 0
 --- !u!65 &842421010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1390,32 +1347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camid: {fileID: 2034146677}
   camid2: {fileID: 566134843}
-  canvas: {fileID: 1177668920}
-  animationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -0.009498596
-      value: 1.018753
-      inSlope: -0.99811184
-      outSlope: -0.99811184
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 0.9986572
-      value: 0.012500763
-      inSlope: -0.99811184
-      outSlope: -0.99811184
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  fadingSpeed: 5
+  sidecam: {fileID: 0}
+  camfollowvalue: 0
 --- !u!65 &843832906
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1464,6 +1397,8 @@ GameObject:
   - component: {fileID: 870068606}
   - component: {fileID: 870068607}
   - component: {fileID: 870068603}
+  - component: {fileID: 870068609}
+  - component: {fileID: 870068608}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1556,6 +1491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 429079146}
   smoothtime: 0.09
+  distance: 0
 --- !u!114 &870068607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1566,6 +1502,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2683c6eb30da094a96f121008121f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &870068608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870068602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d7853a9c8fe394385641b3e369abdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &870068609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870068602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bad6729a44ff6439d0a9597aab4b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_listeners:
@@ -2740,14 +2712,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camid: {fileID: 566134843}
   camid2: {fileID: 2034146677}
-  canvas: {fileID: 1177668920}
-  animationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  fadingSpeed: 5
+  sidecam: {fileID: 0}
+  camfollowvalue: 0
 --- !u!65 &1663045175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2894,14 +2860,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camid: {fileID: 870068604}
   camid2: {fileID: 1378763198}
-  canvas: {fileID: 1177668920}
-  animationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  fadingSpeed: 5
+  sidecam: {fileID: 0}
+  camfollowvalue: 0
 --- !u!65 &1733931898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3012,6 +2972,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1761960106}
   m_CullTransparentMesh: 1
+--- !u!1 &1781441533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1781441535}
+  - component: {fileID: 1781441534}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1781441534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781441533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa73e4f170cacc46965878b12b000eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 0ce3df519cabce3418389397350bbcab, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &1781441535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781441533}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802019380
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,14 +3219,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camid: {fileID: 1378763198}
   camid2: {fileID: 566134843}
-  canvas: {fileID: 1177668920}
-  animationCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  fadingSpeed: 5
+  sidecam: {fileID: 0}
+  camfollowvalue: 0
 --- !u!65 &2033576831
 BoxCollider:
   m_ObjectHideFlags: 0

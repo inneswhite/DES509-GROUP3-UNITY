@@ -14,14 +14,14 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
     private GameObject statsPanel;
     private SpawnItem spawnitem;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         itemIcon = GetComponent<Image>();
         UpdateUI(null);
-        selecteditem = GameObject.Find("SelectedIcon").GetComponent<UIItem>();
-        inventory = GameObject.Find("Player").GetComponent<Inventory>();
-        itemstats = GameObject.Find("ItemStats").GetComponent<ItemStats>();
-        spawnitem = GameObject.Find("SelectedIcon").GetComponent<SpawnItem>();
+        selecteditem = GameObject.FindGameObjectWithTag("SelectedIcon").GetComponent<UIItem>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+     //   itemstats = GameObject.FindGameObjectWithTag("ItemStats").GetComponent<ItemStats>();
+        spawnitem = GameObject.FindGameObjectWithTag("SelectedIcon").GetComponent<SpawnItem>();
     }
 
   
@@ -73,6 +73,7 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
 
     void Update()
     {
+        
         if (selecteditem.item != null)
         {
             if (Input.GetMouseButtonDown(0))
@@ -108,6 +109,8 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
         }
 
     }
+
+ 
     public void OnDrop(PointerEventData eventData)
     {
 
@@ -118,12 +121,12 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
     {
       if(this.item!=null)
         {
-            itemstats.GetStats(this.item);
+     //       itemstats.GetStats(this.item);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        itemstats.gameObject.SetActive(false);
+      //  itemstats.gameObject.SetActive(false);
     }
 }

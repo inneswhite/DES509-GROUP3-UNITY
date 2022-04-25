@@ -14,6 +14,8 @@ TagManager:
   - Syringe
   - InspectManager
   - Robot
+  - SelectedIcon
+  - ItemStats
   layers:
   - Default
   - TransparentFX
