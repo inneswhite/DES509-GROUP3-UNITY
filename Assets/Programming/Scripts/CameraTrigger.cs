@@ -12,7 +12,7 @@ public class CameraTrigger : MonoBehaviour
     private int camfollowvalue;
     void Start()
     {
-      
+        sidecam.enabled = false;
        /* if (canvas == null) 
             canvas.gameObject.GetComponent<Canvas>();
         CanvasGroup canvasGroup = canvas.GetComponent<CanvasGroup>();

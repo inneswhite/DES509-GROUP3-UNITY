@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class ItemStats : MonoBehaviour
 {
-    private Text stats;
+    private TextMeshProUGUI stats;
     // Start is called before the first frame update
     void Start()
     {
-        stats = GetComponentInChildren<Text>();
+        stats = GetComponentInChildren<TextMeshProUGUI>();
         this.gameObject.SetActive(false);
     }
 

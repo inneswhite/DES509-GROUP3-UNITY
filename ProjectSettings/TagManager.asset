@@ -16,6 +16,7 @@ TagManager:
   - Robot
   - SelectedIcon
   - ItemStats
+  - DialogueCamera
   layers:
   - Default
   - TransparentFX

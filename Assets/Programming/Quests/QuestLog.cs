@@ -6,13 +6,14 @@ public class QuestLog : MonoBehaviour
 {
     private bool isLogOpen;
 
-
+    [SerializeField]
+    private GameObject ObjectivePanel;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.SetActive(false);
+        ObjectivePanel.SetActive(false);
     }
 
 
@@ -22,11 +23,12 @@ public class QuestLog : MonoBehaviour
 
         if (isLogOpen)
         {
-            this.gameObject.SetActive(true);
+      
+            ObjectivePanel.SetActive(true);
         }
         else
         {
-            this.gameObject.SetActive(false);
+            ObjectivePanel.SetActive(false);
         }
     }
 }

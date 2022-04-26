@@ -10,7 +10,7 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
     private Image itemIcon;
     private UIItem selecteditem;
     private Inventory inventory;
-    private ItemStats itemstats;
+    private ItemStats itemstats;                // search item stats 
     private GameObject statsPanel;
     private SpawnItem spawnitem;
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
         UpdateUI(null);
         selecteditem = GameObject.FindGameObjectWithTag("SelectedIcon").GetComponent<UIItem>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-     //   itemstats = GameObject.FindGameObjectWithTag("ItemStats").GetComponent<ItemStats>();
+        itemstats = GameObject.FindGameObjectWithTag("ItemStats").GetComponent<ItemStats>();
         spawnitem = GameObject.FindGameObjectWithTag("SelectedIcon").GetComponent<SpawnItem>();
     }
 
@@ -121,12 +121,12 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
     {
       if(this.item!=null)
         {
-     //       itemstats.GetStats(this.item);
+            itemstats.GetStats(this.item);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-      //  itemstats.gameObject.SetActive(false);
+        itemstats.gameObject.SetActive(false);
     }
 }

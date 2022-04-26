@@ -43,6 +43,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject choicePanel3;
 
+    [Header("Camera Switch")]
+    [SerializeField]
+    private GameObject dialoguecamera,sideCamera2;
+
+
 
 
     private int Tracker;
@@ -64,7 +69,7 @@ public class DialogueManager : MonoBehaviour
         choicePanel2.SetActive(false);
         choicePanel3.SetActive(false);
         quests[0].ActivateQuest();          // Activate your quest
-
+        dialoguecamera.SetActive(false);
     }
 
 
@@ -97,6 +102,8 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ReadingDialogue(NPC npc)
     {
+        dialoguecamera.SetActive(true);         //DIALOGUE CAM
+        sideCamera2.SetActive(false);
         PlayCopDialogue();                              // COP START DIALOGUE
         yield return new WaitForSeconds(1f);
         foreach(string dialogue in cop.playerstartdialogue)     
@@ -138,6 +145,7 @@ public class DialogueManager : MonoBehaviour
         }
         yield return new WaitForSeconds(1f);
         CloseCopDialogue();
+
     }
 
 
@@ -146,6 +154,8 @@ public class DialogueManager : MonoBehaviour
     {
         isActive = false;
         Copdialoguecanvas.SetActive(false);
+        dialoguecamera.SetActive(false);        //Turn Camera Off
+        sideCamera2.SetActive(true);
         copdialoguetext.text = null;
         sequencenumber++;
         isActive = false;
@@ -168,6 +178,8 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ReadQuestDialogue(NPC npc)
     {
+        dialoguecamera.SetActive(true);         //Dialogue CAM
+        sideCamera2.SetActive(false);
         yield return new WaitForSeconds(1f);
         PlayCopDialogue();
         if (inventory.confiscatednumber == 0)
@@ -196,8 +208,8 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             ConfiscateBothItems();          // If Player has two items
-        }
-        StopCopDialogue();      // Cop stops talking
+        }    
+        StopCopDialogue();               // Cop stops talking
     }
 
     /*IF COP HAS SINGLE ITEM*/
@@ -208,6 +220,8 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator SingleItemConversation()
     {
+        dialoguecamera.SetActive(true);
+        sideCamera2.SetActive(false);
         isActive = true;
         yield return new WaitForSeconds(1f);
         if (inventory.inventoryid == 0 && inventory.confiscatednumber == 1)         //ROBOT
@@ -273,6 +287,8 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator SingleDecision(NPC npc)
     {
+        dialoguecamera.SetActive(true);
+        sideCamera2.SetActive(false);
         yield return new WaitForSeconds(2f);
         if(relationshipvalue==1)                    //GIVE AWAY SINGLE ITEM
         {
@@ -311,6 +327,8 @@ public class DialogueManager : MonoBehaviour
             }
             StopNPCDialogue();
             sequencenumber++;
+            dialoguecamera.SetActive(false);
+            sideCamera2.SetActive(true);
         }
         if (relationshipvalue == -1)    //TAKE AWAY SYRINGE     
         {
@@ -330,6 +348,8 @@ public class DialogueManager : MonoBehaviour
             }
             StopNPCDialogue();
             sequencenumber++;
+            dialoguecamera.SetActive(false);
+            sideCamera2.SetActive(true);
         }
     }
 
@@ -348,6 +368,8 @@ public class DialogueManager : MonoBehaviour
     /* COP MAKES A CHOICE */
     private IEnumerator MakeChoiceDialogue(NPC npc)
     {
+        dialoguecamera.SetActive(true);
+        sideCamera2.SetActive(false);
         yield return new WaitForSeconds(2f);
         PlayNPCDialogue();          // npc responds
         foreach (string dialogue in npc.choicedialogue)
@@ -426,6 +448,8 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator FinalDecision(NPC npc)
     {
+        dialoguecamera.SetActive(true);
+        sideCamera2.SetActive(false);
         yield return new WaitForSeconds(1f);
         if (relationshipvalue == 2)         //RETURN BOTH THE ITEMS
         {
@@ -512,6 +536,8 @@ public class DialogueManager : MonoBehaviour
     IEnumerator LastConversation()      //HAVE LAST CONVERSATION
     {
         //End
+        dialoguecamera.SetActive(true);
+        sideCamera2.SetActive(false);
         yield return new WaitForSeconds(2f);
         PlayNPCDialogue();
         foreach(string dialogue in End.endnpcdialogue)
@@ -570,6 +596,8 @@ public class DialogueManager : MonoBehaviour
         StopNPCDialogue();
         yield return new WaitForSeconds(1f);
         isActive = false;
+        dialoguecamera.SetActive(false);
+        sideCamera2.SetActive(true);
         sequencenumber++;
     }
 
