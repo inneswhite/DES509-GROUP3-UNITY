@@ -159,7 +159,7 @@ Material:
     - _AlphaToMaskInspectorValue: 0
     - _Anisotropy: 0
     - _BlendMode: 0
-    - _Brightness: 1
+    - _Brightness: 0
     - _CoatMask: 0
     - _CullMode: 2
     - _CullModeForward: 2
@@ -233,7 +233,7 @@ Material:
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
     - _Saturation: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 1
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
     - _SpecularAAScreenSpaceVariance: 0.1
