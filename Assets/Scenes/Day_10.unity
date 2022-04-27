@@ -6354,7 +6354,7 @@ MonoBehaviour:
   description: Sieze items
   descriptionText: {fileID: 6386651980562341124}
   isComplete: 0
-  CurrentStatus: 0
+  CurrentStatus: 1
 --- !u!1001 &1245237583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8053,7 +8053,7 @@ BoxCollider:
   m_GameObject: {fileID: 1601437708}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 10, y: 2.2204463e-16, z: 10}
   m_Center: {x: -0.0000038146973, y: 0.00000011920929, z: -0.0000019073486}
@@ -22581,7 +22581,7 @@ GameObject:
   - component: {fileID: 715916605}
   m_Layer: 0
   m_Name: Afsoon
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29546,8 +29546,10 @@ MonoBehaviour:
   items:
   - {fileID: 8483261970978213190}
   - {fileID: 1290912747162560061}
+  - {fileID: 1446106491443989809}
   itemTitle: {fileID: 1712163202021086795}
   itemDescription: {fileID: 1712163201167322295}
+  thiscam: {fileID: 0}
   isInspect: 0
 --- !u!1 &6449106565599968008
 GameObject:

@@ -495,8 +495,8 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
             }
-            inventory.RemoveItem(0);                    // remove item from player inventory
-            npcinventory.GetItem(0);
+  //          inventory.RemoveItem(0);                    // remove item from player inventory
+  //          npcinventory.GetItem(0);
             StopNPCDialogue();
             StartCoroutine(LastConversation());
         }
