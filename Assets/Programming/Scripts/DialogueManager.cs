@@ -29,6 +29,7 @@ public class DialogueManager : MonoBehaviour
     private TypingSpeed typingspeed;
     private PlayerController playercontroller;
     private Inventory inventory;
+    private NPCInventory npcinventory;
     [Header("List of quests")]
     [SerializeField]
     private Quest[] quests;
@@ -65,6 +66,7 @@ public class DialogueManager : MonoBehaviour
         Copdialoguecanvas.SetActive(false);
         playercontroller = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        npcinventory = GameObject.FindGameObjectWithTag("NPC").GetComponent<NPCInventory>();
         choicePanel.SetActive(false);
         choicePanel2.SetActive(false);
         choicePanel3.SetActive(false);
@@ -467,6 +469,10 @@ public class DialogueManager : MonoBehaviour
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
+            inventory.RemoveItem(0);            // remove items from player inventory
+            inventory.RemoveItem(1);
+            npcinventory.GetItem(0);
+            npcinventory.GetItem(1);
             StopNPCDialogue();
             StartCoroutine(LastConversation());
         }
@@ -488,6 +494,8 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
             }
+            inventory.RemoveItem(0);                    // remove item from player inventory
+            npcinventory.GetItem(0);
             StopNPCDialogue();
             StartCoroutine(LastConversation());
         }
@@ -508,6 +516,8 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
             }
+            inventory.RemoveItem(1);                // remove item from player inventory
+            npcinventory.GetItem(1);
             StopNPCDialogue();
             StartCoroutine(LastConversation());
         }
@@ -526,7 +536,7 @@ public class DialogueManager : MonoBehaviour
             {
                 yield return typingspeed.Run(dialogue, dialoguetext);
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-            }
+            }       
             StopNPCDialogue();
             StartCoroutine(LastConversation());
         }

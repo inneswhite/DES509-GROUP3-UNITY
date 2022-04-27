@@ -293,8 +293,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.069938846, y: 0.13858877, z: 0.07515895}
-  m_Center: {x: 0.0000002394674, y: 0.0017349924, z: 0.00000011718619}
+  m_Size: {x: 0.069938846, y: 0.13325937, z: 0.07515895}
+  m_Center: {x: 0.0000002394674, y: -0.00092978316, z: 0.00000011718619}
 --- !u!1001 &40408430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1090,6 +1090,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b4f798ec744b21740b6c1ecbd456228f, type: 3}
       propertyPath: m_Name
       value: Truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b4f798ec744b21740b6c1ecbd456228f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b4f798ec744b21740b6c1ecbd456228f, type: 3}
+      propertyPath: m_TagString
+      value: CameraTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b4f798ec744b21740b6c1ecbd456228f, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2000,8 +2008,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3860704, y: 0.2415837, z: 0.44166687}
-  m_Center: {x: -0.00000046938658, y: -0.0000000037252903, z: 0.00000046938658}
+  m_Size: {x: 0.26111594, y: 0.23433395, z: 0.26988125}
+  m_Center: {x: -0.0009167196, y: -0.0036248565, z: 0.009735234}
 --- !u!1001 &405230186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2199,8 +2207,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.17768109, y: 0.14071687, z: 0.15299907}
-  m_Center: {x: -0.0000000098643795, y: 0.028193112, z: 0}
+  m_Size: {x: 0.17768109, y: 0.087101035, z: 0.15299907}
+  m_Center: {x: -0.0000000098643795, y: 0.0013852301, z: 0}
 --- !u!114 &484686066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4130,7 +4138,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2621642831009437500, guid: f1759a8a823060d4fb3490ad48fd8718, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f1759a8a823060d4fb3490ad48fd8718, type: 3}
 --- !u!1 &801802709 stripped
 GameObject:
@@ -4551,24 +4560,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectivePanel: {fileID: 6386651979387972211}
---- !u!1 &860289891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9152363913774390056, guid: 6e3255c4ea27a984ca085cc1707ad5e2, type: 3}
-  m_PrefabInstance: {fileID: 944417119}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &860289896
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 860289891}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.3860704, y: 0.2415837, z: 0.4416668}
-  m_Center: {x: 0.00000000745058, y: 0.0000000037252903, z: -0.00000048428774}
 --- !u!1001 &862835860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5097,8 +5088,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.016306365, y: 0.60650295, z: 0.018526835}
-  m_Center: {x: -0.00012741132, y: -0.094662696, z: -0.0002450364}
+  m_Size: {x: 0.016306365, y: 0.42628905, z: 0.018526835}
+  m_Center: {x: -0.00012741132, y: -0.18476963, z: -0.0002450364}
 --- !u!1001 &944417119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5422,29 +5413,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 197d6cca2aca0f24aa941df1f258d0b3, type: 3}
   m_PrefabInstance: {fileID: 601167589}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &982881057 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6e3255c4ea27a984ca085cc1707ad5e2, type: 3}
-  m_PrefabInstance: {fileID: 2040570103}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &982881058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6e3255c4ea27a984ca085cc1707ad5e2, type: 3}
   m_PrefabInstance: {fileID: 2040570103}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &982881059
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982881057}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.19896677, y: 0.3198283, z: 0.22253136}
-  m_Center: {x: 0.005529539, y: -0.03972406, z: 0.0031508699}
 --- !u!65 &993363284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6781,7 +6754,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stove_Dish
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: d984823a8eb033e4b95175fd6129c2e3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d984823a8eb033e4b95175fd6129c2e3, type: 3}
 --- !u!1001 &1353533201
 PrefabInstance:
@@ -6838,7 +6812,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate Canisters
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3451118302482216456, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: dd17fed2e282ed449b3208ac9fd24b30, type: 3}
 --- !u!1001 &1363901586
 PrefabInstance:
@@ -6894,6 +6869,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aa52b745dbb8aa14fa8b3e8959f45631, type: 3}
       propertyPath: m_Name
       value: ScreenB
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa52b745dbb8aa14fa8b3e8959f45631, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa52b745dbb8aa14fa8b3e8959f45631, type: 3}
@@ -7985,7 +7964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c883ea0fcfc2e468f590a7c26c9382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 0
+  itemId: 2
   Sound:
     idInternal: 0
     valueGuidInternal: 
@@ -8065,8 +8044,8 @@ Transform:
   m_Father: {fileID: 543450652801812383}
   m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1601437710
-MeshCollider:
+--- !u!65 &1601437710
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8075,10 +8054,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.2204463e-16, z: 10}
+  m_Center: {x: -0.0000038146973, y: 0.00000011920929, z: -0.0000019073486}
 --- !u!23 &1601437711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10178,7 +10156,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5797430715685110199, guid: 6e3255c4ea27a984ca085cc1707ad5e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e3255c4ea27a984ca085cc1707ad5e2, type: 3}
 --- !u!4 &2048923941 stripped
 Transform:
@@ -27398,6 +27377,7 @@ MonoBehaviour:
   defaultColor: {r: 0.59607846, g: 0.42745098, b: 0, a: 1}
   hoverColor: {r: 1, g: 0.7176471, b: 0, a: 1}
   pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  isEnabled: 0
 --- !u!224 &6386651978977630316
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27755,6 +27735,7 @@ MonoBehaviour:
   defaultColor: {r: 0.59607846, g: 0.42745098, b: 0, a: 1}
   hoverColor: {r: 1, g: 0.7176471, b: 0, a: 1}
   pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  isEnabled: 0
 --- !u!114 &6386651979159866530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28425,6 +28406,7 @@ MonoBehaviour:
   defaultColor: {r: 0.59607846, g: 0.42745098, b: 0, a: 1}
   hoverColor: {r: 1, g: 0.7176471, b: 0, a: 1}
   pressedColor: {r: 1, g: 1, b: 1, a: 1}
+  isEnabled: 0
 --- !u!1 &6386651979630858929
 GameObject:
   m_ObjectHideFlags: 0
@@ -31902,7 +31884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &7728799787160621560
 BoxCollider:
   m_ObjectHideFlags: 0
