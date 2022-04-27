@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
@@ -63,6 +64,10 @@ public class PlayerController : MonoBehaviour
 	{
 		if (!istalking)
 		{
+            if(EventSystem.current.IsPointerOverGameObject())           // if mouse cursor is over ui button
+            {
+                return;
+            }
 			CameraSwitch();
 			CalculateHeight();
 			CheckIfFinishedMovement();

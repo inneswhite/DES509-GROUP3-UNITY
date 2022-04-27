@@ -36,6 +36,7 @@ public class InspectManager : MonoBehaviour
         inspectorPanel.SetActive(false);
         items[0].SetActive(false);
         items[1].SetActive(false);
+        items[2].SetActive(false);
 
     }
 
@@ -54,13 +55,15 @@ public class InspectManager : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "Robot")
                     {
-                        Debug.Log("iasa");
                         ShowRobot();
                     }
                     if (hit.collider.gameObject.tag == "Syringe")
                     {
-                        ShowSyringe();
-                        
+                        ShowSyringe();                       
+                    }
+                    if (hit.collider.gameObject.tag == "Medicine")
+                    {
+                        ShowMedicine();
                     }
                 }
             }
@@ -90,12 +93,24 @@ public class InspectManager : MonoBehaviour
         string description2 = "Syringe is normally used to treat the sick and wounded.It is used as an anaesthetic";
         itemDescription.text = description2;
     }
+    public void ShowMedicine()
+    {
+        itemid = 2;
+        Time.timeScale = 0f;
+        inspectorPanel.SetActive(true);
+        items[1].SetActive(true);
+        string title3 = "Medicine";
+        itemTitle.text = title3;
+        string description3 = "Medicine is used to relieve pain and other symptoms";
+        itemDescription.text = description3;
+    }
 
     public void Continue()
     {
         // DISABLE ITEMS 
         items[0].SetActive(false);
         items[1].SetActive(false);
+        items[2].SetActive(false);
         inspectorPanel.SetActive(false);
         Time.timeScale = 1f;
     }
@@ -124,6 +139,15 @@ public class InspectManager : MonoBehaviour
             mPrevPos = Input.mousePosition;
         }
         if (itemid == 1)
+        {
+            if (isRotated)
+            {
+                mPosDelta = Input.mousePosition - mPrevPos;
+                items[1].transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
+            }
+            mPrevPos = Input.mousePosition;
+        }
+        if (itemid == 2)
         {
             if (isRotated)
             {
