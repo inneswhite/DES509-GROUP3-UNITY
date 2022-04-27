@@ -14,27 +14,60 @@ public class PauseUIButton : MonoBehaviour
     Color pressedColor = Color.white;
 
     TMPro.TextMeshProUGUI text;
+    Image image;
+
+    [SerializeField] bool isEnabled = false;
 
     private void Awake()
     {
         text = gameObject.transform.GetChild(0).gameObject.GetComponent<TMPro.TextMeshProUGUI>();
+        image = gameObject.GetComponent<Image>();
     }
 
      //____________Event Triggers___________\\
     //See Event Trigger Component for details\\
     public void PointerEnter()
     {
-        text.color = hoverColor;
+        Debug.Log("Pointer Enter: " + gameObject.name);
+        if (isEnabled)
+        {
+            text.color = hoverColor;
+        }
     }
 
     public void PointerExit()
     {
-        text.color = defaultColor;
+        if (isEnabled)
+        {
+            text.color = defaultColor;
+        }
     }
 
     public void PointerDown()
     {
-        text.color = pressedColor;
+        if (isEnabled)
+        {
+            text.color = pressedColor;
+        }
+    }
+
+    public void Enable()
+    {
+        isEnabled = true;
+        image.raycastTarget = true;
+        
+    }
+
+    public void Disable()
+    {
+        isEnabled = false;
+        image.raycastTarget = false;
+    }
+
+    public void SetAlpha(float _alpha)
+    {
+        Color _tempColor = new Color(text.color.r, text.color.g, text.color.b, _alpha);
+        text.color = _tempColor;
     }
 
 }
