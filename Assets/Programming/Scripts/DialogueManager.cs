@@ -110,6 +110,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         foreach(string dialogue in cop.playerstartdialogue)     
         {
+            //TEST DIALOGUE AUDIO
             yield return typingspeed.Run(dialogue, copdialoguetext);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
