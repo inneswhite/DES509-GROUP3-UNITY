@@ -17,8 +17,13 @@ public class InspectManager : MonoBehaviour
     private TextMeshProUGUI itemTitle;
     [SerializeField]
     private TextMeshProUGUI itemDescription;
-  
 
+    private Camera maincam;
+    private Camera sidecam;
+    private Camera sidecam2;
+
+    [SerializeField]
+    private Camera thiscam;
 
     //ROTATE OBJECT 
     Vector3 mPrevPos = Vector3.zero;
@@ -38,6 +43,10 @@ public class InspectManager : MonoBehaviour
         items[1].SetActive(false);
         items[2].SetActive(false);
 
+        maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        sidecam = GameObject.FindGameObjectWithTag("SideCamera").GetComponent<Camera>();
+        sidecam2 = GameObject.FindGameObjectWithTag("SideCamera2").GetComponent<Camera>();
+
     }
 
     // Update is called once per frame
@@ -50,7 +59,7 @@ public class InspectManager : MonoBehaviour
             {
                 Debug.Log("asa");
                 RaycastHit hit = new RaycastHit();
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = thiscam.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, 1000))
                 {
                     if (hit.collider.gameObject.tag == "Robot")
@@ -98,7 +107,7 @@ public class InspectManager : MonoBehaviour
         itemid = 2;
         Time.timeScale = 0f;
         inspectorPanel.SetActive(true);
-        items[1].SetActive(true);
+        items[2].SetActive(true);
         string title3 = "Medicine";
         itemTitle.text = title3;
         string description3 = "Medicine is used to relieve pain and other symptoms";
@@ -117,6 +126,7 @@ public class InspectManager : MonoBehaviour
     public void InspectMode()
     {
         isInspect = !isInspect;
+        GetCam();
         if(isInspect)
         {
             Cursor.SetCursor(inspectcursor, Vector2.zero, CursorMode.ForceSoftware);
@@ -134,7 +144,7 @@ public class InspectManager : MonoBehaviour
             if (isRotated)
             {
                 mPosDelta = Input.mousePosition - mPrevPos;
-                items[0].transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
+                items[0].transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, thiscam.transform.right), Space.World);
             }
             mPrevPos = Input.mousePosition;
         }
@@ -143,7 +153,7 @@ public class InspectManager : MonoBehaviour
             if (isRotated)
             {
                 mPosDelta = Input.mousePosition - mPrevPos;
-                items[1].transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
+                items[1].transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, thiscam.transform.right), Space.World);
             }
             mPrevPos = Input.mousePosition;
         }
@@ -152,13 +162,33 @@ public class InspectManager : MonoBehaviour
             if (isRotated)
             {
                 mPosDelta = Input.mousePosition - mPrevPos;
-                items[1].transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, Camera.main.transform.right), Space.World);
+                items[2].transform.Rotate(transform.up, -Vector3.Dot(mPosDelta, thiscam.transform.right), Space.World);
             }
             mPrevPos = Input.mousePosition;
         }
     }
 
- 
+ public void GetCam()
+    {
+        if(maincam.enabled)
+        {
+            thiscam = maincam;
+            sidecam.enabled = false;
+            sidecam2.enabled = false;
+        }
+        else if(sidecam.enabled)
+        {
+            thiscam = sidecam;
+            maincam.enabled = false;
+            sidecam2.enabled = false;
+        }
+        else if(sidecam2.enabled)
+        {
+            thiscam = sidecam2;
+            maincam.enabled = false;
+            sidecam.enabled = false;
+        }
+    }
 
 
     public void TogglePressed(bool value)

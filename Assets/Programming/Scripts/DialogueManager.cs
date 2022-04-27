@@ -31,8 +31,8 @@ public class DialogueManager : MonoBehaviour
     private Inventory inventory;
     private NPCInventory npcinventory;
     [Header("List of quests")]
-    [SerializeField]
-    private Quest[] quests;
+   
+    public Quest[] quests;
     [SerializeField]
     private int sequencenumber;
     [SerializeField]
