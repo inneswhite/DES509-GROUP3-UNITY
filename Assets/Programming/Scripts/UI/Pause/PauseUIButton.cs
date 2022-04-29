@@ -55,7 +55,7 @@ public class PauseUIButton : MonoBehaviour
     {
         isEnabled = true;
         image.raycastTarget = true;
-        
+        text.color = defaultColor;
     }
 
     public void Disable()

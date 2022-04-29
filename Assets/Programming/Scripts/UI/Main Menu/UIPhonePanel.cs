@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class UIPhonePanel : MonoBehaviour
 {
     [SerializeField] PauseUIButton continueButton, beginDayButton;
     [SerializeField] float buttonFadeDuration = 1f;
     [SerializeField] LeanTweenType leanTweenType;
     [SerializeField] UIPhone uIPhone;
+
+
+
 
     private void Start()
     {
@@ -19,7 +22,6 @@ public class UIPhonePanel : MonoBehaviour
     public void Activate()
     {
         StartCoroutine(ActivateEvents());
-        
     }
 
     IEnumerator ActivateEvents()

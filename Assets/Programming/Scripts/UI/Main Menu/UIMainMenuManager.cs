@@ -70,12 +70,29 @@ public class UIMainMenuManager : MonoBehaviour
         }
 
     }
+    
+
+    public void CloseMainMenu()
+    {
+        if(activePanel == ActivePanel.mainMenu)
+        {
+            uIMainMenuPanel.Deactivate();
+        }
+    }
     public void OpenSettings()
     {
         if (activePanel != ActivePanel.settings)
         {
             uiSettingsPanel.Activate();
             activePanel = ActivePanel.settings;
+        }
+    }
+    public void CloseSettings()
+    {
+        if(activePanel == ActivePanel.settings)
+        {
+            uiSettingsPanel.Deactivate();
+            
         }
     }
 
