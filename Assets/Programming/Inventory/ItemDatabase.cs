@@ -21,7 +21,7 @@ public class ItemDatabase : MonoBehaviour
 
     public void OpenInventory()
     {
-        toggled = !toggled;
+        toggled = !toggled;         // toggle inventory
         if(toggled)
         {
             inventoryPanel.SetActive(true);
@@ -40,6 +40,7 @@ public class ItemDatabase : MonoBehaviour
     }
     void Build()
     {
+
         items = new List<Item>{ new Item(0, "Robot", "this is a Robot", new Dictionary<string, int>
         {
             { "Cost", 35 },

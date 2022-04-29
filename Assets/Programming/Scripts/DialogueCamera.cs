@@ -6,6 +6,8 @@ public class DialogueCamera : MonoBehaviour
 {
     [SerializeField]
     private Transform target;
+    [SerializeField]
+    Vector3 Offset;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,7 @@ public class DialogueCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target);       //Dialogue camera
+        transform.LookAt(target.transform.position+Offset);       //Dialogue camera
+
     }
 }

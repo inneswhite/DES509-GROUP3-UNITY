@@ -64,7 +64,7 @@ public class InspectManager : MonoBehaviour
                 {
                     if (hit.collider.gameObject.tag == "Robot")
                     {
-                        ShowRobot();
+                        ShowRobot();    
                     }
                     if (hit.collider.gameObject.tag == "Syringe")
                     {
@@ -79,7 +79,7 @@ public class InspectManager : MonoBehaviour
         }
     }
 
-    public void ShowRobot()
+    public void ShowRobot()         
     {
         itemid = 0;
         Time.timeScale = 0f;
@@ -126,7 +126,7 @@ public class InspectManager : MonoBehaviour
     public void InspectMode()
     {
         isInspect = !isInspect;
-        GetCam();
+        GetCam();           // get current camera reference
         if(isInspect)
         {
             Cursor.SetCursor(inspectcursor, Vector2.zero, CursorMode.ForceSoftware);
@@ -170,19 +170,19 @@ public class InspectManager : MonoBehaviour
 
  public void GetCam()
     {
-        if(maincam.enabled)
+        if(maincam.enabled)         // Main Cam is active
         {
             thiscam = maincam;
             sidecam.enabled = false;
             sidecam2.enabled = false;
         }
-        else if(sidecam.enabled)
+        else if(sidecam.enabled)            // Side Cam is active
         {
             thiscam = sidecam;
             maincam.enabled = false;
             sidecam2.enabled = false;
         }
-        else if(sidecam2.enabled)
+        else if(sidecam2.enabled)           // Side Cam 2 is active
         {
             thiscam = sidecam2;
             maincam.enabled = false;

@@ -20,21 +20,22 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
         UpdateUI(null);
         selecteditem = GameObject.FindGameObjectWithTag("SelectedIcon").GetComponent<UIItem>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-     //   itemstats = GameObject.FindGameObjectWithTag("ItemStats").GetComponent<ItemStats>();
+  //      itemstats = GameObject.FindGameObjectWithTag("ItemStats").GetComponent<ItemStats>();  
         spawnitem = GameObject.FindGameObjectWithTag("SelectedIcon").GetComponent<SpawnItem>();
+
     }
 
   
 
     public void UpdateUI(Item item)
     {
-        this.item = item;
-        if(this.item!=null)
+        this.item = item;           // get current item
+        if(this.item!=null)     // change color     
         {
             itemIcon.color = Color.white;
             itemIcon.sprite = this.item.itemIcon;
         }
-        else
+        else     // make icon transparent
         {
             itemIcon.color = Color.clear;
         }
@@ -42,8 +43,8 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
 
     public void RemoveUI(Item item)
     {
-        this.item = item;
-        itemIcon.color = Color.clear;
+        this.item = item; // remove item 
+        itemIcon.color = Color.clear;       // make icon transparent
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -52,20 +53,20 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
         {
             if(selecteditem.item!=null)
             {
-                Item clone = new Item(selecteditem.item);
+                Item clone = new Item(selecteditem.item);           // item is selected
                 selecteditem.UpdateUI(this.item);
                
                 UpdateUI(clone);
             }
             else
             {
-                selecteditem.UpdateUI(this.item);
+                selecteditem.UpdateUI(this.item);           // item isnt selected
                 UpdateUI(null);
             }
         }
         else if(selecteditem.item!=null)
         {
-            UpdateUI(selecteditem.item);
+            UpdateUI(selecteditem.item);                
             selecteditem.UpdateUI(null);
         }
     }
@@ -73,44 +74,41 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
 
     void Update()
     {
-        
         if (selecteditem.item != null)
         {
             if (Input.GetMouseButtonDown(0))
             {
+
                 Debug.Log("asa");
-                RaycastHit hit = new RaycastHit();
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 1000))
+                if (!EventSystem.current.IsPointerOverGameObject())             //is pointer not over UI 
                 {
-                    if (hit.collider.gameObject.tag == "Player")
+                    if (selecteditem.item.itemId == 0)
                     {
-                        if (selecteditem.item.itemId == 0)
-                        {
-                             spawnitem.SpawningItem();
-                            inventory.RemoveItem(selecteditem.item.itemId);
-                            selecteditem.UpdateUI(null);
-                        }
-                        else if (selecteditem.item.itemId == 1)
-                        {
-                            spawnitem.SpawningItem2();
-                            inventory.RemoveItem(selecteditem.item.itemId);
-                            selecteditem.UpdateUI(null);
-                        }
-                        else if (selecteditem.item.itemId == 2)
-                        {
-                            spawnitem.SpawningItem3();
-                            inventory.RemoveItem(selecteditem.item.itemId);
-                            selecteditem.UpdateUI(null);
-                        }
+                        Debug.Log("I am spawned");
+                        spawnitem.SpawningItem();
+                        inventory.RemoveItem(selecteditem.item.itemId);
+                        selecteditem.UpdateUI(null);
+                    }
+                    else if (selecteditem.item.itemId == 1)
+                    {
+                        spawnitem.SpawningItem2();
+                        inventory.RemoveItem(selecteditem.item.itemId);
+                        selecteditem.UpdateUI(null);
+                    }
+                    else if (selecteditem.item.itemId == 2)
+                    {
+                        spawnitem.SpawningItem3();
+                        inventory.RemoveItem(selecteditem.item.itemId);
+                        selecteditem.UpdateUI(null);
                     }
                 }
             }
         }
-
     }
 
- 
+   
+
+
     public void OnDrop(PointerEventData eventData)
     {
 
@@ -121,12 +119,12 @@ public class UIItem : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IP
     {
       if(this.item!=null)
         {
-    //        itemstats.GetStats(this.item);
+   //         itemstats.GetStats(this.item);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-   //     itemstats.gameObject.SetActive(false);
+  //      itemstats.gameObject.SetActive(false);
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using TMPro;
 using System.Linq;
 
+
+
 public class DialogueManager : MonoBehaviour
 {
     public NPC npc;
@@ -19,7 +21,8 @@ public class DialogueManager : MonoBehaviour
 
     public EndDialogue End;
 
-    [SerializeField]
+
+
     private float dist;
 
     public GameObject player;
@@ -48,14 +51,14 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     private GameObject dialoguecamera,sideCamera2;
 
-
-
-
-    private int Tracker;
     private int relationshipvalue;
 
 
-
+    public enum State
+    {
+        initial, investigate, end
+    }
+    public State currentstate;
 
 
     // Start is called before the first frame update
@@ -80,7 +83,7 @@ public class DialogueManager : MonoBehaviour
     public void Talking()
     {
         dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist < 4f)
+        if (dist < 3f)
         {
             if (Input.GetKeyDown(KeyCode.E) && isActive == false)
             {
@@ -89,6 +92,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     StartCoroutine(ReadingDialogue(npc));      // Starting Dialogue
                     Debug.Log("i am there");
+                    currentstate = State.investigate;
                 }
                 else if (sequencenumber == 1)
                 {
@@ -181,38 +185,41 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ReadQuestDialogue(NPC npc)
     {
-        dialoguecamera.SetActive(true);         //Dialogue CAM
-        sideCamera2.SetActive(false);
-        yield return new WaitForSeconds(1f);
-        PlayCopDialogue();
-        if (inventory.confiscatednumber == 0)
+        if (currentstate == State.investigate)
         {
-            foreach (string dialogue in cop.playeroptiondialogue)
+            dialoguecamera.SetActive(true);         //Dialogue CAM
+            sideCamera2.SetActive(false);
+            yield return new WaitForSeconds(1f);
+            PlayCopDialogue();
+            if (inventory.confiscatednumber == 0)
             {
-                yield return typingspeed.Run(dialogue, copdialoguetext);
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                foreach (string dialogue in cop.playeroptiondialogue)
+                {
+                    yield return typingspeed.Run(dialogue, copdialoguetext);
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                }
+                StartCoroutine(LastConversation());         //Have Final Conversation
             }
-            StartCoroutine(LastConversation());         //Have Final Conversation
+            else if (inventory.confiscatednumber == 1)
+            {
+                foreach (string dialogue in cop.playeroptiondialogue2)
+                {
+                    yield return typingspeed.Run(dialogue, copdialoguetext);
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                }
+                ConfiscateSingleItem();         // If Player has single item 
+            }
+            else if (inventory.confiscatednumber == 2)
+            {
+                foreach (string dialogue in cop.playeroptiondialogue2)
+                {
+                    yield return typingspeed.Run(dialogue, copdialoguetext);
+                    yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+                }
+                ConfiscateBothItems();          // If Player has two items
+            }
+            StopCopDialogue();          // Cop stops talking
         }
-        else if (inventory.confiscatednumber == 1)
-        {
-            foreach (string dialogue in cop.playeroptiondialogue2)
-            {
-                yield return typingspeed.Run(dialogue, copdialoguetext);
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-            }
-            ConfiscateSingleItem();         // If Player has single item 
-        }
-        else if (inventory.confiscatednumber == 2)
-        {
-            foreach (string dialogue in cop.playeroptiondialogue2)
-            {
-                yield return typingspeed.Run(dialogue, copdialoguetext);
-                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-            }
-            ConfiscateBothItems();          // If Player has two items
-        }    
-        StopCopDialogue();               // Cop stops talking
     }
 
     /*IF COP HAS SINGLE ITEM*/
@@ -495,8 +502,8 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
 
             }
-  //          inventory.RemoveItem(0);                    // remove item from player inventory
-  //          npcinventory.GetItem(0);
+            inventory.RemoveItem(0);                    // remove item from player inventory
+            npcinventory.GetItem(0);
             StopNPCDialogue();
             StartCoroutine(LastConversation());
         }
@@ -605,6 +612,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
         StopNPCDialogue();
+        currentstate = State.end;
         yield return new WaitForSeconds(1f);
         isActive = false;
         dialoguecamera.SetActive(false);

@@ -8,6 +8,7 @@ public class ItemPickup : MonoBehaviour
     public int itemId;
     private PlayerController player;
     private float distance;
+    private DialogueManager dm;
     private InspectManager inspectmanager;
     public AK.Wwise.Event Sound;
 
@@ -16,6 +17,7 @@ public class ItemPickup : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        dm = GameObject.FindGameObjectWithTag("NPC").GetComponent<DialogueManager>();
         inspectmanager = GameObject.FindGameObjectWithTag("InspectManager").GetComponent<InspectManager>();
     }
 
@@ -29,28 +31,34 @@ public class ItemPickup : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (distance < 3f)
-        {
-            if (inspectmanager.isInspect == false)
+      //  if (dm.currentstate == DialogueManager.State.investigate)
+     //   {
+            if (distance < 3f)
             {
+                if (inspectmanager.isInspect == false)
+                {
 
-                Sound.Post(gameObject);
-                if (itemId == 0)
-                {
-                    inventory.GiveItem(0);
-                    this.gameObject.SetActive(false);
-                }
-                if (itemId == 1)
-                {
-                    inventory.GiveItem(1);
-                    this.gameObject.SetActive(false);
-                }
-                if (itemId == 2)
-                {
-                    inventory.GiveItem(2);
-                    this.gameObject.SetActive(false);
+                    Sound.Post(gameObject);
+                    if (itemId == 0)
+                    {
+                        inventory.GiveItem(0);
+                        this.gameObject.SetActive(false);
+                    }
+                    if (itemId == 1)
+                    {
+                        inventory.GiveItem(1);
+                        this.gameObject.SetActive(false);
+                    }
+                    if (itemId == 2)
+                    {
+                        inventory.GiveItem(2);
+                        this.gameObject.SetActive(false);
+                    }
                 }
             }
         }
+  //      else
+  //      {
+   //         Debug.Log("Error player is not investigating yet");
+  //      }
     }
-}
