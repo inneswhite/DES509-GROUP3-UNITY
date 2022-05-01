@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class UICursor : MonoBehaviour
 {
+
+    private void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Confined;
+
+    }
     private void Update()
     {
         transform.position = Input.mousePosition;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Confined;
+
     }
 }
