@@ -13,7 +13,7 @@ public class QuestLog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ObjectivePanel.SetActive(false);
+        //ObjectivePanel.SetActive(false);
     }
 
 
@@ -24,11 +24,11 @@ public class QuestLog : MonoBehaviour
         if (isLogOpen)
         {
       
-            ObjectivePanel.SetActive(true);
+            //ObjectivePanel.SetActive(true);
         }
         else
         {
-            ObjectivePanel.SetActive(false);
+            //ObjectivePanel.SetActive(false);
         }
     }
 }

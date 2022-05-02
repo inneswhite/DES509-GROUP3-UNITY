@@ -27,7 +27,7 @@ public class HUDMenuPanel : MonoBehaviour
     {
         uiManager = UIManager.instance;
         activePosition = rectTransform.position;
-        inactivePosition = new Vector2(-rectTransform.sizeDelta.x, activePosition.y);
+        inactivePosition = new Vector2(-rectTransform.sizeDelta.x - 80, activePosition.y);
         rectTransform.position = inactivePosition;
     }
 
@@ -60,5 +60,10 @@ public class HUDMenuPanel : MonoBehaviour
                 ).setEase(leanTweenType);
             isActive = false;
         }
+    }
+
+    private void OnDisable()
+    {
+        Debug.LogError("");
     }
 }

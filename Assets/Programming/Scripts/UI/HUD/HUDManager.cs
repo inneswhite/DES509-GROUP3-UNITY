@@ -8,8 +8,14 @@ public class HUDManager : MonoBehaviour
     [Header("UI References")]
     [SerializeField]
     HUDMenuPanel objectivesPanel;
+    [SerializeField] 
+    HUDMenuButton objectivesButton;
     [SerializeField]
     HUDMenuPanel inventoryPanel;
+    [SerializeField]
+    HUDMenuButton inventoryButton;
+
+
 
     public enum ActivePanel
     {
@@ -24,6 +30,10 @@ public class HUDManager : MonoBehaviour
     //Activate Objects Panel | Only runs if no panel is open
     public void ActivateObjectivesPanel()
     {
+        if(activePanel == ActivePanel.inventory)
+        {
+            DeactivateInventoryPanel();
+        }
         if (activePanel == ActivePanel.none)
         {
             objectivesPanel.Activate();
@@ -36,6 +46,7 @@ public class HUDManager : MonoBehaviour
     {
         if(activePanel == ActivePanel.objectives)
         {
+            objectivesButton.Deselect();
             objectivesPanel.Deactivate();
             activePanel = ActivePanel.none;
         }
@@ -43,16 +54,23 @@ public class HUDManager : MonoBehaviour
 
     public void ActivateInventoryPanel()
     {
+        if(activePanel == ActivePanel.objectives)
+        {
+            DeactivateObjectivesPanel();
+        }
+
         if (activePanel == ActivePanel.none)
         {
             inventoryPanel.Activate();
             activePanel = ActivePanel.inventory;
         }
+        
     }
     public void DeactivateInventoryPanel()
     {
         if(activePanel == ActivePanel.inventory)
         {
+            inventoryButton.Deselect();
             inventoryPanel.Deactivate();
             activePanel = ActivePanel.none;
         }

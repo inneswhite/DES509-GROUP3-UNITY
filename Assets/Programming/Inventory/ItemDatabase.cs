@@ -16,7 +16,7 @@ public class ItemDatabase : MonoBehaviour
     }
     private void Start()
     {
-        inventoryPanel.SetActive(false);
+        //inventoryPanel.SetActive(false);
     }
 
     public void OpenInventory()
