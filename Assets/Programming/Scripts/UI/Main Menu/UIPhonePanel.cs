@@ -43,6 +43,7 @@ public class UIPhonePanel : MonoBehaviour
     public void OpenMessage()
     {
         StartCoroutine(OpenMessageEvents());
+        
     }
 
     IEnumerator OpenMessageEvents()
@@ -57,6 +58,7 @@ public class UIPhonePanel : MonoBehaviour
 
         yield return new WaitForSeconds(buttonFadeDuration);
 
+        uIPhone.StraightenPhone();
         continueButton.Disable();
         continueButton.gameObject.SetActive(false);
         uIPhone.ShowMessage();

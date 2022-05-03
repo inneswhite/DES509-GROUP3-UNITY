@@ -23,6 +23,10 @@ public class UIPhone : MonoBehaviour
         animator.SetBool("phoneActive", false);
     }
 
+    public void StraightenPhone()
+    {
+        animator.SetBool("straightenPhone", true);
+    }
     public void ShowMessage()
     {
         LeanTween.value(0f, 1f, 1f).setOnUpdate

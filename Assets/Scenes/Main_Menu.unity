@@ -978,6 +978,18 @@ PrefabInstance:
       propertyPath: Sound.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
+    - target: {fileID: 1226899188, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226899188, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1226899189, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4de87b72c96c1d84bada318a511d738d, type: 3}
     - target: {fileID: 1663130856, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: Sound.WwiseObjectReference
       value: 
@@ -1116,6 +1128,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6492109735857603267, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7245376251070598273, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
