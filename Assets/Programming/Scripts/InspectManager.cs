@@ -23,6 +23,7 @@ public class InspectManager : MonoBehaviour
     private Camera maincam;
     private Camera sidecam;
     private Camera sidecam2;
+    private Camera insidecam;
 
     [SerializeField]
     private Camera thiscam;
@@ -48,6 +49,7 @@ public class InspectManager : MonoBehaviour
         maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         sidecam = GameObject.FindGameObjectWithTag("SideCamera").GetComponent<Camera>();
         sidecam2 = GameObject.FindGameObjectWithTag("SideCamera2").GetComponent<Camera>();
+        insidecam = GameObject.FindGameObjectWithTag("InsideCamera").GetComponent<Camera>();
 
     }
 
@@ -181,18 +183,28 @@ public class InspectManager : MonoBehaviour
             thiscam = maincam;
             sidecam.enabled = false;
             sidecam2.enabled = false;
+            insidecam.enabled = false;
         }
         else if(sidecam.enabled)            // Side Cam is active
         {
             thiscam = sidecam;
             maincam.enabled = false;
             sidecam2.enabled = false;
+            insidecam.enabled = false;
         }
         else if(sidecam2.enabled)           // Side Cam 2 is active
         {
             thiscam = sidecam2;
             maincam.enabled = false;
             sidecam.enabled = false;
+            insidecam.enabled = false;
+        }
+        else if (insidecam.enabled)           // Inside Cam is active
+        {
+            thiscam = insidecam;
+            maincam.enabled = false;
+            sidecam.enabled = false;
+            sidecam2.enabled = false;
         }
     }
 

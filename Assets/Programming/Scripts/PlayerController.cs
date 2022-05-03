@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
 	private Camera Sidecam;
 	[SerializeField]
 	private Camera Sidecam2;
+    [SerializeField]
+    private Camera InsideCam;
 	[Header("Reference Cam")]
 	[SerializeField]
 	private Camera thiscam;
@@ -195,6 +197,11 @@ public class PlayerController : MonoBehaviour
 			{
 				thiscam = Maincam;
 			}
+            else if(InsideCam.enabled)
+             {
+                 thiscam = InsideCam;
+
+        }
 		}
 }
 
