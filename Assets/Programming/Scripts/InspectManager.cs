@@ -9,6 +9,8 @@ public class InspectManager : MonoBehaviour
     [SerializeField]
     private Texture2D inspectcursor;
     [SerializeField]
+    UICursor uiCursor;
+    [SerializeField]
     private GameObject inspectorPanel;
     [SerializeField]
     private GameObject[] items;
@@ -129,11 +131,15 @@ public class InspectManager : MonoBehaviour
         GetCam();           // get current camera reference
         if(isInspect)
         {
-            Cursor.SetCursor(inspectcursor, Vector2.zero, CursorMode.ForceSoftware);
+            //Cursor.SetCursor(inspectcursor, Vector2.zero, CursorMode.ForceSoftware);
+                //Innes changed the above line to the below line
+            uiCursor.ActivateInspectModeCursor();
         }
         else
         {
-            Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
+            //Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
+                //Innes changed the above line to the below line
+            uiCursor.ExitInspectModeCursor();
         }
     }
 
