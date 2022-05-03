@@ -53,7 +53,7 @@ public class UISettingsPanel : MonoBehaviour
 
     IEnumerator ActivationSequence()
     {
-        yield return new WaitForSeconds(menuOpenDelay);
+        yield return new WaitForSecondsRealtime(menuOpenDelay);
         foreach (PauseUIButton menuButton in menuButtons)
         {
             menuButton.gameObject.SetActive(true);
@@ -64,7 +64,7 @@ public class UISettingsPanel : MonoBehaviour
                    {
                        menuButton.SetAlpha(_alpha);
                    }
-               ).setEase(leanTweenType);
+               ).setEase(leanTweenType).setIgnoreTimeScale(true);
         }
         LeanTween.value(0f, 1f, buttonFadeDuration).setOnUpdate
                (
@@ -75,7 +75,7 @@ public class UISettingsPanel : MonoBehaviour
                            sliderElements[i].color = new Color(sliderElements[i].color.r, sliderElements[i].color.g, sliderElements[i].color.b, _alpha);
                        }
                    }
-               ).setEase(leanTweenType);
+               ).setEase(leanTweenType).setIgnoreTimeScale(true);
 
     }
 
@@ -95,7 +95,7 @@ public class UISettingsPanel : MonoBehaviour
                    {
                        menuButton.SetAlpha(_alpha);
                    }
-               ).setEase(leanTweenType);
+               ).setEase(leanTweenType).setIgnoreTimeScale(true);
 
             isActive = false;
         }
@@ -108,9 +108,9 @@ public class UISettingsPanel : MonoBehaviour
                            sliderElements[i].color = new Color(sliderElements[i].color.r, sliderElements[i].color.g, sliderElements[i].color.b, _alpha);
                        }
                    }
-               ).setEase(leanTweenType);
+               ).setEase(leanTweenType).setIgnoreTimeScale(true);
 
-        yield return new WaitForSeconds(buttonFadeDuration);
+        yield return new WaitForSecondsRealtime(buttonFadeDuration);
 
         foreach (PauseUIButton menuButton in menuButtons)
         {

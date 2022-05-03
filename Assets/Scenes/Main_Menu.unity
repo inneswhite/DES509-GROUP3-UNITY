@@ -925,6 +925,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 299783634, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 582834015, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -949,6 +953,10 @@ PrefabInstance:
       propertyPath: uIPhone
       value: 
       objectReference: {fileID: 1725434102}
+    - target: {fileID: 2035628802, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5053704613762872473, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_Name
       value: Main Menu
@@ -1035,6 +1043,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5053704613762872477, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492109734204347837, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492109734217703715, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492109734892809718, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492109735199182358, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492109735857603267, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
