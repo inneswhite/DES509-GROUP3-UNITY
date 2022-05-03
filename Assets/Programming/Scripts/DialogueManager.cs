@@ -306,7 +306,7 @@ public class DialogueManager : MonoBehaviour
         dialoguecamera.SetActive(true);
         sideCamera2.SetActive(false);
         yield return new WaitForSeconds(2f);
-        if(relationshipvalue==1)                    //GIVE AWAY SINGLE ITEM
+        if(relationshipvalue==1)                    //GIVE AWAY SYRINGE
         {
             PlayCopDialogue();
             foreach (string dialogue in cop.bothitemsdialogue)
@@ -342,9 +342,7 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopNPCDialogue();
-            sequencenumber++;
-            dialoguecamera.SetActive(false);
-            sideCamera2.SetActive(true);
+            StartCoroutine(LastConversation());
         }
         if (relationshipvalue == -1)    //TAKE AWAY SYRINGE     
         {
@@ -363,9 +361,7 @@ public class DialogueManager : MonoBehaviour
                 yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
             }
             StopNPCDialogue();
-            sequencenumber++;
-            dialoguecamera.SetActive(false);
-            sideCamera2.SetActive(true);
+            StartCoroutine(LastConversation());
         }
     }
 
@@ -562,6 +558,7 @@ public class DialogueManager : MonoBehaviour
         //End
         dialoguecamera.SetActive(true);
         sideCamera2.SetActive(false);
+        Debug.Log("Last Convo");
         yield return new WaitForSeconds(2f);
         PlayNPCDialogue();
         foreach(string dialogue in End.endnpcdialogue)
@@ -618,7 +615,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
         StopNPCDialogue();
-        currentstate = State.end;
+        currentstate = State.end; 
         yield return new WaitForSeconds(1f);
         isActive = false;
         dialoguecamera.SetActive(false);

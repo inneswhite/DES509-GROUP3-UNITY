@@ -12,6 +12,7 @@ public class ItemPickup : MonoBehaviour
     private DialogueManager dm;
     private InspectManager inspectmanager;
     public AK.Wwise.Event Sound;
+    private GameObject medicine;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class ItemPickup : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         dm = GameObject.FindGameObjectWithTag("NPC").GetComponent<DialogueManager>();
         inspectmanager = GameObject.FindGameObjectWithTag("InspectManager").GetComponent<InspectManager>();
+        medicine = GameObject.Find("Medicine");
     }
 
     // Update is called once per frame
@@ -53,7 +55,7 @@ public class ItemPickup : MonoBehaviour
                     if (itemId == 2)
                     {
                         inventory.GiveItem(2);
-                        this.gameObject.SetActive(false);
+                        medicine.SetActive(false);
                     }
                 }
             }
