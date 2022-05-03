@@ -17,6 +17,7 @@ TagManager:
   - SelectedIcon
   - ItemStats
   - DialogueCamera
+  - InsideCamera
   layers:
   - Default
   - TransparentFX
