@@ -9,6 +9,8 @@ public class CameraTrigger : MonoBehaviour
     [SerializeField]
     private CameraFollow sidecam;
     [SerializeField]
+    private CameraFollow maincam;
+    [SerializeField]
     private int camfollowvalue;
     void Start()
     {
@@ -69,20 +71,35 @@ private void OnTriggerEnter(Collider other)
     {
        if(other.gameObject.tag=="Player")
         {
-            if (camfollowvalue == 1)
+            if(camfollowvalue==1)
+            {
+                maincam.enabled = true;
+                sidecam.enabled = false;
+                camid.enabled = true;                   // Switch Cameras
+                camid2.enabled = false;
+            }
+            if (camfollowvalue == 2)
+            {
+                maincam.enabled = true;
+                sidecam.enabled = false;
+                camid.enabled = true;                   // Switch Cameras
+                camid2.enabled = false;
+            }
+            if (camfollowvalue == 3)
             {
                 sidecam.enabled = true;
-
+                maincam.enabled = false;
                 camid.enabled = true;                   // Switch Cameras
                 camid2.enabled = false;
             }
-            else
+            if (camfollowvalue == 4)
             {
                 sidecam.enabled = false;
-
+                maincam.enabled = false;
                 camid.enabled = true;                   // Switch Cameras
                 camid2.enabled = false;
             }
+
         }
     }
 }
