@@ -458,6 +458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 960086379}
   - component: {fileID: 960086378}
+  - component: {fileID: 960086380}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -504,6 +505,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &960086380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960086377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95755dcce9e853941a500ddea8cfb5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 15f7ff93b9a202046b9f3af7602feba1, type: 2}
+  decodeBank: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1 &1273438124
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +974,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1012849177, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
+    - target: {fileID: 1663130856, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
     - target: {fileID: 1831800379, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: uIPhone
       value: 
@@ -1045,18 +1078,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6492109733935933091, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
     - target: {fileID: 6492109734204347837, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6492109734214428563, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
     - target: {fileID: 6492109734217703715, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6492109734636268150, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
+    - target: {fileID: 6492109734816725404, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
     - target: {fileID: 6492109734892809718, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6492109734898182982, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: Sound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
     - target: {fileID: 6492109735199182358, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_RaycastTarget
       value: 0

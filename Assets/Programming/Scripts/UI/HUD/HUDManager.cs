@@ -5,6 +5,10 @@ using UnityEngine;
 //HUDManager communicates between UI Manager and HUD elements
 public class HUDManager : MonoBehaviour
 {
+
+    public AK.Wwise.Event SoundInt;
+    public AK.Wwise.Event SoundInv;
+
     [Header("UI References")]
     [SerializeField]
     HUDMenuPanel objectivesPanel;
@@ -99,5 +103,15 @@ public class HUDManager : MonoBehaviour
         {
             DeactivateInventoryPanel();
         }
+    }
+
+    public void InteractSound()
+    {
+        SoundInt.Post(gameObject);
+    }
+
+    public void InvestigateSound()
+    {
+        SoundInv.Post(gameObject);
     }
 }

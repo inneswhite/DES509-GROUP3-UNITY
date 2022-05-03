@@ -9,6 +9,10 @@ using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
+
+    public AK.Wwise.Event NPCTalking;
+    public AK.Wwise.Event CopTalking;
+
     public NPC npc;
     public TextMeshProUGUI npcName;
     public TextMeshProUGUI dialoguetext;
@@ -123,6 +127,8 @@ public class DialogueManager : MonoBehaviour
         PlayNPCDialogue();                              // PLAYER START NPC DIALOGUE
         foreach (string dialogue in npc.npcdialogue)
         {
+
+            //NPCTalking.Post(gameObject);
             yield return typingspeed.Run(dialogue, dialoguetext);
             yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         }
@@ -626,6 +632,7 @@ public class DialogueManager : MonoBehaviour
     {
         isActive = true;
         Dialoguecanvas.SetActive(true);
+        NPCTalking.Post(gameObject);
         npcName.text = npc.NPCName;
     }
 
@@ -633,6 +640,7 @@ public class DialogueManager : MonoBehaviour
     {
         Dialoguecanvas.SetActive(false);
         npcName.text = npc.NPCName;
+        NPCTalking.Stop(gameObject);
         dialoguetext.text = null;
     }
 
@@ -640,6 +648,7 @@ public class DialogueManager : MonoBehaviour
     {
         isActive = true;
         Copdialoguecanvas.SetActive(true);
+        CopTalking.Post(gameObject);
         copName.text = cop.copName;       
     }
 
@@ -647,6 +656,7 @@ public class DialogueManager : MonoBehaviour
     {
         Copdialoguecanvas.SetActive(false);
         copName.text = cop.copName;
+        CopTalking.Stop(gameObject);
         copdialoguetext.text = null;
     }
 

@@ -390,8 +390,8 @@ MonoBehaviour:
         guid: f4043964df919343966f9f9c49f54ecd
       Path: Events\Default Work Unit\Dialogue
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.150363
+      minDuration: 5.150363
     - name: Footstep_Platform
       guid: ff8f2183078f954793d3cfea0fae5e37
       id: 1062709567
@@ -407,8 +407,8 @@ MonoBehaviour:
         guid: ff8f2183078f954793d3cfea0fae5e37
       Path: Events\Default Work Unit\Footstep_Platform
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.202744
+      minDuration: 0.147687
     - name: Interact
       guid: 2482c3e6e9ab3d4f8c1aa640c8f4c891
       id: 1466384055
@@ -424,8 +424,8 @@ MonoBehaviour:
         guid: 2482c3e6e9ab3d4f8c1aa640c8f4c891
       Path: Events\Default Work Unit\Interact
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.32
+      minDuration: 0.32
     - name: Investigate
       guid: 48cf6596d162814ab70611d827fa6fe1
       id: 2041902182
@@ -441,8 +441,8 @@ MonoBehaviour:
         guid: 48cf6596d162814ab70611d827fa6fe1
       Path: Events\Default Work Unit\Investigate
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5
+      minDuration: 0.5
     - name: Pickup
       guid: 2b6d29d02c62324b9d44f64134e280d1
       id: 3978245845
@@ -458,8 +458,8 @@ MonoBehaviour:
         guid: 2b6d29d02c62324b9d44f64134e280d1
       Path: Events\Default Work Unit\Pickup
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.14
+      minDuration: 0.14
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:

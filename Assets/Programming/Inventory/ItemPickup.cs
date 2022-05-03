@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
-{ 
+{
+
     private Inventory inventory;
     public int itemId;
     private PlayerController player;

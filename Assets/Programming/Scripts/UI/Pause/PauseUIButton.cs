@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class PauseUIButton : MonoBehaviour
 {
+    public AK.Wwise.Event Sound;
+
     [Header("Button Text Colours")]
     [SerializeField]
     Color defaultColor = Color.white;
@@ -47,6 +49,7 @@ public class PauseUIButton : MonoBehaviour
     {
         if (isEnabled)
         {
+            Sound.Post(gameObject);
             text.color = pressedColor;
         }
     }
