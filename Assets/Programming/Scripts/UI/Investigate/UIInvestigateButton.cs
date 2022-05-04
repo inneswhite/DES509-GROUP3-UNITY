@@ -12,6 +12,7 @@ public class UIInvestigateButton : MonoBehaviour
 
     Image image; 
 
+
     enum ActiveSprite
     {
         idle,
@@ -20,6 +21,8 @@ public class UIInvestigateButton : MonoBehaviour
         selected
     }
     ActiveSprite activeSprite;
+
+    bool isSelected = false;
 
     private void Awake()
     {
@@ -32,10 +35,15 @@ public class UIInvestigateButton : MonoBehaviour
 
     public void SetIdle()
     {
-        if (activeSprite != ActiveSprite.idle)
+        if (activeSprite != ActiveSprite.idle && !isSelected)
         {
             image.sprite = idle;
             activeSprite = ActiveSprite.idle;
+        }
+        if (isSelected)
+        {
+            image.sprite = selected;
+            activeSprite = ActiveSprite.selected;
         }
 
     }
@@ -51,10 +59,19 @@ public class UIInvestigateButton : MonoBehaviour
 
     public void SetPressed()
     {
-        if (activeSprite != ActiveSprite.pressed)
+        if (activeSprite != ActiveSprite.pressed )
         {
             image.sprite = pressed;
             activeSprite = ActiveSprite.pressed;
+
+            if (isSelected)
+            {
+                isSelected = false;
+            }
+            else
+            {
+                isSelected = true;
+            }
         }
     }
 
