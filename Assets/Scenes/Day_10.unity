@@ -29546,6 +29546,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 42a70cef4e3bda145bb5d339ff819440, type: 3}
+    - target: {fileID: 2915230022488321937, guid: fe838c547b5d3544b963f1297b728fbb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 688.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915230022488321937, guid: fe838c547b5d3544b963f1297b728fbb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 183.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3113875039257330191, guid: fe838c547b5d3544b963f1297b728fbb, type: 3}
       propertyPath: Sound.WwiseObjectReference
       value: 
