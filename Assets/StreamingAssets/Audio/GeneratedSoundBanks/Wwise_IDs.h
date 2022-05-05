@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID DIALOGUE = 3930136735U;
+        static const AkUniqueID DIALOGUE_AFSOON = 808420794U;
         static const AkUniqueID FOOTSTEP_PLATFORM = 1062709567U;
         static const AkUniqueID INTERACT = 1466384055U;
         static const AkUniqueID INVESTIGATE = 2041902182U;

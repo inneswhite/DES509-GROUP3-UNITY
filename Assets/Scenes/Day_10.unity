@@ -9486,7 +9486,7 @@ MonoBehaviour:
   NPCTalking:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 690ebf12c81a40244bf868df343f44e9, type: 2}
   CopTalking:
     idInternal: 0
     valueGuidInternal: 
@@ -29361,6 +29361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1407652643267939824}
+  TargetObject: {fileID: 0}
+  radius: 0
 --- !u!33 &515067873311083746
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -31046,6 +31048,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1407652643267939824}
+  TargetObject: {fileID: 0}
+  radius: 0
 --- !u!4 &1648477491392843315
 Transform:
   m_ObjectHideFlags: 0
