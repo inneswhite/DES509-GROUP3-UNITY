@@ -18,6 +18,7 @@ TagManager:
   - ItemStats
   - DialogueCamera
   - InsideCamera
+  - RecorderCamera
   layers:
   - Default
   - TransparentFX

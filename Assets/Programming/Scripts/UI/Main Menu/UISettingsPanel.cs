@@ -58,6 +58,7 @@ public class UISettingsPanel : MonoBehaviour
         {
             menuButton.gameObject.SetActive(true);
             menuButton.Enable();
+            menuButton.SetAlpha(0f);
             LeanTween.value(0f, 1f, buttonFadeDuration).setOnUpdate
                (
                    (float _alpha) =>
@@ -88,7 +89,9 @@ public class UISettingsPanel : MonoBehaviour
     {
         foreach (PauseUIButton menuButton in menuButtons)
         {
+            menuButton.SetAlpha(1f);
             menuButton.Disable();
+            
             LeanTween.value(1f, 0f, buttonFadeDuration).setOnUpdate
                (
                    (float _alpha) =>

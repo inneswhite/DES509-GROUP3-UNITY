@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIMainMenuPanel : MonoBehaviour
 {
     List<PauseUIButton> menuButtons = new List<PauseUIButton>();
-    [SerializeField] Image titleImage;
+    [SerializeField] Image titleImage, backgroundImage;
     [SerializeField] float buttonFadeDuration = 0.5f;
     [SerializeField] LeanTweenType leanTweenType;
 
@@ -47,6 +47,7 @@ public class UIMainMenuPanel : MonoBehaviour
                        (float _alpha) =>
                        {
                            titleImage.color = new Color(titleImage.color.r, titleImage.color.g, titleImage.color.b, _alpha);
+                           backgroundImage.color = new Color(backgroundImage.color.r, backgroundImage.color.g, backgroundImage.color.b, _alpha);
                        }
                    ).setEase(leanTweenType);
             
@@ -71,6 +72,7 @@ public class UIMainMenuPanel : MonoBehaviour
                        (float _alpha) =>
                        {
                            titleImage.color = new Color(titleImage.color.r, titleImage.color.g, titleImage.color.b, _alpha);
+                           backgroundImage.color = new Color(backgroundImage.color.r, backgroundImage.color.g, backgroundImage.color.b, _alpha);
                        }
                    ).setEase(leanTweenType);
 

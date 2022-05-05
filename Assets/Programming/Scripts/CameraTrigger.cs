@@ -12,6 +12,10 @@ public class CameraTrigger : MonoBehaviour
     private CameraFollow maincam;
     [SerializeField]
     private int camfollowvalue;
+
+    [Header("UI References")]
+    [SerializeField]
+    UIInvestigateButton uIInvestigateButton;
     void Start()
     {
         sidecam.enabled = false;
@@ -77,6 +81,9 @@ private void OnTriggerEnter(Collider other)
                 sidecam.enabled = false;
                 camid.enabled = true;                   // Switch Cameras
                 camid2.enabled = false;
+
+                //Activate Inspect UI
+                uIInvestigateButton.Activate();
             }
             if (camfollowvalue == 2)
             {
@@ -84,6 +91,7 @@ private void OnTriggerEnter(Collider other)
                 sidecam.enabled = false;
                 camid.enabled = true;                   // Switch Cameras
                 camid2.enabled = false;
+              
             }
             if (camfollowvalue == 3)
             {
@@ -98,8 +106,12 @@ private void OnTriggerEnter(Collider other)
                 maincam.enabled = false;
                 camid.enabled = true;                   // Switch Cameras
                 camid2.enabled = false;
+
+                    //Deactivate Inspect UI
+                uIInvestigateButton.Deactivate();                
             }
 
+            
         }
     }
 }

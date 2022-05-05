@@ -950,10 +950,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 299783634, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 582834015, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -974,33 +970,21 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1012849177, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: Sound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
-    - target: {fileID: 1226899188, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 54
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226899188, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226899189, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 4de87b72c96c1d84bada318a511d738d, type: 3}
-    - target: {fileID: 1663130856, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: Sound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
     - target: {fileID: 1831800379, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: uIPhone
       value: 
       objectReference: {fileID: 1725434102}
-    - target: {fileID: 2035628802, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
+    - target: {fileID: 3700362386105651686, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700362386105651686, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3700362386105651686, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.59
       objectReference: {fileID: 0}
     - target: {fileID: 5053704613762872473, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
       propertyPath: m_Name
@@ -1090,52 +1074,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6492109733935933091, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: Sound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
-    - target: {fileID: 6492109734204347837, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492109734214428563, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: Sound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
-    - target: {fileID: 6492109734217703715, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492109734636268150, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: Sound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
-    - target: {fileID: 6492109734816725404, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: Sound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
-    - target: {fileID: 6492109734892809718, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492109734898182982, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: Sound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 330701eda2e3af34facd6c826a972e60, type: 2}
-    - target: {fileID: 6492109735199182358, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6492109735857603267, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7245376251070598273, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1462413261, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
 --- !u!1001 &6196492742299242696
 PrefabInstance:
