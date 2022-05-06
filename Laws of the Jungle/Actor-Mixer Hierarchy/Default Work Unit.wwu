@@ -203,6 +203,94 @@
 						<ActiveSource Name="Afsoon_Dialogue" ID="{8BC82A35-BE69-4C84-BB34-4465C3C39B30}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<RandomSequenceContainer Name="Footsteps_Mud" ID="{C555E033-37EA-40C9-956E-EE3455AD8E8C}" ShortID="49748902">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Footsteps_Mud 2" ID="{7FF0F982-0608-4028-BCAF-2F7CE9D11E3F}" ShortID="970996232">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps_Mud 2" ID="{35051B2E-8812-4C1D-88C6-D0AEC6BA4523}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps_Mud 2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="941869471"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps_Mud 2" ID="{35051B2E-8812-4C1D-88C6-D0AEC6BA4523}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps_Mud 1" ID="{4C18FE0B-AFE2-435C-AFC8-E3A5C617323F}" ShortID="43439363">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps_Mud 1" ID="{8B42E8C0-DC23-458B-9D49-BEF21BFF94A0}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps_Mud 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="11055572"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps_Mud 1" ID="{8B42E8C0-DC23-458B-9D49-BEF21BFF94A0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Footsteps_Mud 3" ID="{F2F394A5-7F4F-4BC3-B57E-84A85AFCE99A}" ShortID="44014111">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Footsteps_Mud 3" ID="{3C023BAF-EF6D-4CB6-8B1D-A4716131BD0E}">
+									<Language>SFX</Language>
+									<AudioFile>Footsteps_Mud 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="693062051"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Footsteps_Mud 3" ID="{3C023BAF-EF6D-4CB6-8B1D-A4716131BD0E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

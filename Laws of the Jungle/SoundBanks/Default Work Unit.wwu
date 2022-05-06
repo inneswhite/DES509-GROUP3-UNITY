@@ -14,6 +14,7 @@
 						<ObjectRef Name="Investigate" ID="{9665CF48-62D1-4A81-B706-11D827FA6FE1}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Pickup" ID="{D0296D2B-622C-4B32-9D44-F64134E280D1}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Police Dialogue" ID="{002EB091-871A-4C12-A2D3-A64D7906040F}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Footstep_mud" ID="{7DF23F15-F2EF-4DCF-A56F-77E24F99E668}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Background_Music" ID="{61DB0845-5623-4E18-AF58-682EBCDA1CA4}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Dialogue_Afsoon" ID="{CE30BB31-00F0-4F06-B4B9-DC07682A79A4}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Interact" ID="{E6C38224-ABE9-4F3D-8C1A-A640C8F4C891}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
