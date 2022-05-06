@@ -26,7 +26,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -108,8 +108,1163 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Afsoon_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Afsoon_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Afsoon_SittingIdle(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Reference
+      parentName: Afsoon_SittingIdle(Clone)
+      position: {x: -0.010069458, y: -0.24686168, z: 0.050576765}
+      rotation: {x: 0.001274712, y: -0.0011944675, z: -0.007979773, w: 0.9999667}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Hips
+      parentName: Afsoon_Reference
+      position: {x: -0.004158752, y: 0.80137616, z: -0.009688756}
+      rotation: {x: -0.0012747119, y: 0.0011944678, z: 0.007979773, w: 0.9999667}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Afsoon_LeftUpLeg
+      parentName: Afsoon_Hips
+      position: {x: -0.06356028, y: -0.007056007, z: -1.110223e-18}
+      rotation: {x: 0.0000029567163, y: 0.000000009313226, z: -0.000000011244083, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Afsoon_LeftLeg
+      parentName: Afsoon_LeftUpLeg
+      position: {x: -0, y: -0.2148363, z: 0.019332869}
+      rotation: {x: -0.000006134971, y: 0.0000000020954367, z: 0.0000000101848, w: 1}
+      scale: {x: 1, y: 0.9999998, z: 1.0000002}
+    - name: Afsoon_LeftFoot
+      parentName: Afsoon_LeftLeg
+      position: {x: 0.000000028610229, y: -0.26962757, z: -0.039663017}
+      rotation: {x: 0.0000031781383, y: -0.000000023283063, z: 9.338997e-10, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 1}
+    - name: Afsoon_LeftToeBase
+      parentName: Afsoon_LeftFoot
+      position: {x: -0.000000042915342, y: -0.03393475, z: 0.074610524}
+      rotation: {x: -0, y: -0, z: -5.5084247e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Afsoon_Spine
+      parentName: Afsoon_Hips
+      position: {x: -0, y: 0.05110733, z: -1.110223e-18}
+      rotation: {x: -1.1641532e-10, y: 1.1641532e-10, z: -1.0993517e-10, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Afsoon_Spine1
+      parentName: Afsoon_Spine
+      position: {x: -2.5780265e-15, y: 0.049200132, z: -0.012625065}
+      rotation: {x: 0.000000005820766, y: -3.4924597e-10, z: -9.317773e-10, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+    - name: Afsoon_Spine2
+      parentName: Afsoon_Spine1
+      position: {x: -2.4869321e-15, y: 0.047671966, z: -0.0060328506}
+      rotation: {x: -0.000000011641532, y: 6.9849193e-10, z: -0.0000000018617357, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_LeftShoulder
+      parentName: Afsoon_Spine2
+      position: {x: -0.05176412, y: 0.115653835, z: 0.004349501}
+      rotation: {x: 0.000000005820766, y: -6.98492e-10, z: 0.000000007449671, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_LeftArm
+      parentName: Afsoon_LeftShoulder
+      position: {x: -0.036772218, y: -0.000914917, z: 0}
+      rotation: {x: 0.00066097453, y: 0.04490547, z: 0.006787016, w: 0.998968}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: Afsoon_LeftForeArm
+      parentName: Afsoon_LeftArm
+      position: {x: -0.15137099, y: -0.00000010567497, z: -0.025587704}
+      rotation: {x: -0.00032243482, y: -0.047840614, z: -0.0037196912, w: 0.9988481}
+      scale: {x: 0.99999976, y: 0.9999999, z: 1.0000002}
+    - name: Afsoon_LeftHand
+      parentName: Afsoon_LeftForeArm
+      position: {x: -0.13348576, y: -0.00000016719706, z: 0.011261588}
+      rotation: {x: 0.000000002436536, y: -0.0000017330601, z: 0.0000007599596, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: Afsoon_LeftHandThumb1
+      parentName: Afsoon_LeftHand
+      position: {x: -0.024348931, y: -0.003992547, z: 0.013079154}
+      rotation: {x: -0.02571637, y: 0.0434862, z: -0.028197352, w: 0.99832493}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: Afsoon_LeftHandThumb2
+      parentName: Afsoon_LeftHandThumb1
+      position: {x: -0.020117974, y: -0.0026804681, z: 0.014213939}
+      rotation: {x: 0.028969174, y: 0.29981023, z: 0.09063488, w: 0.9492418}
+      scale: {x: 1.1451048, y: 1.0000001, z: 1.0000001}
+    - name: Afsoon_LeftHandThumb3
+      parentName: Afsoon_LeftHandThumb2
+      position: {x: -0.012715686, y: -0.000000047386138, z: 0.000000058030434}
+      rotation: {x: -0.0000006351617, y: -0.05228742, z: -0.0000006589104, w: 0.9986321}
+      scale: {x: 0.97265744, y: 1.0005004, z: 1.0304165}
+    - name: Afsoon_LeftHandThumb4
+      parentName: Afsoon_LeftHandThumb3
+      position: {x: -0.01333373, y: -0.00000008046226, z: -0.000000041656975}
+      rotation: {x: -0.0000000062921104, y: 0.000000014901158, z: 0.000002558887, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Afsoon_LeftHandIndex1
+      parentName: Afsoon_LeftHand
+      position: {x: -0.06426965, y: 0.003908185, z: 0.016693635}
+      rotation: {x: -0.00095724803, y: 0.064242005, z: -0.00682431, w: 0.9979106}
+      scale: {x: 0.8649886, y: 1, z: 1.0000001}
+    - name: Afsoon_LeftHandIndex2
+      parentName: Afsoon_LeftHandIndex1
+      position: {x: -0.02111375, y: -0.00000009468777, z: 0.0007359971}
+      rotation: {x: -0.00017637387, y: -0.017451517, z: 0.010104984, w: 0.9997967}
+      scale: {x: 1.5141487, y: 0.98632705, z: 1.0001633}
+    - name: Afsoon_LeftHandIndex3
+      parentName: Afsoon_LeftHandIndex2
+      position: {x: -0.013237438, y: -0.00000013971587, z: 0.00092481484}
+      rotation: {x: -0.000000022424498, y: -0.0000000074505797, z: 0.04088224, w: 0.99916404}
+      scale: {x: 0.98976123, y: 1.0135403, z: 1.0000211}
+    - name: Afsoon_LeftHandIndex4
+      parentName: Afsoon_LeftHandIndex3
+      position: {x: -0.009767276, y: -0.00000009745541, z: 0.0006823894}
+      rotation: {x: -0, y: -0, z: -1.6707549e-16, w: 1}
+      scale: {x: 1.0000002, y: 0.9999998, z: 1}
+    - name: Afsoon_LeftHandMiddle1
+      parentName: Afsoon_LeftHand
+      position: {x: -0.07148039, y: 0.0075306348, z: 0.0025351413}
+      rotation: {x: 0.00040201933, y: 0.014272788, z: 0.030134462, w: 0.9994439}
+      scale: {x: 0.97484154, y: 1.0000001, z: 1.0000001}
+    - name: Afsoon_LeftHandMiddle2
+      parentName: Afsoon_LeftHandMiddle1
+      position: {x: -0.024316253, y: -0.00000002542918, z: 0.0000015138248}
+      rotation: {x: -0.0000009951763, y: -0.000031067055, z: 0.03209569, w: 0.9994849}
+      scale: {x: 1.1820216, y: 0.9974583, z: 0.99999416}
+    - name: Afsoon_LeftHandMiddle3
+      parentName: Afsoon_LeftHandMiddle2
+      position: {x: -0.01382618, y: 0.0000000075420195, z: 0.0000017191555}
+      rotation: {x: 0.000000039073928, y: -0.000000025484036, z: -0.000000014932098, w: 1}
+      scale: {x: 0.98637754, y: 1.0157051, z: 1.0000352}
+    - name: Afsoon_LeftHandMiddle4
+      parentName: Afsoon_LeftHandMiddle3
+      position: {x: -0.010028152, y: 0.000000021859812, z: 0.0000012431615}
+      rotation: {x: -0, y: -0, z: -7.8059507e-16, w: 1}
+      scale: {x: 1.0000005, y: 0.99999976, z: 0.99999994}
+    - name: Afsoon_LeftHandRing1
+      parentName: Afsoon_LeftHand
+      position: {x: -0.06853354, y: 0.0062183575, z: -0.011586233}
+      rotation: {x: -0.003444628, y: -0.035984755, z: 0.006399771, w: 0.99932593}
+      scale: {x: 0.75156265, y: 1.0000001, z: 1}
+    - name: Afsoon_LeftHandRing2
+      parentName: Afsoon_LeftHandRing1
+      position: {x: -0.022688774, y: 0.0000000019131403, z: -0.000000001587321}
+      rotation: {x: 0.0000000013969834, y: -0.000031113614, z: 0.000001205713, w: 1}
+      scale: {x: 1.4243515, y: 0.98994976, z: 0.9999782}
+    - name: Afsoon_LeftHandRing3
+      parentName: Afsoon_LeftHandRing2
+      position: {x: -0.011522635, y: 0.00000008307322, z: 0.00000072261207}
+      rotation: {x: -0.00000051508687, y: 0.00000015812829, z: 0.045293864, w: 0.99897367}
+      scale: {x: 0.9936254, y: 1.0068635, z: 1.000015}
+    - name: Afsoon_LeftHandRing4
+      parentName: Afsoon_LeftHandRing3
+      position: {x: -0.009616738, y: 0.000000016030945, z: 0.0000005930928}
+      rotation: {x: -2.2204455e-16, y: -0, z: -1.2923981e-17, w: 1}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: Afsoon_LeftHandPinky1
+      parentName: Afsoon_LeftHand
+      position: {x: -0.05908181, y: -0.002938459, z: -0.021141684}
+      rotation: {x: -0.01617385, y: -0.04330196, z: -0.014557221, w: 0.9988251}
+      scale: {x: 1.0102795, y: 1, z: 0.9999999}
+    - name: Afsoon_LeftHandPinky2
+      parentName: Afsoon_LeftHandPinky1
+      position: {x: -0.015220486, y: 0.00000016326639, z: -0.0000000061234564}
+      rotation: {x: 0.000000029802315, y: -0.000000014901158, z: 0.000006688757, w: 1}
+      scale: {x: 1.3473179, y: 1.0005985, z: 1.0000005}
+    - name: Afsoon_LeftHandPinky3
+      parentName: Afsoon_LeftHandPinky2
+      position: {x: -0.009872492, y: 0.00000029004818, z: 2.5305091e-11}
+      rotation: {x: 0.000000007450778, y: 0.000000029802266, z: 0.00000000791624, w: 1}
+      scale: {x: 0.98258984, y: 1.0236726, z: 1.000012}
+    - name: Afsoon_LeftHandPinky4
+      parentName: Afsoon_LeftHandPinky3
+      position: {x: -0.008333089, y: 0.00000019767293, z: 0.000000011586678}
+      rotation: {x: -0, y: -0, z: -2.2205006e-16, w: 1}
+      scale: {x: 1.0000005, y: 1, z: 1.0000004}
+    - name: Afsoon_Neck
+      parentName: Afsoon_Spine2
+      position: {x: -6.9581935e-15, y: 0.13348404, z: -0.009400033}
+      rotation: {x: 0.0000005878974, y: -3.492443e-10, z: 0.0000000027994251, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Afsoon_Head
+      parentName: Afsoon_Neck
+      position: {x: -3.1806686e-15, y: 0.06151384, z: 0.015495398}
+      rotation: {x: -0, y: -0, z: -1.6724798e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Afsoon_RightShoulder
+      parentName: Afsoon_Spine2
+      position: {x: 0.051764097, y: 0.11565338, z: 0.004349525}
+      rotation: {x: 1, y: -0.0000000016570989, z: 0.000000003626155, w: 0.000000005841682}
+      scale: {x: 1, y: 1.0000007, z: 1.0000007}
+    - name: Afsoon_RightArm
+      parentName: Afsoon_RightShoulder
+      position: {x: 0.03677227, y: 0.00091400143, z: 0}
+      rotation: {x: 0.0006611311, y: 0.044905122, z: 0.006785195, w: 0.99896806}
+      scale: {x: 1.0000007, y: 0.9999997, z: 0.9999997}
+    - name: Afsoon_RightForeArm
+      parentName: Afsoon_RightArm
+      position: {x: 0.15137063, y: 0.0000009106005, z: 0.025587456}
+      rotation: {x: -0.00032252452, y: -0.047839798, z: -0.003717634, w: 0.9988481}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000005}
+    - name: Afsoon_RightHand
+      parentName: Afsoon_RightForeArm
+      position: {x: 0.13348629, y: -0.00000013880172, z: -0.0112615395}
+      rotation: {x: 0.0000000035488474, y: -0.0000015831298, z: 0.00000081677064, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Afsoon_RightHandThumb1
+      parentName: Afsoon_RightHand
+      position: {x: 0.024349136, y: 0.0039929976, z: -0.013079197}
+      rotation: {x: -0.025713652, y: 0.043479774, z: -0.028194256, w: 0.9983253}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000002}
+    - name: Afsoon_RightHandThumb2
+      parentName: Afsoon_RightHandThumb1
+      position: {x: 0.020117318, y: 0.0026802565, z: -0.0142138945}
+      rotation: {x: 0.028966637, y: 0.2998234, z: 0.0906308, w: 0.9492381}
+      scale: {x: 1.1451054, y: 1.0000002, z: 1.0000002}
+    - name: Afsoon_RightHandThumb3
+      parentName: Afsoon_RightHandThumb2
+      position: {x: 0.012715947, y: 0.00000011857436, z: 0.00000013540644}
+      rotation: {x: 0.000003496184, y: -0.052292723, z: 0.00001071952, w: 0.99863183}
+      scale: {x: 0.95149, y: 1.0021296, z: 1.052732}
+    - name: Afsoon_RightHandThumb4
+      parentName: Afsoon_RightHandThumb3
+      position: {x: 0.013333827, y: -0.00000050575994, z: 0.00000016609381}
+      rotation: {x: 0.0000031614493, y: -0.000000022351736, z: -0.000000048025033, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+    - name: Afsoon_RightHandIndex1
+      parentName: Afsoon_RightHand
+      position: {x: 0.064269654, y: -0.003907958, z: -0.016693698}
+      rotation: {x: -0.00095729466, y: 0.064243615, z: -0.006823542, w: 0.9979105}
+      scale: {x: 0.86498886, y: 1.0000007, z: 1.0000004}
+    - name: Afsoon_RightHandIndex2
+      parentName: Afsoon_RightHandIndex1
+      position: {x: 0.021113556, y: 0.000000030444944, z: -0.0007359577}
+      rotation: {x: -0.00015265863, y: -0.015097093, z: 0.010105738, w: 0.99983495}
+      scale: {x: 1.5258068, y: 0.97965574, z: 1.0000695}
+    - name: Afsoon_RightHandIndex3
+      parentName: Afsoon_RightHandIndex2
+      position: {x: 0.0132404305, y: -0.00000014158987, z: -0.0008318497}
+      rotation: {x: -0.00009595596, y: -0.0035090537, z: 0.04088181, w: 0.99915785}
+      scale: {x: 0.99048173, y: 1.0127286, z: 1.0000588}
+    - name: Afsoon_RightHandIndex4
+      parentName: Afsoon_RightHandIndex3
+      position: {x: 0.009765914, y: 0.0000002620076, z: -0.0007049993}
+      rotation: {x: 0.00000038945285, y: 0.0011596096, z: 0.00000018797202, w: 0.9999994}
+      scale: {x: 1.0000103, y: 1.0000001, z: 0.99998677}
+    - name: Afsoon_RightHandMiddle1
+      parentName: Afsoon_RightHand
+      position: {x: 0.07148054, y: -0.007530792, z: -0.0025351977}
+      rotation: {x: 0.00040199034, y: 0.01427292, z: 0.03013483, w: 0.9994439}
+      scale: {x: 0.97484165, y: 1.0000006, z: 1.0000002}
+    - name: Afsoon_RightHandMiddle2
+      parentName: Afsoon_RightHandMiddle1
+      position: {x: 0.024316361, y: -0.0000000627492, z: -0.0000014844945}
+      rotation: {x: -0.0000009770155, y: -0.00003028847, z: 0.032095667, w: 0.99948484}
+      scale: {x: 1.1857252, y: 0.9944175, z: 0.99997294}
+    - name: Afsoon_RightHandMiddle3
+      parentName: Afsoon_RightHandMiddle2
+      position: {x: 0.013825877, y: 0.0000008292446, z: -0.0000017330417}
+      rotation: {x: 0.000000043222197, y: -0.0000000069776425, z: 0.000000029772721, w: 1}
+      scale: {x: 0.99837554, y: 1.0018796, z: 1.0000086}
+    - name: Afsoon_RightHandMiddle4
+      parentName: Afsoon_RightHandMiddle3
+      position: {x: 0.01002799, y: -0.0000003257574, z: -0.000001175355}
+      rotation: {x: 0.000000099081305, y: 0.0000000024083386, z: 3.7502083e-15, w: 1}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000002}
+    - name: Afsoon_RightHandRing1
+      parentName: Afsoon_RightHand
+      position: {x: 0.068533376, y: -0.0062187333, z: 0.011586196}
+      rotation: {x: -0.0034457054, y: -0.03597654, z: 0.0063794325, w: 0.99932635}
+      scale: {x: 0.7515627, y: 1.0000007, z: 1.0000005}
+    - name: Afsoon_RightHandRing2
+      parentName: Afsoon_RightHandRing1
+      position: {x: 0.022688925, y: 0.0000009840733, z: 0.000000031361335}
+      rotation: {x: 0.000000005587934, y: -0.000024512405, z: 0.000057107667, w: 1}
+      scale: {x: 1.4177972, y: 0.99346226, z: 0.99996996}
+    - name: Afsoon_RightHandRing3
+      parentName: Afsoon_RightHandRing2
+      position: {x: 0.01152276, y: -0.0000009184139, z: -0.00000054871447}
+      rotation: {x: -0.0000011864198, y: -0.000010745627, z: 0.04476609, w: 0.99899757}
+      scale: {x: 0.9986034, y: 1.0014848, z: 1.0000101}
+    - name: Afsoon_RightHandRing4
+      parentName: Afsoon_RightHandRing3
+      position: {x: 0.009616999, y: 0.00000055961857, z: -0.00000064295386}
+      rotation: {x: 0.0000003573952, y: 0.0000000012660165, z: 0.000000029795373, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: Afsoon_RightHandPinky1
+      parentName: Afsoon_RightHand
+      position: {x: 0.0590812, y: 0.0029384792, z: 0.021141693}
+      rotation: {x: -0.016173959, y: -0.04331719, z: -0.014547583, w: 0.9988245}
+      scale: {x: 1.0102798, y: 1.0000006, z: 1.0000004}
+    - name: Afsoon_RightHandPinky2
+      parentName: Afsoon_RightHandPinky1
+      position: {x: 0.015221293, y: -0.00000043805113, z: -0.00000041316449}
+      rotation: {x: 0.00000093132246, y: 0.000000059604638, z: 0.0000066985367, w: 1}
+      scale: {x: 1.3479414, y: 1.000131, z: 0.99999994}
+    - name: Afsoon_RightHandPinky3
+      parentName: Afsoon_RightHandPinky2
+      position: {x: 0.009872477, y: 0.000000026410916, z: -0.000000021239183}
+      rotation: {x: 0.0000009611248, y: -6.430411e-12, z: 0.000000009778831, w: 1}
+      scale: {x: 0.99399513, y: 1.0081615, z: 1.0000155}
+    - name: Afsoon_RightHandPinky4
+      parentName: Afsoon_RightHandPinky3
+      position: {x: 0.008332942, y: -0.00000018762391, z: 0.00000010370547}
+      rotation: {x: 0.0000018887217, y: -0.00000002981501, z: -0.000000010710153, w: 1}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000002}
+    - name: Afsoon_RightUpLeg
+      parentName: Afsoon_Hips
+      position: {x: 0.063560255, y: -0.00705616, z: 0.0000000035762786}
+      rotation: {x: 1, y: -0.0000000057931393, z: 0.00000000309501, w: -0.0000028549036}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: Afsoon_RightLeg
+      parentName: Afsoon_RightUpLeg
+      position: {x: -0.0000000333786, y: 0.21483566, z: -0.01933279}
+      rotation: {x: -0.00000611462, y: -0.0000000029176181, z: 0.0000000017155235, w: 1}
+      scale: {x: 1, y: 1.0000006, z: 1.0000002}
+    - name: Afsoon_RightFoot
+      parentName: Afsoon_RightLeg
+      position: {x: -0.0000000667572, y: 0.2696282, z: 0.03966294}
+      rotation: {x: 0.0000032595985, y: 5.457012e-11, z: -0.000000007618608, w: 1}
+      scale: {x: 1.0000001, y: 1.0000008, z: 1.0000006}
+    - name: Afsoon_RightToeBase
+      parentName: Afsoon_RightFoot
+      position: {x: 0.0000001001358, y: 0.03393477, z: -0.07461044}
+      rotation: {x: -0, y: -0, z: -1.7787668e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_Reference
+      parentName: Afsoon_SittingIdle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_HipsEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.000000009536743, y: 0.5338148, z: -0.009029521}
+      rotation: {x: 3.061617e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftAnkleEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.06356025, y: 0.049349878, z: -0.02936631}
+      rotation: {x: 1.08114796e-16, y: 1.3789448e-16, z: -1.921586e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightAnkleEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.06356016, y: 0.049349822, z: -0.029366288}
+      rotation: {x: 3.1351966e-16, y: -1.9239231e-16, z: 3.2148024e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftWristEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.37327236, y: 0.79533064, z: -0.037670173}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightWristEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.37327072, y: 0.7953216, z: -0.037676733}
+      rotation: {x: -1.2325952e-32, y: 6.123234e-17, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftKneeEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.06356023, y: 0.31897753, z: 0.01029451}
+      rotation: {x: 1.3877788e-16, y: 9.8537765e-17, z: 1.3300207e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightKneeEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.063560225, y: 0.3189781, z: 0.010294533}
+      rotation: {x: 1.5848121e-33, y: -6.162976e-33, z: 9.244464e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftElbowEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.23984286, y: 0.79920524, z: -0.04893136}
+      rotation: {x: 1.667503e-16, y: 5.454892e-18, z: -1.3877788e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightElbowEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.2398408, y: 0.7991957, z: -0.048939638}
+      rotation: {x: -4.3368087e-19, y: 3.523657e-19, z: 8.673617e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_ChestOriginEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0, y: 0.5919781, z: -0.009029526}
+      rotation: {x: -1.3645283e-33, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_ChestEndEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.000000009536743, y: 0.8045037, z: -0.023337912}
+      rotation: {x: 4.1633363e-17, y: -0, z: -6.162976e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftFootEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.06356029, y: 0.015415146, z: 0.04524417}
+      rotation: {x: 2.2365468e-32, y: -0, z: -1.2246469e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightFootEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.06356026, y: 0.015415044, z: 0.045244157}
+      rotation: {x: 2.2365468e-32, y: -0, z: -1.2246469e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftShoulderEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.088536225, y: 0.803589, z: -0.023337904}
+      rotation: {x: 1.3010426e-18, y: -5.6920614e-19, z: 5.2041704e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightShoulderEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.08853628, y: 0.80358946, z: -0.023337891}
+      rotation: {x: 5.7245875e-17, y: 2.2402327e-17, z: 1.7347235e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_HeadEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.000000009872014, y: 0.883846, z: -0.021592125}
+      rotation: {x: 3.061617e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHipEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.06356024, y: 0.53381485, z: -0.009029521}
+      rotation: {x: -8.326673e-17, y: 1.2718192e-17, z: -5.732855e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHipEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.06356022, y: 0.53381467, z: -0.009029521}
+      rotation: {x: 2.7755576e-17, y: -7.021349e-17, z: -4.9865687e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandThumbEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.43966824, y: 0.7808865, z: 0.0050051645}
+      rotation: {x: -8.3266733e-17, y: 0.000000018626453, z: 2.7755576e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandIndexEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.48377895, y: 0.7924878, z: -0.009578712}
+      rotation: {x: 9.367507e-17, y: -0.000000028230719, z: 6.418477e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandMiddleEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.49442363, y: 0.7936919, z: -0.03375281}
+      rotation: {x: 1.0972126e-16, y: 1.2143064e-17, z: -2.2104172e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandRingEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.48351505, y: 0.79213303, z: -0.056378406}
+      rotation: {x: -1.110223e-16, y: -5.551115e-17, z: -1.0408341e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandPinkyEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0.4644702, y: 0.7822378, z: -0.074956514}
+      rotation: {x: 2.7755576e-17, y: -1.110223e-16, z: 2.3245295e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandThumbEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.4282277, y: 0.7839955, z: -0.0011020297}
+      rotation: {x: -4.163336e-17, y: 0.000000014901163, z: -1.3877788e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandIndexEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.47443667, y: 0.7941825, z: -0.01197523}
+      rotation: {x: 0.0000000021316073, y: 0.000000022146578, z: 0.000000011957907, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandMiddleEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.4845467, y: 0.79540557, z: -0.034035426}
+      rotation: {x: -1.7347235e-18, y: -8.673617e-18, z: -1.0638734e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandRingEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.4743687, y: 0.79465055, z: -0.05481331}
+      rotation: {x: 8.6736166e-18, y: 2.7755576e-17, z: 0.000000021187592, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandPinkyEffector
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: 0.45721465, y: 0.78412855, z: -0.071328826}
+      rotation: {x: 0.0000000036527397, y: 0.0000000139443195, z: -0.0000000018299328, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_Hips
+      parentName: Afsoon_Ctrl_Reference
+      position: {x: -0, y: 0.54087085, z: -0.009029519}
+      rotation: {x: 3.061617e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftUpLeg
+      parentName: Afsoon_Ctrl_Hips
+      position: {x: -0.06356033, y: -0.007056009, z: 0}
+      rotation: {x: -8.326673e-17, y: 1.2718192e-17, z: -5.732855e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftLeg
+      parentName: Afsoon_Ctrl_LeftUpLeg
+      position: {x: -0, y: -0.21483669, z: 0.019332698}
+      rotation: {x: 1.3877788e-16, y: 9.8537765e-17, z: 1.3300207e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftFoot
+      parentName: Afsoon_Ctrl_LeftLeg
+      position: {x: -8.881784e-18, y: -0.26962793, z: -0.039662417}
+      rotation: {x: 1.08114796e-16, y: 1.3789448e-16, z: -1.921586e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftToeBase
+      parentName: Afsoon_Ctrl_LeftFoot
+      position: {x: -0.000000042915353, y: -0.03393478, z: 0.074610576}
+      rotation: {x: 2.2365468e-32, y: -0, z: -1.2246469e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightUpLeg
+      parentName: Afsoon_Ctrl_Hips
+      position: {x: 0.063560314, y: -0.0070561618, z: 0.0000000035762795}
+      rotation: {x: 2.7755576e-17, y: -7.021349e-17, z: -4.9865687e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightLeg
+      parentName: Afsoon_Ctrl_RightUpLeg
+      position: {x: -8.881784e-18, y: -0.21483606, z: 0.019332724}
+      rotation: {x: 1.5848121e-33, y: -6.162976e-33, z: 9.244464e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightFoot
+      parentName: Afsoon_Ctrl_RightLeg
+      position: {x: -8.881784e-18, y: -0.26962835, z: -0.03966241}
+      rotation: {x: 3.1351966e-16, y: -1.9239231e-16, z: 3.2148024e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightToeBase
+      parentName: Afsoon_Ctrl_RightFoot
+      position: {x: 0.00000010013583, y: -0.033934806, z: 0.07461052}
+      rotation: {x: 2.2365468e-32, y: -0, z: -1.2246469e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_Spine
+      parentName: Afsoon_Ctrl_Hips
+      position: {x: -0, y: 0.051107343, z: 0}
+      rotation: {x: -1.3645283e-33, y: 0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_Spine1
+      parentName: Afsoon_Ctrl_Spine
+      position: {x: -0, y: 0.04920018, z: -0.012625066}
+      rotation: {x: -5.551115e-17, y: -4.810262e-17, z: -4.8981076e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_Spine2
+      parentName: Afsoon_Ctrl_Spine1
+      position: {x: -0, y: 0.047671974, z: -0.0060328445}
+      rotation: {x: 4.1633363e-17, y: -0, z: -6.162976e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftShoulder
+      parentName: Afsoon_Ctrl_Spine2
+      position: {x: -0.051764138, y: 0.115653865, z: 0.004349504}
+      rotation: {x: 0, y: 0, z: 5.2041704e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftArm
+      parentName: Afsoon_Ctrl_LeftShoulder
+      position: {x: -0.03677225, y: -0.0009149172, z: 4.440892e-18}
+      rotation: {x: 1.3010426e-18, y: -5.6920614e-19, z: 5.2041704e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftForeArm
+      parentName: Afsoon_Ctrl_LeftArm
+      position: {x: -0.15130606, y: -0.004393388, z: -0.025595628}
+      rotation: {x: 1.667503e-16, y: 5.454892e-18, z: -1.3877788e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHand
+      parentName: Afsoon_Ctrl_LeftForeArm
+      position: {x: -0.13342953, y: -0.0038742837, z: 0.011262076}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandThumb1
+      parentName: Afsoon_Ctrl_LeftHand
+      position: {x: -0.024222799, y: -0.004697572, z: 0.01307916}
+      rotation: {x: -3.330669e-16, y: 3.469447e-18, z: 1.2490009e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandThumb2
+      parentName: Afsoon_Ctrl_LeftHandThumb1
+      position: {x: -0.020031666, y: -0.0032632453, z: 0.014213948}
+      rotation: {x: -2.0816682e-16, y: 0.000000011408704, z: 2.7755576e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandThumb3
+      parentName: Afsoon_Ctrl_LeftHandThumb2
+      position: {x: -0.01070267, y: -0.003364869, z: 0.009281571}
+      rotation: {x: -2.359224e-16, y: -1.3183898e-16, z: 0.000000014901163, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandThumb4
+      parentName: Afsoon_Ctrl_LeftHandThumb3
+      position: {x: -0.011438753, y: -0.0031185155, z: 0.0061006853}
+      rotation: {x: 9.7144515e-17, y: 1.8908486e-16, z: 1.5265567e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandIndex1
+      parentName: Afsoon_Ctrl_LeftHand
+      position: {x: -0.06435598, y: 0.0020411685, z: 0.016693639}
+      rotation: {x: -1.7347235e-18, y: 1.2789379e-35, z: -7.372575e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandIndex2
+      parentName: Afsoon_Ctrl_LeftHandIndex1
+      position: {x: -0.017641187, y: -0.001335068, z: 0.0045924746}
+      rotation: {x: 3.8163916e-17, y: -0.000000013224053, z: -3.0357657e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandIndex3
+      parentName: Afsoon_Ctrl_LeftHandIndex2
+      position: {x: -0.019168667, y: -0.0018451695, z: 0.0044153654}
+      rotation: {x: -1.0408341e-17, y: 4.1633363e-17, z: -6.938894e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandIndex4
+      parentName: Afsoon_Ctrl_LeftHandIndex3
+      position: {x: -0.0093407845, y: -0.0017037968, z: 0.0023900222}
+      rotation: {x: 1.179612e-16, y: 4.1633363e-17, z: 2.2030988e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandMiddle1
+      parentName: Afsoon_Ctrl_LeftHand
+      position: {x: -0.07166883, y: 0.0054528057, z: 0.0025351434}
+      rotation: {x: -1.22298e-16, y: -1.7347235e-18, z: 5.2387294e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandMiddle2
+      parentName: Afsoon_Ctrl_LeftHandMiddle1
+      position: {x: -0.023555912, y: -0.0025670629, z: 0.0006575252}
+      rotation: {x: -4.3368087e-19, y: 1.7347235e-18, z: 2.493665e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandMiddle3
+      parentName: Afsoon_Ctrl_LeftHandMiddle2
+      position: {x: -0.016051486, y: -0.002801209, z: 0.00044857513}
+      rotation: {x: 4.3368087e-19, y: -3.469447e-18, z: 1.8133281e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandMiddle4
+      parentName: Afsoon_Ctrl_LeftHandMiddle3
+      position: {x: -0.009875109, y: -0.001723328, z: 0.00027615315}
+      rotation: {x: 1.0972126e-16, y: 1.2143064e-17, z: -2.2104172e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandRing1
+      parentName: Afsoon_Ctrl_LeftHand
+      position: {x: -0.06868512, y: 0.004226609, z: -0.011586239}
+      rotation: {x: -1.7347235e-18, y: -4.1633363e-17, z: 3.5995512e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandRing2
+      parentName: Afsoon_Ctrl_LeftHandRing1
+      position: {x: -0.016624033, y: -0.002512055, z: -0.0028465753}
+      rotation: {x: 1.0581813e-16, y: 1.110223e-16, z: -1.9515639e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandRing3
+      parentName: Afsoon_Ctrl_LeftHandRing2
+      position: {x: -0.015788691, y: -0.0023857886, z: -0.0027038294}
+      rotation: {x: 0, y: 0, z: 6.505213e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandRing4
+      parentName: Afsoon_Ctrl_LeftHandRing3
+      position: {x: -0.009144899, y: -0.0025263983, z: -0.0015715698}
+      rotation: {x: -1.6306401e-16, y: -4.163336e-17, z: -0.000000014901163, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandPinky1
+      parentName: Afsoon_Ctrl_LeftHand
+      position: {x: -0.05897161, y: -0.0046520242, z: -0.021141695}
+      rotation: {x: -2.888895e-34, y: -2.7755576e-17, z: -1.0408341e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandPinky2
+      parentName: Afsoon_Ctrl_LeftHandPinky1
+      position: {x: -0.013386043, y: -0.003506089, z: -0.0067061014}
+      rotation: {x: 1.3877788e-17, y: -8.326673e-17, z: 1.179612e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandPinky3
+      parentName: Afsoon_Ctrl_LeftHandPinky2
+      position: {x: -0.011586077, y: -0.0030346685, z: -0.0058043585}
+      rotation: {x: 1.3183898e-16, y: -8.326673e-17, z: 3.469447e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_LeftHandPinky4
+      parentName: Afsoon_Ctrl_LeftHandPinky3
+      position: {x: -0.0072541824, y: -0.0019000248, z: -0.0036341676}
+      rotation: {x: 2.7755576e-17, y: -1.110223e-16, z: 2.3245295e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightShoulder
+      parentName: Afsoon_Ctrl_Spine2
+      position: {x: 0.051764116, y: 0.11565341, z: 0.0043495307}
+      rotation: {x: 0, y: -0, z: -6.938894e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightArm
+      parentName: Afsoon_Ctrl_RightShoulder
+      position: {x: 0.036772303, y: -0.00091400166, z: 4.440892e-18}
+      rotation: {x: 5.7245875e-17, y: 2.2402327e-17, z: 1.7347235e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightForeArm
+      parentName: Afsoon_Ctrl_RightArm
+      position: {x: 0.15130563, y: -0.004393998, z: -0.025595607}
+      rotation: {x: -4.3368087e-19, y: 3.523657e-19, z: 8.673617e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHand
+      parentName: Afsoon_Ctrl_RightForeArm
+      position: {x: 0.13343005, y: -0.0038739785, z: 0.011262004}
+      rotation: {x: -1.2325952e-32, y: 6.123234e-17, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandThumb1
+      parentName: Afsoon_Ctrl_RightHand
+      position: {x: 0.024222989, y: -0.0046980297, z: 0.013079203}
+      rotation: {x: 2.9143354e-16, y: -2.3678975e-16, z: 2.220446e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandThumb2
+      parentName: Afsoon_Ctrl_RightHandThumb1
+      position: {x: 0.020031018, y: -0.0032630165, z: 0.014213903}
+      rotation: {x: -2.7755576e-16, y: 2.4286129e-17, z: -1.2490009e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandThumb3
+      parentName: Afsoon_Ctrl_RightHandThumb2
+      position: {x: 0.010702974, y: -0.0033650217, z: 0.009281603}
+      rotation: {x: 1.110223e-16, y: 0.000000014901161, z: -1.6543612e-24, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandIndex1
+      parentName: Afsoon_Ctrl_RightHand
+      position: {x: 0.06435598, y: 0.0020409396, z: 0.016693702}
+      rotation: {x: -1.2143064e-17, y: 1.3877788e-17, z: -2.0903418e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandIndex2
+      parentName: Afsoon_Ctrl_RightHandIndex1
+      position: {x: 0.017641034, y: -0.0013349918, z: 0.0045924005}
+      rotation: {x: 2.7755576e-17, y: 1.3877788e-17, z: 4.7704896e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandIndex3
+      parentName: Afsoon_Ctrl_RightHandIndex2
+      position: {x: 0.01916901, y: -0.0018450168, z: 0.0044154013}
+      rotation: {x: 1.7347235e-18, y: 2.7755576e-17, z: 4.7704896e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandMiddle1
+      parentName: Afsoon_Ctrl_RightHand
+      position: {x: 0.07166898, y: 0.0054529584, z: 0.0025352007}
+      rotation: {x: -2.6020852e-18, y: 5.5409865e-34, z: -2.1294408e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandMiddle2
+      parentName: Afsoon_Ctrl_RightHandMiddle1
+      position: {x: 0.023556028, y: -0.0025669867, z: 0.00065749895}
+      rotation: {x: 8.6736174e-19, y: -9.168856e-36, z: -1.0570971e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandMiddle3
+      parentName: Afsoon_Ctrl_RightHandMiddle2
+      position: {x: 0.01605099, y: -0.002801972, z: 0.00044860135}
+      rotation: {x: -1.7347235e-18, y: -8.673617e-18, z: -1.0638734e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandRing1
+      parentName: Afsoon_Ctrl_RightHand
+      position: {x: 0.06868501, y: 0.0042269905, z: -0.011586201}
+      rotation: {x: 1.2143064e-17, y: -2.7755576e-17, z: -5.2041704e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandRing2
+      parentName: Afsoon_Ctrl_RightHandRing1
+      position: {x: 0.016623996, y: -0.0025130468, z: -0.002846604}
+      rotation: {x: 5.2041704e-18, y: -1.3877788e-17, z: -1.9081958e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandRing3
+      parentName: Afsoon_Ctrl_RightHandRing2
+      position: {x: 0.015788997, y: -0.0023849492, z: -0.0027038008}
+      rotation: {x: -0.0000000022006297, y: -0.000000014568755, z: 0.000000022757698, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandPinky1
+      parentName: Afsoon_Ctrl_RightHand
+      position: {x: 0.058971, y: -0.0046520242, z: -0.021141704}
+      rotation: {x: 3.469447e-17, y: -5.551115e-17, z: 1.92593e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandPinky2
+      parentName: Afsoon_Ctrl_RightHandPinky1
+      position: {x: 0.013386996, y: -0.0035060127, z: -0.0067061014}
+      rotation: {x: 0.0000000036527399, y: 0.00000001394432, z: -0.0000000018299329, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_RightHandPinky3
+      parentName: Afsoon_Ctrl_RightHandPinky2
+      position: {x: 0.011586, y: -0.0030349737, z: -0.0058043012}
+      rotation: {x: -2.7755576e-17, y: -3.85186e-34, z: 1.3877788e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_Neck
+      parentName: Afsoon_Ctrl_Spine2
+      position: {x: -0, y: 0.13348399, z: -0.009400079}
+      rotation: {x: -1.3877788e-16, y: -6.7389385e-17, z: -7.075263e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Ctrl_Head
+      parentName: Afsoon_Ctrl_Neck
+      position: {x: -0, y: 0.061513837, z: 0.015495561}
+      rotation: {x: 3.061617e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Afsoon_Low
+      parentName: Afsoon_SittingIdle(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -120,13 +1275,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 

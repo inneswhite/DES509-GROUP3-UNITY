@@ -8,18 +8,26 @@ public class NPCLook : MonoBehaviour
     [SerializeField]
     private Transform target;
 
-
+    private Animator anim;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+  
+
+    void OnAnimatorIK()
     {
-        transform.LookAt(target);
+        if(anim.enabled)
+        {
+            if(target!=null)
+            {
+                anim.SetLookAtPosition(target.position);
+                anim.SetLookAtWeight(1.0f, 0.5f, 0.5f, 0f);
+            }
+        }
     }
 }
