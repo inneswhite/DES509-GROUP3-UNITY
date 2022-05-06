@@ -4,6 +4,7 @@
 		<UserProjectSettings Name="" ID="{48B25C83-6448-4C85-88C4-17CE43F65CAC}">
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\UNI\Masters\DES509\Audio Rendered\"/>
+				<Property Name="Event Action List\{61DB0845-5623-4E18-AF58-682EBCDA1CA4}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{643904F4-91DF-4393-966F-9F9C49F54ECD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{83218FFF-8F07-4795-93D3-CFEA0FAE5E37}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9665CF48-62D1-4A81-B706-11D827FA6FE1}\x64_Expand States" Type="string" Value=""/>
@@ -48,7 +49,7 @@
 				<Property Name="ProjectExplorer\FirstVisible_9_1" Type="string" Value="{41093F77-829F-4D88-8601-E8B25F3D4781}"/>
 				<Property Name="ProjectExplorer\x64_Expanded_11_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_12_1" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\x64_Expanded_13_1" Type="string" Value=""/>
+				<Property Name="ProjectExplorer\x64_Expanded_13_1" Type="string" Value="n4rlefSUi0eEFQoWPbp7mw=="/>
 				<Property Name="ProjectExplorer\x64_Expanded_14_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_15_1" Type="string" Value=""/>
 				<Property Name="ProjectExplorer\x64_Expanded_16_1" Type="string" Value=""/>

@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{79E58A9F-94F4-478B-8415-0A163DBA7B9B}" SchemaVersion="103">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{79E58A9F-94F4-478B-8415-0A163DBA7B9B}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{79E58A9F-94F4-478B-8415-0A163DBA7B9B}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="Background Music" ID="{2E3CBDE2-D721-4EC9-9702-67DB85F103B9}" ShortID="73199342">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="97000"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Background Music" ID="{87919651-9320-4FF5-8ABC-686B8B2DED76}" ShortID="729987264">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Background Music" ID="{5DA72A6B-949A-486D-B1CA-7EE862900BBD}">
+									<Language>SFX</Language>
+									<AudioFile>Background Music.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="775613883"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{124552D1-C343-483C-ABC6-23DFD1B06148}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists>
+								<ObjectList Name="Sequences">
+									<Reference>
+										<Local>
+											<MusicTrackSequence Name="" ID="{B09F505B-24D4-4A4A-AEBE-36730BB2D0ED}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<Reference>
+															<Local>
+																<MusicClip Name="Background Music" ID="{BB41658F-67CC-447E-A454-3234742C5C78}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="97000"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Background Music" ID="{5DA72A6B-949A-486D-B1CA-7EE862900BBD}"/>
+																</MusicClip>
+															</Local>
+														</Reference>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicTrack>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Cues">
+							<Reference>
+								<Local>
+									<MusicCue Name="Entry Cue" ID="{5C3EBDC8-3E48-495E-80CA-E8F353A01C4E}"/>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="Exit Cue" ID="{7BE986F2-643E-4A9E-B580-3B40CACA9C55}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="97000"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>

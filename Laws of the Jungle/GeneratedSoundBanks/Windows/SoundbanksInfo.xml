@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,11 +16,19 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3224730511">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1459273127">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1585661381" Name="Background_Music" ObjectPath="\Events\Default Work Unit\Background_Music" DurationType="OneShot" DurationMin="97." DurationMax="97.">
+					<IncludedMemoryFiles>
+						<File Id="775613883" Language="SFX">
+							<ShortName>Background Music.wav</ShortName>
+							<Path>SFX\Background Music_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3930136735" Name="Dialogue" ObjectPath="\Events\Default Work Unit\Dialogue" DurationType="OneShot" DurationMin="5.150363" DurationMax="5.150363">
 					<IncludedMemoryFiles>
 						<File Id="158423759" Language="SFX">
@@ -29,7 +37,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="808420794" Name="Dialogue_Afsoon" ObjectPath="\Events\Default Work Unit\Dialogue_Afsoon" DurationType="OneShot" DurationMin="8.500000" DurationMax="8.500000">
+				<Event Id="808420794" Name="Dialogue_Afsoon" ObjectPath="\Events\Default Work Unit\Dialogue_Afsoon" DurationType="OneShot" DurationMin="8.5" DurationMax="8.5">
 					<IncludedMemoryFiles>
 						<File Id="1020599999" Language="SFX">
 							<ShortName>Afsoon_Dialogue.wav</ShortName>
@@ -53,7 +61,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1466384055" Name="Interact" ObjectPath="\Events\Default Work Unit\Interact" DurationType="OneShot" DurationMin="0.320000" DurationMax="0.320000">
+				<Event Id="1466384055" Name="Interact" ObjectPath="\Events\Default Work Unit\Interact" DurationType="OneShot" DurationMin="0.32" DurationMax="0.32">
 					<IncludedMemoryFiles>
 						<File Id="278489834" Language="SFX">
 							<ShortName>Interact.wav</ShortName>
@@ -61,7 +69,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2041902182" Name="Investigate" ObjectPath="\Events\Default Work Unit\Investigate" DurationType="OneShot" DurationMin="0.500000" DurationMax="0.500000">
+				<Event Id="2041902182" Name="Investigate" ObjectPath="\Events\Default Work Unit\Investigate" DurationType="OneShot" DurationMin="0.5" DurationMax="0.5">
 					<IncludedMemoryFiles>
 						<File Id="98484540" Language="SFX">
 							<ShortName>Investigate.wav</ShortName>
@@ -69,7 +77,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3978245845" Name="Pickup" ObjectPath="\Events\Default Work Unit\Pickup" DurationType="OneShot" DurationMin="0.140000" DurationMax="0.140000">
+				<Event Id="3978245845" Name="Pickup" ObjectPath="\Events\Default Work Unit\Pickup" DurationType="OneShot" DurationMin="0.14" DurationMax="0.14">
 					<IncludedMemoryFiles>
 						<File Id="771028731" Language="SFX">
 							<ShortName>Item Pickup.wav</ShortName>

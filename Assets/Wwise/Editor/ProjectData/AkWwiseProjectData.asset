@@ -345,7 +345,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 4861802c2ddba145a63025fac4669776
     GuidInternal: 
-    m_lastTime: -8585498195777561725
+    m_lastTime: -8585497699943936306
     List:
     - name: Main
       guid: cf0e2c26e9073343a0de2f20ecbc0e9a
@@ -373,8 +373,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7721433ab38bed44a81b8a5149666270
     GuidInternal: 
-    m_lastTime: -8585498195777681736
+    m_lastTime: -8585497700160202479
     List:
+    - name: Background_Music
+      guid: 4508db612356184eaf58682ebcda1ca4
+      id: 1585661381
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7721433ab38bed44a81b8a5149666270
+      - ElementName: Background_Music
+        ObjectType: 3
+        guid: 4508db612356184eaf58682ebcda1ca4
+      Path: Events\Default Work Unit\Background_Music
+      maxAttenuation: 0
+      maxDuration: 97
+      minDuration: 97
     - name: Dialogue
       guid: f4043964df919343966f9f9c49f54ecd
       id: 3930136735
@@ -728,7 +745,7 @@ MonoBehaviour:
     m_lastTime: -8585558048765895512
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 06000000070000000f00000010000000
+  ExpandedWaapiItemIds: 0600000007000000080000000f00000010000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
