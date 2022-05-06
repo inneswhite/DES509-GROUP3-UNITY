@@ -7,6 +7,9 @@ public class NPCLook : MonoBehaviour
 
     [SerializeField]
     private Transform target;
+    [SerializeField]
+    [Range(0,1)]
+    private float weight;
 
     private Animator anim;
 
@@ -17,7 +20,10 @@ public class NPCLook : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-  
+  void FixedUpdate()
+    {
+
+    }
 
     void OnAnimatorIK()
     {
@@ -25,8 +31,16 @@ public class NPCLook : MonoBehaviour
         {
             if(target!=null)
             {
-                anim.SetLookAtPosition(target.position);
-                anim.SetLookAtWeight(1.0f, 0.5f, 0.5f, 0f);
+                if (weight == 0f)
+                {
+                    return;
+                }
+                else if(weight>0f)
+                {
+                    Debug.Log("im looking");
+                    anim.SetLookAtPosition(target.position);            //  look at object 
+                    anim.SetLookAtWeight(weight, 0f, 1f, 0.5f);         // set values for each part 
+                }
             }
         }
     }
