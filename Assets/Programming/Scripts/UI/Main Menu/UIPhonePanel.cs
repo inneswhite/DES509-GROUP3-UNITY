@@ -29,7 +29,9 @@ public class UIPhonePanel : MonoBehaviour
         yield return new WaitForSeconds(1f);
         uIPhone.Activate();
         yield return new WaitForSeconds(2f);
+
         continueButton.Enable();
+        continueButton.SetAlpha(0);
         LeanTween.value(0f, 1f, buttonFadeDuration).setOnUpdate
                (
                    (float _alpha) =>
@@ -48,6 +50,7 @@ public class UIPhonePanel : MonoBehaviour
 
     IEnumerator OpenMessageEvents()
     {
+        continueButton.SetAlpha(1);
         LeanTween.value(1f, 0f, buttonFadeDuration).setOnUpdate
                (
                    (float _alpha) =>
@@ -65,7 +68,9 @@ public class UIPhonePanel : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+
         beginDayButton.Enable();
+        beginDayButton.SetAlpha(0);
         LeanTween.value(0f, 1f, buttonFadeDuration).setOnUpdate
                (
                    (float _alpha) =>
