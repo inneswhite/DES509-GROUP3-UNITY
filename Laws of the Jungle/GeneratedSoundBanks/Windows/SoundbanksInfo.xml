@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="3333115648">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1785330900">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -37,7 +37,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="808420794" Name="Dialogue_Afsoon" ObjectPath="\Events\Default Work Unit\Dialogue_Afsoon" DurationType="OneShot" DurationMin="8.5" DurationMax="8.5">
+				<Event Id="808420794" Name="Dialogue_Afsoon" ObjectPath="\Events\Default Work Unit\Dialogue_Afsoon" DurationType="OneShot" DurationMin="6.75" DurationMax="6.75">
 					<IncludedMemoryFiles>
 						<File Id="1020599999" Language="SFX">
 							<ShortName>Afsoon_Dialogue.wav</ShortName>

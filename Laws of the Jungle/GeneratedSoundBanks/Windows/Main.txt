@@ -20,5 +20,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	775613883	Background Music	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Background Music_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Background Music\Background Music		17110864
 	884767807	Walk_Platform_4_P1	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Walk_Platform_4_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Platform\Walk_Platform_4_P1		26116
 	941869471	Footsteps_Mud 2	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Footsteps_Mud 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Mud\Footsteps_Mud 2		73220
-	1020599999	Afsoon_Dialogue	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Afsoon_Dialogue_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Afsoon_Dialogue		1499464
+	1020599999	Afsoon_Dialogue	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Afsoon_Dialogue_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Afsoon_Dialogue		1190764
 
