@@ -138,14 +138,13 @@ public class PlayerController : MonoBehaviour
 				dist = Vector3.Distance(transform.position, targetTemp); //calculate distance of player position and temporary position
 				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetTemp - transform.position), 15.0f * Time.deltaTime);
 				player_Move = transform.forward * moveSpeed * Time.deltaTime;
-			//IMPLEMENT FOOTSTEPS AUDIO
-				Footstep.Post(gameObject);
+			
+				
 
 			if (dist < 0.3f)
 				{
 					isMove = false;
-				// STOP AUDIO 
-					Footstep.Stop(gameObject);
+				
 			}
 			}
 			else
@@ -207,6 +206,11 @@ public class PlayerController : MonoBehaviour
 
         }
 		}
+
+	public void PlayFootStepSound()
+    {
+		Footstep.Post(gameObject);
+	}
 }
 
 
