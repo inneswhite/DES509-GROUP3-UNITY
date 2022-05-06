@@ -34,6 +34,9 @@ public class PlayerController : MonoBehaviour
 	private Camera Sidecam2;
     [SerializeField]
     private Camera InsideCam;
+
+	private Camera OutsideCam;
+
 	[Header("Reference Cam")]
 	[SerializeField]
 	private Camera thiscam;
@@ -60,7 +63,7 @@ public class PlayerController : MonoBehaviour
 	{
 		//check for all cameras
 		Maincam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-
+		OutsideCam = GameObject.FindGameObjectWithTag("OutsideCamera").GetComponent<Camera>();
 		thiscam = Maincam;
 	}
 
@@ -204,7 +207,11 @@ public class PlayerController : MonoBehaviour
              {
                  thiscam = InsideCam;
 
-        }
+			 }
+			else if(OutsideCam.enabled)
+			{
+				thiscam = OutsideCam;
+		    }
 		}
 
 	public void PlayFootStepSound()

@@ -34,8 +34,8 @@ public class ItemPickup : MonoBehaviour
 
     private void OnMouseDown()
     {
-      //  if (dm.currentstate == DialogueManager.State.investigate)
-     //   {
+        if (dm.currentstate == DialogueManager.State.investigate)
+        {
             if (distance < 3f)
             {
                 if (inspectmanager.isInspect == false)
@@ -60,8 +60,9 @@ public class ItemPickup : MonoBehaviour
                 }
             }
         }
-  //      else
-  //      {
-   //         Debug.Log("Error player is not investigating yet");
-  //      }
+        else
+        {
+            Debug.Log("Error player is not investigating yet");
+        }
     }
+}

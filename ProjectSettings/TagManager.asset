@@ -19,6 +19,7 @@ TagManager:
   - DialogueCamera
   - InsideCamera
   - RecorderCamera
+  - OutsideCamera
   layers:
   - Default
   - TransparentFX
