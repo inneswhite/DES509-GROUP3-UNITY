@@ -441,8 +441,8 @@ MonoBehaviour:
         guid: 153ff27deff2cf4da56f77e24f99e668
       Path: Events\Default Work Unit\Footstep_mud
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.72576
+      minDuration: 0.414717
     - name: Footstep_Platform
       guid: ff8f2183078f954793d3cfea0fae5e37
       id: 1062709567
