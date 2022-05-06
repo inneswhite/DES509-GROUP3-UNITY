@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
     public void Talking()
     {
         dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist < 3f)
+        if (dist < 2f)
         {
             if (Input.GetKeyDown(KeyCode.E) && isActive == false)
             {
