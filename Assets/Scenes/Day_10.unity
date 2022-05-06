@@ -30081,6 +30081,10 @@ PrefabInstance:
       propertyPath: InsideCam
       value: 
       objectReference: {fileID: 292892000}
+    - target: {fileID: 6333661052893994281, guid: b90f2a95e3af0874cb4632c40939970b, type: 3}
+      propertyPath: Footstep.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 13d6d5a8492792640a2b0c88c13e470e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b90f2a95e3af0874cb4632c40939970b, type: 3}
 --- !u!4 &1523051825948394670

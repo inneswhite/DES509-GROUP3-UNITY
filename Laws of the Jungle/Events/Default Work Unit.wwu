@@ -80,6 +80,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Footstep_mud" ID="{7DF23F15-F2EF-4DCF-A56F-77E24F99E668}">
+					<ChildrenList>
+						<Action Name="" ID="{C71F40EB-1CDA-4B97-85D7-557EC1A73F27}" ShortID="145575595">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Mud" ID="{C555E033-37EA-40C9-956E-EE3455AD8E8C}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

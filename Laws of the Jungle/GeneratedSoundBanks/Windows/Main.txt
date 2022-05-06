@@ -4,17 +4,21 @@ Event	ID	Name			Wwise Object Path	Notes
 	1466384055	Interact			\Default Work Unit\Interact	
 	1585661381	Background_Music			\Default Work Unit\Background_Music	
 	2041902182	Investigate			\Default Work Unit\Investigate	
+	2289180592	Footstep_mud			\Default Work Unit\Footstep_mud	
 	3930136735	Dialogue			\Default Work Unit\Dialogue	
 	3978245845	Pickup			\Default Work Unit\Pickup	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	11055572	Footsteps_Mud 1	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Footsteps_Mud 1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Mud\Footsteps_Mud 1		73220
 	98484540	Investigate	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Investigate_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Investigate		88264
 	158423759	Police Dialogue	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Police Dialogue_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Police Dialogue		908588
 	278489834	Interact	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Interact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact		56512
 	479546188	Walk_Platform_1_P1	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Walk_Platform_1_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Platform\Walk_Platform_1_P1		35828
 	605629001	Walk_Platform_2_P1	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Walk_Platform_2_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Platform\Walk_Platform_2_P1		35096
+	693062051	Footsteps_Mud 3	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Footsteps_Mud 3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Mud\Footsteps_Mud 3		128088
 	771028731	Item Pickup	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Item Pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Item Pickup		24760
 	775613883	Background Music	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Background Music_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Background Music\Background Music		17110864
 	884767807	Walk_Platform_4_P1	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Walk_Platform_4_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Platform\Walk_Platform_4_P1		26116
+	941869471	Footsteps_Mud 2	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Footsteps_Mud 2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Mud\Footsteps_Mud 2		73220
 	1020599999	Afsoon_Dialogue	C:\Users\robbi\Documents\GitHub\DES509-GROUP3-UNITY\Laws of the Jungle\.cache\Windows\SFX\Afsoon_Dialogue_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Afsoon_Dialogue		1499464
 

@@ -16,7 +16,7 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="3161908922" Language="SFX" Hash="1459273127">
+		<SoundBank Id="3161908922" Language="SFX" Hash="1853861101">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
@@ -42,6 +42,22 @@
 						<File Id="1020599999" Language="SFX">
 							<ShortName>Afsoon_Dialogue.wav</ShortName>
 							<Path>SFX\Afsoon_Dialogue_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2289180592" Name="Footstep_mud" ObjectPath="\Events\Default Work Unit\Footstep_mud" DurationType="OneShot" DurationMin="1.555193" DurationMax="1.555193">
+					<IncludedMemoryFiles>
+						<File Id="11055572" Language="SFX">
+							<ShortName>Footsteps_Mud 1.wav</ShortName>
+							<Path>SFX\Footsteps_Mud 1_10C4C929.wem</Path>
+						</File>
+						<File Id="693062051" Language="SFX">
+							<ShortName>Footsteps_Mud 3.wav</ShortName>
+							<Path>SFX\Footsteps_Mud 3_10C4C929.wem</Path>
+						</File>
+						<File Id="941869471" Language="SFX">
+							<ShortName>Footsteps_Mud 2.wav</ShortName>
+							<Path>SFX\Footsteps_Mud 2_10C4C929.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

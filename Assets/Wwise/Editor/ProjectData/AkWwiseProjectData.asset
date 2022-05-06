@@ -345,7 +345,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 4861802c2ddba145a63025fac4669776
     GuidInternal: 
-    m_lastTime: -8585497699943936306
+    m_lastTime: -8585497624543358636
     List:
     - name: Main
       guid: cf0e2c26e9073343a0de2f20ecbc0e9a
@@ -373,7 +373,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 7721433ab38bed44a81b8a5149666270
     GuidInternal: 
-    m_lastTime: -8585497700160202479
+    m_lastTime: -8585497624543498658
     List:
     - name: Background_Music
       guid: 4508db612356184eaf58682ebcda1ca4
@@ -426,6 +426,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 8.5
       minDuration: 8.5
+    - name: Footstep_mud
+      guid: 153ff27deff2cf4da56f77e24f99e668
+      id: 2289180592
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7721433ab38bed44a81b8a5149666270
+      - ElementName: Footstep_mud
+        ObjectType: 3
+        guid: 153ff27deff2cf4da56f77e24f99e668
+      Path: Events\Default Work Unit\Footstep_mud
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Footstep_Platform
       guid: ff8f2183078f954793d3cfea0fae5e37
       id: 1062709567
@@ -744,9 +761,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585558048765895512
     List: []
-  ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000080000000f00000010000000
-  AutoSyncSelection: 0
+  ExpandedFileSystemItemIds: 0200000003000000
+  ExpandedWaapiItemIds: 0200000003000000
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 
