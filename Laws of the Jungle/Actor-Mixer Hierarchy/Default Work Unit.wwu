@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4452380F-B048-401F-ABA6-4688DC3EED91}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{4452380F-B048-401F-ABA6-4688DC3EED91}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Interact" ID="{384BA3E1-585A-47BC-B91F-3AB5A47EF698}" ShortID="543618449">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Interact" ID="{DB2867F5-6F9B-437C-9847-F97A95D5A787}">
+							<Language>SFX</Language>
+							<AudioFile>Interact.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="278489834"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Interact" ID="{DB2867F5-6F9B-437C-9847-F97A95D5A787}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Investigate" ID="{EF63F1C2-8FF3-436D-BA69-D51508464403}" ShortID="842500026">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Investigate" ID="{85D12479-37E7-46A9-BB20-FE715AFA0E01}">
+							<Language>SFX</Language>
+							<AudioFile>Investigate.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="98484540"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Investigate" ID="{85D12479-37E7-46A9-BB20-FE715AFA0E01}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Item Pickup" ID="{5C71F13B-5ECD-495D-AFA5-F9F26AEE594B}" ShortID="711353337">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Item Pickup" ID="{5B838A06-B462-4FA8-9976-2DB5DAAE1F68}">
+							<Language>SFX</Language>
+							<AudioFile>Item Pickup.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="771028731"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Item Pickup" ID="{5B838A06-B462-4FA8-9976-2DB5DAAE1F68}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Police Dialogue" ID="{002EB091-871A-4C12-A2D3-A64D7906040F}" ShortID="147457914">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Police Dialogue" ID="{4BE89EAA-0DE2-439B-9048-EF0E7C1178E6}">
+							<Language>SFX</Language>
+							<AudioFile>Police Dialogue.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="158423759"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Police Dialogue" ID="{4BE89EAA-0DE2-439B-9048-EF0E7C1178E6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Footsteps_Platform" ID="{15739C30-738F-4073-BE79-FC06B3FA7052}" ShortID="935098371">
+					<PropertyList>
+						<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Walk_Platform_4_P1" ID="{3B3D310B-45BF-4F07-B84B-BB50E5C60BE4}" ShortID="986468277">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Walk_Platform_4_P1" ID="{1C108CFA-41A8-40A8-AC27-F62CCFAB97F5}">
+									<Language>SFX</Language>
+									<AudioFile>Walk_Platform_4_P1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="884767807"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Walk_Platform_4_P1" ID="{1C108CFA-41A8-40A8-AC27-F62CCFAB97F5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Walk_Platform_2_P1" ID="{2EE78385-9872-4650-A8EE-C12BD9B0CE4E}" ShortID="232095097">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Walk_Platform_2_P1" ID="{80D1C817-12FA-4267-A0BA-D748E92D9865}">
+									<Language>SFX</Language>
+									<AudioFile>Walk_Platform_2_P1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="605629001"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Walk_Platform_2_P1" ID="{80D1C817-12FA-4267-A0BA-D748E92D9865}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Walk_Platform_1_P1" ID="{8339CE07-2FA8-4273-83E7-8F9CCCAED2F0}" ShortID="1066046230">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Walk_Platform_1_P1" ID="{543DD330-7778-4E20-844E-1677CCB5B3EE}">
+									<Language>SFX</Language>
+									<AudioFile>Walk_Platform_1_P1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="479546188"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Walk_Platform_1_P1" ID="{543DD330-7778-4E20-844E-1677CCB5B3EE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<Sound Name="Afsoon_Dialogue" ID="{FAB68DD9-125D-4CA9-86C9-6214A89285E5}" ShortID="619364710">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8B5AAD28-8A04-4C9A-AF31-68DE61AD2656}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{FE44E010-CAA1-4918-AD18-AA3B74C0569B}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Afsoon_Dialogue" ID="{8BC82A35-BE69-4C84-BB34-4465C3C39B30}">
+							<Language>SFX</Language>
+							<AudioFile>Afsoon_Dialogue.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1020599999"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Afsoon_Dialogue" ID="{8BC82A35-BE69-4C84-BB34-4465C3C39B30}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

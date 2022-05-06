@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2C806148-DB2D-45A1-A630-25FAC4669776}" SchemaVersion="103">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{2C806148-DB2D-45A1-A630-25FAC4669776}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{262C0ECF-07E9-4333-A0DE-2F20ECBC0E9A}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Footsteps_Platform" ID="{15739C30-738F-4073-BE79-FC06B3FA7052}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Investigate" ID="{EF63F1C2-8FF3-436D-BA69-D51508464403}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Dialogue" ID="{643904F4-91DF-4393-966F-9F9C49F54ECD}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Footstep_Platform" ID="{83218FFF-8F07-4795-93D3-CFEA0FAE5E37}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Interact" ID="{384BA3E1-585A-47BC-B91F-3AB5A47EF698}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Item Pickup" ID="{5C71F13B-5ECD-495D-AFA5-F9F26AEE594B}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Investigate" ID="{9665CF48-62D1-4A81-B706-11D827FA6FE1}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Pickup" ID="{D0296D2B-622C-4B32-9D44-F64134E280D1}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Police Dialogue" ID="{002EB091-871A-4C12-A2D3-A64D7906040F}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Dialogue_Afsoon" ID="{CE30BB31-00F0-4F06-B4B9-DC07682A79A4}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Interact" ID="{E6C38224-ABE9-4F3D-8C1A-A640C8F4C891}" WorkUnitID="{3A432177-8BB3-44ED-A81B-8A5149666270}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

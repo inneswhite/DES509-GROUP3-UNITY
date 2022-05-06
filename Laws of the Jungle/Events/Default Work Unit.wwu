@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3A432177-8BB3-44ED-A81B-8A5149666270}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{3A432177-8BB3-44ED-A81B-8A5149666270}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Footstep_Platform" ID="{83218FFF-8F07-4795-93D3-CFEA0FAE5E37}">
+					<ChildrenList>
+						<Action Name="" ID="{FAFFD9DB-8477-4704-8F2D-3677375B2648}" ShortID="970563648">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Footsteps_Platform" ID="{15739C30-738F-4073-BE79-FC06B3FA7052}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Interact" ID="{E6C38224-ABE9-4F3D-8C1A-A640C8F4C891}">
+					<ChildrenList>
+						<Action Name="" ID="{799D0BA6-8DA8-4951-BC9A-D9F421BA378C}" ShortID="175978544">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Interact" ID="{384BA3E1-585A-47BC-B91F-3AB5A47EF698}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pickup" ID="{D0296D2B-622C-4B32-9D44-F64134E280D1}">
+					<ChildrenList>
+						<Action Name="" ID="{A2AD6FC6-5C5B-428E-ABAA-5498C502FE6A}" ShortID="336490958">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Item Pickup" ID="{5C71F13B-5ECD-495D-AFA5-F9F26AEE594B}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue" ID="{643904F4-91DF-4393-966F-9F9C49F54ECD}">
+					<ChildrenList>
+						<Action Name="" ID="{1FC8EFA8-37BC-4102-8711-220ABFB68D67}" ShortID="375721578">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Police Dialogue" ID="{002EB091-871A-4C12-A2D3-A64D7906040F}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Investigate" ID="{9665CF48-62D1-4A81-B706-11D827FA6FE1}">
+					<ChildrenList>
+						<Action Name="" ID="{1F00E2F5-1379-4D07-B502-404179F331C0}" ShortID="985529576">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Investigate" ID="{EF63F1C2-8FF3-436D-BA69-D51508464403}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Dialogue_Afsoon" ID="{CE30BB31-00F0-4F06-B4B9-DC07682A79A4}">
+					<ChildrenList>
+						<Action Name="" ID="{565C81EE-E712-46A7-B5EF-EBF6F46CC2E0}" ShortID="831579892">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Afsoon_Dialogue" ID="{FAB68DD9-125D-4CA9-86C9-6214A89285E5}" WorkUnitID="{4452380F-B048-401F-ABA6-4688DC3EED91}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

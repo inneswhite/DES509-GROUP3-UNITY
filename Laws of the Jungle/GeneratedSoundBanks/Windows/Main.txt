@@ -1,0 +1,18 @@
+Event	ID	Name			Wwise Object Path	Notes
+	808420794	Dialogue_Afsoon			\Default Work Unit\Dialogue_Afsoon	
+	1062709567	Footstep_Platform			\Default Work Unit\Footstep_Platform	
+	1466384055	Interact			\Default Work Unit\Interact	
+	2041902182	Investigate			\Default Work Unit\Investigate	
+	3930136735	Dialogue			\Default Work Unit\Dialogue	
+	3978245845	Pickup			\Default Work Unit\Pickup	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	98484540	Investigate	C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\SFX\Investigate_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Investigate		88264
+	158423759	Police Dialogue	C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\SFX\Police Dialogue_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Police Dialogue		908588
+	278489834	Interact	C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\SFX\Interact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interact		56512
+	479546188	Walk_Platform_1_P1	C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\SFX\Walk_Platform_1_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Platform\Walk_Platform_1_P1		35828
+	605629001	Walk_Platform_2_P1	C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\SFX\Walk_Platform_2_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Platform\Walk_Platform_2_P1		35096
+	771028731	Item Pickup	C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\SFX\Item Pickup_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Item Pickup		24760
+	884767807	Walk_Platform_4_P1	C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\SFX\Walk_Platform_4_P1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Footsteps_Platform\Walk_Platform_4_P1		26116
+	1020599999	Afsoon_Dialogue	C:\Users\robbi\Documents\WwiseProjects\Laws of the Jungle\.cache\Windows\SFX\Afsoon_Dialogue_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Afsoon_Dialogue		1499464
+
