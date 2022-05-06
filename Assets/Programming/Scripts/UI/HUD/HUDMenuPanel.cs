@@ -61,9 +61,4 @@ public class HUDMenuPanel : MonoBehaviour
             isActive = false;
         }
     }
-
-    private void OnDisable()
-    {
-        Debug.LogError("");
-    }
 }
