@@ -37,7 +37,6 @@ public class NPCLook : MonoBehaviour
                 }
                 else if(weight>0f)
                 {
-                    Debug.Log("im looking");
                     anim.SetLookAtPosition(target.position);            //  look at object 
                     anim.SetLookAtWeight(weight, 0f, 1f, 0.5f);         // set values for each part 
                 }
