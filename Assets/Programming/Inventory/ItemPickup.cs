@@ -13,6 +13,7 @@ public class ItemPickup : MonoBehaviour
     private InspectManager inspectmanager;
     public AK.Wwise.Event Sound;
     private GameObject medicine;
+    private GameObject medicineParent;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class ItemPickup : MonoBehaviour
         dm = GameObject.FindGameObjectWithTag("NPC").GetComponent<DialogueManager>();
         inspectmanager = GameObject.FindGameObjectWithTag("InspectManager").GetComponent<InspectManager>();
         medicine = GameObject.Find("Medicine");
+        medicineParent = GameObject.Find("MedicineParent");
     }
 
     // Update is called once per frame
@@ -55,6 +57,7 @@ public class ItemPickup : MonoBehaviour
                     if (itemId == 2)
                     {
                         inventory.GiveItem(2);
+                        medicineParent.GetComponent<BoxCollider>().enabled = false;
                         medicine.SetActive(false);
                     }
                 }

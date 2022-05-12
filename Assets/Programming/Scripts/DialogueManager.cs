@@ -215,7 +215,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 ConfiscateSingleItem();         // If Player has single item 
             }
-            else if (inventory.confiscatednumber == 2)
+            else if (inventory.confiscatednumber > 2)
             {
                 foreach (string dialogue in cop.playeroptiondialogue2)
                 {

@@ -375,7 +375,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &638566381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,8 +1084,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5053704613762872478, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+      propertyPath: m_IgnoreReversedGraphics
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+--- !u!1 &5053704613814131707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5053704613762872473, guid: bd81bde04f5f0ad40839047a70acab6e, type: 3}
+  m_PrefabInstance: {fileID: 5053704613814131706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &5053704613814131708
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053704613814131707}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &6196492742299242696
 PrefabInstance:
   m_ObjectHideFlags: 0

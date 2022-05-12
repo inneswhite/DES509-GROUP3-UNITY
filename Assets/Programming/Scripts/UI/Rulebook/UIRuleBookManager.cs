@@ -107,6 +107,25 @@ public class UIRuleBookManager : MonoBehaviour
                     }
                 }
             }
+            if (inspectmanager.itemid == 2)
+            {
+                if (rulenumber == 5)
+                {
+                    isAssociated = true;            // based on item id and rule number turn bool on
+                    if (isAssociated)
+                    {
+                        Associated.SetActive(true);
+                    }
+                }
+                else if (rulenumber != 5)
+                {
+                    isAssociated = false;
+                    if (!isAssociated)
+                    {
+                        Associated.SetActive(false);
+                    }
+                }
+            }
         }
     }
 

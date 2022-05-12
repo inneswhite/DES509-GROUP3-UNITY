@@ -41,7 +41,7 @@ public class SpawnItem : MonoBehaviour
         istoggled = !istoggled;
         if (istoggled)
         {
-            Vector3 playerPosition = new Vector3(player.position.x + 2, player.position.y + 2, player.position.z + 2);
+            Vector3 playerPosition = new Vector3(player.position.x + 0.5f, player.position.y + 0.5f, player.position.z + 0.5f);
             Instantiate(itemprefabs[1], playerPosition, Quaternion.identity);
         }
     }
@@ -51,7 +51,7 @@ public class SpawnItem : MonoBehaviour
         istoggled = !istoggled;
         if (istoggled)
         {
-            Vector3 playerPosition = new Vector3(player.position.x + 2, player.position.y + 2, player.position.z + 2);
+            Vector3 playerPosition = new Vector3(player.position.x + 0.5f, player.position.y + 0.5f, player.position.z + 0.5f);
             Instantiate(itemprefabs[2], playerPosition, Quaternion.identity);
         }
     }
