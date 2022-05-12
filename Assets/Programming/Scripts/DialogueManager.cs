@@ -177,7 +177,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DuringSearch()
     {
-                                               // Search Dialogue
+                                    // Search Dialogue
     }
 
 
