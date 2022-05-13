@@ -67,7 +67,7 @@ public class PauseUIManager : MonoBehaviour
             menuButton.Enable();
         }
         activePanel = ActivePanel.pauseMenu;
-
+        uiSettingsPanel.Deactivate();
     }
 
     public void Deactivate()

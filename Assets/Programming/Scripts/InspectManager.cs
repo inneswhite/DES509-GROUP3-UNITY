@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class InspectManager : MonoBehaviour
 {
     [SerializeField]
-    private Texture2D inspectcursor;
+    private UIRuleBookManager rulebookmanager;
     [SerializeField]
     UICursor uiCursor;
     [SerializeField]
@@ -125,6 +125,7 @@ public class InspectManager : MonoBehaviour
         items[1].SetActive(false);
         items[2].SetActive(false);
         inspectorPanel.SetActive(false);
+        rulebookmanager.Activate();
         Time.timeScale = 1f;
     }
     public void InspectMode()

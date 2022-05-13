@@ -41,6 +41,8 @@ public class UIRuleBookManager : MonoBehaviour
     {
         rectTransform.position = activePos;
         rulebookActive = true;
+        Associated.SetActive(false);
+        isAssociated = false;
     }
 
     public void Deactivate()
@@ -48,6 +50,7 @@ public class UIRuleBookManager : MonoBehaviour
         rectTransform.position = inactivePos;
         selectedRule = null;
         rulebookActive = false;
+        
     }
 
     //this method is called by the UI Rule buttons.
