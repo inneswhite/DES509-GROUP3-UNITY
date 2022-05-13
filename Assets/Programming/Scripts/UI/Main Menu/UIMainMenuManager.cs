@@ -67,6 +67,7 @@ public class UIMainMenuManager : MonoBehaviour
         {
             uIMainMenuPanel.Activate();
             activePanel = ActivePanel.mainMenu;
+            uiSettingsPanel.Deactivate();
         }
 
     }
