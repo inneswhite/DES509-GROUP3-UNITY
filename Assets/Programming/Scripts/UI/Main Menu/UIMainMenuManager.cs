@@ -97,5 +97,10 @@ public class UIMainMenuManager : MonoBehaviour
         }
     }
 
+    public void ExitToDesktop()
+    {
+        Application.Quit();
+    }
+
 
 }

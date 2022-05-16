@@ -1749,7 +1749,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 121448377172581029}
           m_TargetAssemblyTypeName: PauseUIManager, Assembly-CSharp
-          m_MethodName: Deactivate
+          m_MethodName: ExitToDesktop
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
